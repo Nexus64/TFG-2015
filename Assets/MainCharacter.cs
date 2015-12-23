@@ -1,29 +1,52 @@
 ﻿using UnityEngine;
 using System.Collections;
+using MonsterLove.StateMachine;
 
-public class MainCharacter : MonoBehaviour {
+public class MainCharacter : StateBehaviour {
 	public float maxSpeed;
 	public float force;
+
+	public enum States
+	{
+		Stand, 
+		Move, 
+		Paddle, 
+	}
 	// Use this for initialization
+
+	void Awake(){
+		Debug.Log ("Awake");
+		Initialize<States>();
+		ChangeState(States.Stand);
+	}
+
 	void Start () {
 	
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Stand_Update () {
 		if (Input.GetKey (KeyCode.RightArrow) || Input.GetKey (KeyCode.UpArrow)
 			|| Input.GetKey (KeyCode.LeftArrow) || Input.GetKey (KeyCode.DownArrow)) {
-			movement ();
+			ChangeState(States.Move, StateTransition.Safe);
 		}
 	}
 
-	void movement() {
-		transform.eulerAngles=calculateRotation ();
-		float forceX = force * Mathf.Cos (Mathf.Deg2Rad*transform.rotation.eulerAngles.y);
-		float forceZ = force * Mathf.Sin (Mathf.Deg2Rad*transform.rotation.eulerAngles.y);
-		Debug.Log (GetComponent<Rigidbody> ().velocity);
-		if (GetComponent<Rigidbody> ().velocity.magnitude < maxSpeed) {
-			GetComponent<Rigidbody> ().AddForce (new Vector3(forceX,0,forceZ));
+	void Move_Update(){
+		if (!Input.GetKey (KeyCode.RightArrow) && !Input.GetKey (KeyCode.UpArrow)
+			&& !Input.GetKey (KeyCode.LeftArrow) && !Input.GetKey (KeyCode.DownArrow)) {
+			ChangeState (States.Stand, StateTransition.Safe);
+		} else {
+			transform.eulerAngles = calculateRotation ();
+			float forceX = force * Mathf.Cos (Mathf.Deg2Rad * transform.rotation.eulerAngles.y);
+			float forceZ = force * Mathf.Sin (Mathf.Deg2Rad * transform.rotation.eulerAngles.y);
+			Debug.Log (Mathf.Round (forceX)+"  "+Mathf.Round (forceZ));
+			GetComponent<Rigidbody> ().AddForce (new Vector3 (Mathf.Round (forceX), 0, Mathf.Round (forceZ)));
+		}
+	}
+	void Move_FixedUpdate() {
+		if (GetComponent<Rigidbody> ().velocity.magnitude > maxSpeed) {
+			GetComponent<Rigidbody> ().velocity=GetComponent<Rigidbody> ().velocity.normalized*maxSpeed;
 		}
 	}
 	Vector3 calculateRotation (){
@@ -70,8 +93,7 @@ public class MainCharacter : MonoBehaviour {
 			}
 			newRotation=(input1+input2)/2;
 		}
-
-
 		return new Vector3 (0, newRotation, 0);
 	}
+
 }
