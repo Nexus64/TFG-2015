@@ -40,14 +40,39 @@ public class MainCharacter : StateBehaviour {
 			transform.eulerAngles = calculateRotation ();
 			float forceX = force * Mathf.Cos (Mathf.Deg2Rad * transform.rotation.eulerAngles.y);
 			float forceZ = force * Mathf.Sin (Mathf.Deg2Rad * transform.rotation.eulerAngles.y);
-			Debug.Log (Mathf.Round (forceX)+"  "+Mathf.Round (forceZ));
+
 			GetComponent<Rigidbody> ().AddForce (new Vector3 (Mathf.Round (forceX), 0, Mathf.Round (forceZ)));
+
 		}
 	}
 	void Move_FixedUpdate() {
 		if (GetComponent<Rigidbody> ().velocity.magnitude > maxSpeed) {
 			GetComponent<Rigidbody> ().velocity=GetComponent<Rigidbody> ().velocity.normalized*maxSpeed;
 		}
+		/*
+		Vector3 direction = -(Quaternion.Inverse (transform.rotation) * Vector3.left);
+		Vector3 cross = Vector3.Cross (direction, -Vector3.up);
+		Vector3 leftPoint = transform.position + cross * 0.5f;
+		Vector3 rigthPoint = transform.position + cross * -0.5f;
+		RaycastHit leftHit;
+		RaycastHit rigthHit;
+		Debug.DrawRay (transform.position, cross*10);
+		Debug.DrawRay (leftPoint, direction*3);
+		Debug.DrawRay (rigthPoint, direction*3);
+		Physics.Raycast (leftPoint, direction*16, out leftHit,3f);
+		Physics.Raycast (rigthPoint, direction*16, out rigthHit,3f);
+		if (Mathf.Abs (Mathf.Abs (leftHit.distance - rigthHit.distance) - 1) < 0.5) {
+			Quaternion rotation;
+			if(leftHit.distance < rigthHit.distance){
+				rotation=Quaternion.AngleAxis(-45, Vector3.up);
+			}else{
+				rotation=Quaternion.AngleAxis(45, Vector3.up);
+			}
+			GetComponent<Rigidbody> ().velocity=rotation*GetComponent<Rigidbody> ().velocity;
+			transform.Rotate(rotation.eulerAngles);
+			Debug.Log(transform.rotation.eulerAngles);
+		}
+		*/
 	}
 	Vector3 calculateRotation (){
 		float newRotation;
