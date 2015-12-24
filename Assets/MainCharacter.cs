@@ -5,7 +5,7 @@ using MonsterLove.StateMachine;
 public class MainCharacter : StateBehaviour {
 	public float maxSpeed;
 	public float force;
-
+	public Transform paddlePref;
 	public enum States
 	{
 		Stand, 
@@ -23,12 +23,14 @@ public class MainCharacter : StateBehaviour {
 	void Start () {
 	
 	}
-	
+
 	// Update is called once per frame
 	void Stand_Update () {
 		if (Input.GetKey (KeyCode.RightArrow) || Input.GetKey (KeyCode.UpArrow)
 			|| Input.GetKey (KeyCode.LeftArrow) || Input.GetKey (KeyCode.DownArrow)) {
-			ChangeState(States.Move, StateTransition.Safe);
+			ChangeState (States.Move, StateTransition.Safe);
+		} else if (Input.GetKeyDown (KeyCode.A)) {
+			ChangeState (States.Paddle, StateTransition.Safe);
 		}
 	}
 
@@ -36,7 +38,9 @@ public class MainCharacter : StateBehaviour {
 		if (!Input.GetKey (KeyCode.RightArrow) && !Input.GetKey (KeyCode.UpArrow)
 			&& !Input.GetKey (KeyCode.LeftArrow) && !Input.GetKey (KeyCode.DownArrow)) {
 			ChangeState (States.Stand, StateTransition.Safe);
-		} else {
+		}  else if (Input.GetKeyDown (KeyCode.A)) {
+			ChangeState (States.Paddle, StateTransition.Safe);
+		}else {
 			transform.eulerAngles = calculateRotation ();
 			float forceX = force * Mathf.Cos (Mathf.Deg2Rad * transform.rotation.eulerAngles.y);
 			float forceZ = force * Mathf.Sin (Mathf.Deg2Rad * transform.rotation.eulerAngles.y);
@@ -73,6 +77,17 @@ public class MainCharacter : StateBehaviour {
 			Debug.Log(transform.rotation.eulerAngles);
 		}
 		*/
+	}
+
+	void Paddle_Enter(){
+		float time = 0.3f;
+		Transform paddle=Instantiate(paddlePref);
+		paddle.transform.position += transform.position;
+		Destroy (paddle.gameObject, time-time*0.2f);
+		Invoke ("paddle_end", time);
+	}
+	void paddle_end(){
+		ChangeState (States.Stand, StateTransition.Safe);
 	}
 	Vector3 calculateRotation (){
 		float newRotation;
