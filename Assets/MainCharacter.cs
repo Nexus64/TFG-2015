@@ -6,6 +6,7 @@ public class MainCharacter : StateBehaviour {
 	public float maxSpeed;
 	public float force;
 	public Transform paddlePref;
+	private Transform model;
 	public enum States
 	{
 		Stand, 
@@ -16,6 +17,7 @@ public class MainCharacter : StateBehaviour {
 
 	void Awake(){
 		Debug.Log ("Awake");
+		model = transform.GetChild(0);
 		Initialize<States>();
 		ChangeState(States.Stand);
 	}
@@ -41,9 +43,9 @@ public class MainCharacter : StateBehaviour {
 		}  else if (Input.GetKeyDown (KeyCode.A)) {
 			ChangeState (States.Paddle, StateTransition.Safe);
 		}else {
-			transform.eulerAngles = calculateRotation ();
-			float forceX = force * Mathf.Cos (Mathf.Deg2Rad * transform.rotation.eulerAngles.y);
-			float forceZ = force * Mathf.Sin (Mathf.Deg2Rad * transform.rotation.eulerAngles.y);
+			model.eulerAngles = calculateRotation ();
+			float forceX = force * Mathf.Cos (Mathf.Deg2Rad * model.rotation.eulerAngles.y);
+			float forceZ = force * Mathf.Sin (Mathf.Deg2Rad * model.rotation.eulerAngles.y);
 
 			GetComponent<Rigidbody> ().AddForce (new Vector3 (Mathf.Round (forceX), 0, Mathf.Round (forceZ)));
 
@@ -82,7 +84,8 @@ public class MainCharacter : StateBehaviour {
 	void Paddle_Enter(){
 		float time = 0.3f;
 		Transform paddle=Instantiate(paddlePref);
-		paddle.transform.position += transform.position;
+		paddle.parent = transform;
+		paddle.localPosition = paddle.position;
 		Destroy (paddle.gameObject, time-time*0.2f);
 		Invoke ("paddle_end", time);
 	}
