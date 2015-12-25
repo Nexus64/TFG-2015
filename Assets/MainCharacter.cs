@@ -55,30 +55,8 @@ public class MainCharacter : StateBehaviour {
 		if (GetComponent<Rigidbody> ().velocity.magnitude > maxSpeed) {
 			GetComponent<Rigidbody> ().velocity=GetComponent<Rigidbody> ().velocity.normalized*maxSpeed;
 		}
-		/*
-		Vector3 direction = -(Quaternion.Inverse (transform.rotation) * Vector3.left);
-		Vector3 cross = Vector3.Cross (direction, -Vector3.up);
-		Vector3 leftPoint = transform.position + cross * 0.5f;
-		Vector3 rigthPoint = transform.position + cross * -0.5f;
-		RaycastHit leftHit;
-		RaycastHit rigthHit;
-		Debug.DrawRay (transform.position, cross*10);
-		Debug.DrawRay (leftPoint, direction*3);
-		Debug.DrawRay (rigthPoint, direction*3);
-		Physics.Raycast (leftPoint, direction*16, out leftHit,3f);
-		Physics.Raycast (rigthPoint, direction*16, out rigthHit,3f);
-		if (Mathf.Abs (Mathf.Abs (leftHit.distance - rigthHit.distance) - 1) < 0.5) {
-			Quaternion rotation;
-			if(leftHit.distance < rigthHit.distance){
-				rotation=Quaternion.AngleAxis(-45, Vector3.up);
-			}else{
-				rotation=Quaternion.AngleAxis(45, Vector3.up);
-			}
-			GetComponent<Rigidbody> ().velocity=rotation*GetComponent<Rigidbody> ().velocity;
-			transform.Rotate(rotation.eulerAngles);
-			Debug.Log(transform.rotation.eulerAngles);
-		}
-		*/
+
+
 	}
 
 	void Paddle_Enter(){
@@ -96,6 +74,7 @@ public class MainCharacter : StateBehaviour {
 		float newRotation;
 		float input1 = -1;
 		float input2 = -1;
+
 		if (Input.GetKey (KeyCode.RightArrow)) {
 			if (input1==-1){
 				input1=0;
@@ -135,6 +114,30 @@ public class MainCharacter : StateBehaviour {
 				input2 = 360;
 			}
 			newRotation=(input1+input2)/2;
+		}
+
+		Vector3 direction = -(Quaternion.Inverse (Quaternion.AngleAxis(newRotation,Vector3.up)) * Vector3.left);
+		Vector3 cross = Vector3.Cross (direction, -Vector3.up);
+		Vector3 leftPoint = transform.position + cross * 0.5f;
+		Vector3 rigthPoint = transform.position + cross * -0.5f;
+
+		RaycastHit leftHit;
+		RaycastHit rigthHit;
+
+		Debug.DrawRay (transform.position, cross*10);
+		Debug.DrawRay (leftPoint, direction*3);
+		Debug.DrawRay (rigthPoint, direction*3);
+
+		Physics.Raycast (leftPoint, direction*16, out leftHit,3f);
+		Physics.Raycast (rigthPoint, direction*16, out rigthHit,3f);
+
+		if (Mathf.Abs (Mathf.Abs (leftHit.distance - rigthHit.distance) - 1) < 0.5) {
+			Quaternion rotation;
+			if(leftHit.distance < rigthHit.distance){
+				newRotation+=45;
+			}else{
+				newRotation-=45;
+			}
 		}
 		return new Vector3 (0, newRotation, 0);
 	}
