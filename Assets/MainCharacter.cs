@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using MonsterLove.StateMachine;
 
@@ -11,7 +11,8 @@ public class MainCharacter : StateBehaviour {
 	{
 		Stand, 
 		Move, 
-		Paddle, 
+		Paddle,
+		Confused,
 	}
 	// Use this for initialization
 
@@ -60,15 +61,30 @@ public class MainCharacter : StateBehaviour {
 	}
 
 	void Paddle_Enter(){
-		float time = 0.3f;
+		float time = 0.6f;
 		Transform paddle=Instantiate(paddlePref);
 		paddle.parent = transform;
 		paddle.localPosition = paddle.position;
 		Destroy (paddle.gameObject, time-time*0.2f);
-		Invoke ("paddle_end", time);
+		Invoke ("Paddle_End", time);
 	}
-	void paddle_end(){
+	void Paddle_End(){
 		ChangeState (States.Stand, StateTransition.Safe);
+	}
+	void Confused_Enter(){
+		GetComponent<AudioSource> ().Play ();
+		Invoke ("Confused_End", 1);
+	}
+	void Confused_Update(){
+		transform.Rotate (Vector3.up * 10);
+	}
+	void Confused_End(){
+		GetComponent<AudioSource> ().Stop ();
+		transform.rotation = Quaternion.Euler (new Vector3 (0, 0, 0));
+		ChangeState (States.Stand, StateTransition.Safe);
+	}
+	public void confusion(){
+		ChangeState (States.Confused, StateTransition.Safe);
 	}
 	Vector3 calculateRotation (){
 		float newRotation;

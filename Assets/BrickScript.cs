@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class BrickScript : MonoBehaviour {
-
 	// Use this for initialization
+	public Transform model;
 	void Start () {
 	
 	}
@@ -14,7 +14,10 @@ public class BrickScript : MonoBehaviour {
 	}
 	void OnCollisionEnter(Collision collision){
 		if (collision.transform.tag=="Ball"){
-			Destroy(this.gameObject);
+			GetComponent<ParticleSystem>().Emit(30);
+			Destroy(model.gameObject);
+			Destroy(this.gameObject,2f);
+
 		}
 	}
 }
