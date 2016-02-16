@@ -41,6 +41,12 @@ public class BallMovement : StateBehaviour {
 		case "Door":
 			GetComponent<Rigidbody> ().useGravity=true;
 			audio_source.PlayOneShot(hit_brick);
+			collision.gameObject.GetComponent<DoorScript>().do_damage(10);
+			break;
+		case "Brick":
+			GetComponent<Rigidbody> ().useGravity=true;
+			audio_source.PlayOneShot(hit_brick);
+
 			break;
 		case "Floor":
 			Vector3 velocity = GetComponent<Rigidbody>().velocity;
@@ -58,7 +64,7 @@ public class BallMovement : StateBehaviour {
 			*/break;
 		case "Player":
 			collision.transform.GetComponent<MainCharacter>().confusion();
-			Debug.Log("PLAYER");
+			//Debug.Log("PLAYER");
 			break;
 		case "wall":
 			audio_source.PlayOneShot(hit_wall);
@@ -84,7 +90,7 @@ public class BallMovement : StateBehaviour {
 			xAngle=Mathf.Min(xAngle,0);
 			xAngle=Mathf.Max(xAngle,-90);
 			newVelocity=Quaternion.Euler(new Vector3(xAngle,yAngle,0))*Vector3.forward*speed;
-			Debug.Log(xDiff+" "+yDiff+"--"+yAngle+" "+xAngle);
+			//Debug.Log(xDiff+" "+yDiff+"--"+yAngle+" "+xAngle);
 			GetComponent<Rigidbody> ().useGravity=false;
 			GetComponent<Rigidbody> ().velocity=newVelocity;
 			hit_counter=0;
