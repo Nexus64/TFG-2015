@@ -13,6 +13,7 @@ public class MainCharacter : StateBehaviour {
 		Move, 
 		Paddle,
 		Confused,
+		Dead,
 	}
 	// Use this for initialization
 
@@ -85,6 +86,9 @@ public class MainCharacter : StateBehaviour {
 	}
 	public void confusion(){
 		ChangeState (States.Confused, StateTransition.Safe);
+	}
+	public void dead(){
+		ChangeState (States.Dead, StateTransition.Safe);
 	}
 	Vector3 calculateRotation (){
 		float newRotation;

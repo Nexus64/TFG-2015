@@ -104,12 +104,18 @@ public class BallMovement : StateBehaviour {
 		animator.enabled = true;
 		animator.SetBool ("destroy", true);
 		player.GetComponent<Animator> ().SetBool ("dead", true);
+		player.GetComponent<MainCharacter> ().dead ();
 
 	}
 	public void explosion(){
 		Transform particle = Instantiate (explosion_particle);
+		Invoke("gameover", particle.GetComponent<ParticleSystem>().duration*0.50f);
 		particle.position = transform.position;
-		Destroy (gameObject);
+
+	}
+	public void gameover(){
+		Debug.Log ("gameover");
+		Application.LoadLevel("game over");
 	}
 
 }
