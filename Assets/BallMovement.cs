@@ -39,15 +39,12 @@ public class BallMovement : StateBehaviour {
 
 	}
 	void OnCollisionEnter(Collision collision){
-		Transform particle_ins;
 		switch (collision.transform.tag){
 		case "Door":
 			GetComponent<Rigidbody> ().useGravity=true;
 			audio_source.PlayOneShot(hit_brick);
 			collision.gameObject.GetComponent<DoorScript>().do_damage(10);
-			particle_ins=Instantiate(particle); 
-			particle_ins.transform.position=collision.transform.position;
-			transform.rotation=collision.transform.rotation*Quaternion.Euler(Vector3.left*90);
+			hit_particles(collision);
 			break;
 		case "Brick":
 			GetComponent<Rigidbody> ().useGravity=true;
@@ -62,9 +59,8 @@ public class BallMovement : StateBehaviour {
 			if (hit_counter>=3){
 				ChangeState(States.Destroyed);
 			}
-			particle_ins=Instantiate(particle); 
-			particle_ins.transform.position=collision.transform.position;
-			transform.rotation=collision.transform.rotation*Quaternion.Euler(Vector3.left*90);
+			hit_particles(collision);
+
 			/*float xAngle=-Random.Range(22.5f, 67.5f);
 			float yAngle=-Random.Range (-67.5f, 67.5f);
 			newVelocity=Quaternion.Euler(new Vector3(xAngle,yAngle,0))*Vector3.forward*speed;
@@ -75,11 +71,9 @@ public class BallMovement : StateBehaviour {
 			collision.transform.GetComponent<MainCharacter>().confusion();
 			//Debug.Log("PLAYER");
 			break;
-		case "wall":
+		case "Wall":
 			audio_source.PlayOneShot(hit_wall);
-			particle_ins=Instantiate(particle);
-			particle_ins.transform.position=collision.transform.position;
-			transform.rotation=collision.transform.rotation*Quaternion.Euler(Vector3.left*90);
+			hit_particles(collision);
 			break;
 		default:
 
@@ -129,5 +123,13 @@ public class BallMovement : StateBehaviour {
 		Debug.Log ("gameover");
 		Application.LoadLevel("game over");
 	}
-
+	public void hit_particles(Collision collision){
+		Transform particle_ins=Instantiate(particle);
+		particle_ins.transform.position=collision.contacts[0].point;
+		particle_ins.transform.rotation= Quaternion.AngleAxis(90,Quaternion.Euler (Vector3.forward * 90)*collision.contacts [0].normal);
+		Debug.Log (collision.contacts [0].normal);
+		Quaternion.Euler (Vector3.left * 90);
+		particle_ins.GetComponent<ParticleSystem> ().Play ();
+		Destroy (particle_ins.gameObject, particle.GetComponent<ParticleSystem> ().duration);
+	}
 }
