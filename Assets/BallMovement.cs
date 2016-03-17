@@ -59,6 +59,7 @@ public class BallMovement : StateBehaviour {
 			if (hit_counter>=3){
 				ChangeState(States.Destroyed);
 			}
+			set_color();
 			hit_particles(collision);
 
 			/*float xAngle=-Random.Range(22.5f, 67.5f);
@@ -100,6 +101,7 @@ public class BallMovement : StateBehaviour {
 			GetComponent<Rigidbody> ().useGravity=false;
 			GetComponent<Rigidbody> ().velocity=newVelocity;
 			hit_counter=0;
+			set_color();
 		}
 	
 	}
@@ -114,9 +116,12 @@ public class BallMovement : StateBehaviour {
 
 	}
 	public void explosion(){
-		Transform particle = Instantiate (explosion_particle);
-		Invoke("gameover", particle.GetComponent<ParticleSystem>().duration*0.50f);
-		particle.position = transform.position;
+		Transform particle_ins = Instantiate (explosion_particle);
+		particle_ins.GetComponent<ParticleSystem> ().startColor =
+			GetComponent<Renderer> ().material.color;
+		Invoke("gameover", particle_ins.GetComponent<ParticleSystem>().duration*0.50f);
+
+		particle_ins.position = transform.position;
 
 	}
 	public void gameover(){
@@ -129,7 +134,23 @@ public class BallMovement : StateBehaviour {
 		particle_ins.transform.rotation= Quaternion.AngleAxis(90,Quaternion.Euler (Vector3.forward * 90)*collision.contacts [0].normal);
 		Debug.Log (collision.contacts [0].normal);
 		Quaternion.Euler (Vector3.left * 90);
+		particle_ins.GetComponent<ParticleSystem> ().startColor = 
+			GetComponent<MeshRenderer> ().material.color;
 		particle_ins.GetComponent<ParticleSystem> ().Play ();
 		Destroy (particle_ins.gameObject, particle.GetComponent<ParticleSystem> ().duration);
+	}
+	public void set_color(){
+		switch (hit_counter) {
+		case 0:
+			GetComponent<MeshRenderer>().material.color=Color.white;
+			break;
+		case 1:
+			GetComponent<MeshRenderer>().material.color=Color.yellow;
+			break;
+		default:
+			GetComponent<MeshRenderer>().material.color=Color.red;
+			break;
+		}
+		GetComponent<ParticleSystem> ().startColor = GetComponent<MeshRenderer> ().material.color;
 	}
 }
