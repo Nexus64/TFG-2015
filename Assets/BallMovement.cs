@@ -11,6 +11,7 @@ public class BallMovement : StateBehaviour {
 	public AudioClip hit_paddle;
 	public AudioClip hit_wall;
 	public Transform player;
+	public Transform particle;
 	private AudioSource audio_source;
 	private int hit_counter;
 	public Transform explosion_particle;
@@ -26,7 +27,8 @@ public class BallMovement : StateBehaviour {
 		ChangeState (States.Normal);
 	}
 	void Start () {
-		Vector3 direction = Vector3.up + Vector3.forward;
+		Quaternion rotation = Quaternion.AngleAxis (Random.Range (-20, 20), Vector3.up);
+		Vector3 direction = rotation*(Vector3.up + Vector3.forward);
 		GetComponent<Rigidbody> ().velocity = direction.normalized * speed;
 		hit_counter = 0;
 	}
@@ -37,11 +39,15 @@ public class BallMovement : StateBehaviour {
 
 	}
 	void OnCollisionEnter(Collision collision){
+		Transform particle_ins;
 		switch (collision.transform.tag){
 		case "Door":
 			GetComponent<Rigidbody> ().useGravity=true;
 			audio_source.PlayOneShot(hit_brick);
 			collision.gameObject.GetComponent<DoorScript>().do_damage(10);
+			particle_ins=Instantiate(particle); 
+			particle_ins.transform.position=collision.transform.position;
+			transform.rotation=collision.transform.rotation*Quaternion.Euler(Vector3.left*90);
 			break;
 		case "Brick":
 			GetComponent<Rigidbody> ().useGravity=true;
@@ -56,6 +62,9 @@ public class BallMovement : StateBehaviour {
 			if (hit_counter>=3){
 				ChangeState(States.Destroyed);
 			}
+			particle_ins=Instantiate(particle); 
+			particle_ins.transform.position=collision.transform.position;
+			transform.rotation=collision.transform.rotation*Quaternion.Euler(Vector3.left*90);
 			/*float xAngle=-Random.Range(22.5f, 67.5f);
 			float yAngle=-Random.Range (-67.5f, 67.5f);
 			newVelocity=Quaternion.Euler(new Vector3(xAngle,yAngle,0))*Vector3.forward*speed;
@@ -68,6 +77,9 @@ public class BallMovement : StateBehaviour {
 			break;
 		case "wall":
 			audio_source.PlayOneShot(hit_wall);
+			particle_ins=Instantiate(particle);
+			particle_ins.transform.position=collision.transform.position;
+			transform.rotation=collision.transform.rotation*Quaternion.Euler(Vector3.left*90);
 			break;
 		default:
 

@@ -67,9 +67,12 @@ public class MainCharacter : StateBehaviour {
 		paddle.parent = transform;
 		paddle.localPosition = paddle.position;
 		Destroy (paddle.gameObject, time-time*0.2f);
+		GetComponent<Rigidbody> ().drag *= 0.40f;
 		Invoke ("Paddle_End", time);
 	}
 	void Paddle_End(){
+		GetComponent<Rigidbody> ().drag *= 1/0.40f;
+
 		ChangeState (States.Stand, StateTransition.Safe);
 	}
 	void Confused_Enter(){
@@ -82,13 +85,13 @@ public class MainCharacter : StateBehaviour {
 	void Confused_End(){
 		GetComponent<AudioSource> ().Stop ();
 		transform.rotation = Quaternion.Euler (new Vector3 (0, 0, 0));
-		ChangeState (States.Stand, StateTransition.Safe);
+		ChangeState (States.Stand, StateTransition.Overwrite);
 	}
 	public void confusion(){
 		ChangeState (States.Confused, StateTransition.Safe);
 	}
 	public void dead(){
-		ChangeState (States.Dead, StateTransition.Safe);
+		ChangeState (States.Dead, StateTransition.Overwrite);
 	}
 	Vector3 calculateRotation (){
 		float newRotation;
