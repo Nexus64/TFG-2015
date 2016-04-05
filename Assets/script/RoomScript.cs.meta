@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ef8d7019e9556e045b8baf1ee637ead2
+timeCreated: 1459699286
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - brick_prefab: {fileID: 468194, guid: 69230e7d4e1ca1d44a575d0eeac19a70, type: 2}
+  - unbreakable_prefab: {fileID: 487506, guid: a5394926c8afe1640be7055243837309, type: 2}
+  - brick_wall: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

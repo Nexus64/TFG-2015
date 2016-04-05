@@ -53,7 +53,7 @@ public class BallMovement : StateBehaviour {
 			break;
 		case "Floor":
 			Vector3 velocity = GetComponent<Rigidbody>().velocity;
-			GetComponent<Rigidbody>().velocity=velocity*3f;
+			//GetComponent<Rigidbody>().velocity=velocity*3f;
 			audio_source.PlayOneShot(hit_floor);
 			hit_counter++;
 			if (hit_counter>=3){
@@ -61,7 +61,10 @@ public class BallMovement : StateBehaviour {
 			}
 			set_color();
 			hit_particles(collision);
+			Vector3 a=Vector3.up;
+			float o=0;
 
+			GetComponent<Rigidbody>().AddForce(Vector3.up*speed*(hit_counter+1));
 			/*float xAngle=-Random.Range(22.5f, 67.5f);
 			float yAngle=-Random.Range (-67.5f, 67.5f);
 			newVelocity=Quaternion.Euler(new Vector3(xAngle,yAngle,0))*Vector3.forward*speed;
@@ -153,4 +156,5 @@ public class BallMovement : StateBehaviour {
 		}
 		GetComponent<ParticleSystem> ().startColor = GetComponent<MeshRenderer> ().material.color;
 	}
+
 }
