@@ -47,7 +47,7 @@ public class MainCharacter : StateBehaviour {
 		}else {
 			model.eulerAngles = calculateRotation ();
 			float forceX = force * Mathf.Cos (Mathf.Deg2Rad * model.rotation.eulerAngles.y);
-			float forceZ = force * Mathf.Sin (Mathf.Deg2Rad * model.rotation.eulerAngles.y);
+			float forceZ = -force * Mathf.Sin (Mathf.Deg2Rad * model.rotation.eulerAngles.y);
 
 			GetComponent<Rigidbody> ().AddForce (new Vector3 (Mathf.Round (forceX), 0, Mathf.Round (forceZ)));
 
@@ -107,9 +107,9 @@ public class MainCharacter : StateBehaviour {
 		}
 		if (Input.GetKey (KeyCode.UpArrow)) {
 			if (input1==-1){
-				input1=90;
+				input1=270;
 			}else {
-				input2=90;
+				input2=270;
 			}
 		}
 		if (Input.GetKey (KeyCode.LeftArrow)) {
@@ -121,9 +121,9 @@ public class MainCharacter : StateBehaviour {
 		}
 		if (Input.GetKey (KeyCode.DownArrow)) {
 			if (input1==-1){
-				input1=270;
+				input1=90;
 			}else {
-				input2=270;
+				input2=90;
 			}
 		}
 		if (input1 == -1) {
