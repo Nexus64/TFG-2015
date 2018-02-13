@@ -1,0 +1,105 @@
+\begin{thebibliography}{SKK14}
+\ifx \showCODEN  \undefined \def \showCODEN #1{CODEN #1}  \fi
+\ifx \showISBN   \undefined \def \showISBN  #1{ISBN #1}   \fi
+\ifx \showISSN   \undefined \def \showISSN  #1{ISSN #1}   \fi
+\ifx \showLCCN   \undefined \def \showLCCN  #1{LCCN #1}   \fi
+\ifx \showPRICE  \undefined \def \showPRICE #1{#1}        \fi
+\ifx \showURL    \undefined \def \showURL {URL }          \fi
+\ifx \path       \undefined \input path.sty               \fi
+\ifx \ifshowURL \undefined
+     \newif \ifshowURL
+     \showURLtrue
+\fi
+
+\bibitem[Ale]{compra_supercell}
+Julia Alexander.
+\newblock Clash of clans developer supercell purchased by chinese giant tencent
+  for \$8.6b.
+\newblock \ifshowURL {\showURL
+  \path|https://www.polygon.com/2016/6/21/11987074/clash-of-clans-supercell-tencent-purchase|}\fi.
+
+\bibitem[Bar]{flow}
+Sean Baron.
+\newblock Cognitive flow: The psychology of great game design.
+\newblock \ifshowURL {\showURL
+  \path|https://www.gamasutra.com/view/feature/166972/cognitive_flow_the_psychology_of_.php|}\fi.
+
+\bibitem[Bat04]{game_design_2}
+Bob Bates.
+\newblock {\em Game Design}.
+\newblock Thomson Course Technology, Boston, 2004.
+
+\bibitem[Bet03]{development_and_production}
+Erik Bethke.
+\newblock {\em Game Development and Production}.
+\newblock Wordware Publishing, Plano, Texas, 2003.
+
+\bibitem[BS12]{breaking_game_industry}
+Brenda Brathwaite and Ian Schreiber.
+\newblock {\em Breaking into the Game Industry: Advice for a Successful Career
+  from Those Who Have Done It}.
+\newblock Course Technology, Boston, 2012.
+
+\bibitem[DV15]{libro_esi}
+David~Villa David~Vallejo, Carlos~González.
+\newblock {\em Desarrollo de Videojuegos: Un Enfoque Práctico}.
+\newblock Ciudad Real, España, 2015.
+
+\bibitem[lib16]{libro_blanco}
+{\em Libro Blanco del Desarrollo Español del Videojuego}.
+\newblock DEV, Desarrollo Español del Videojuego, Madrid, España, 2016.
+
+\bibitem[Lyd]{web_4_0}
+Bill Lydon.
+\newblock Industry 4.0 - only one-tenth of germany's high-tech strategy.
+\newblock \ifshowURL {\showURL
+  \path|https://www.automation.com/automation-news/article/industry-40-only-one-tenth-of-germanys-high-tech-strategy|}\fi.
+
+\bibitem[Mah]{toxic_wow}
+Brendan Maher.
+\newblock Can a video game company tame toxic behaviour?
+\newblock \ifshowURL {\showURL
+  \path|https://www.nature.com/news/can-a-video-game-company-tame-toxic-behaviour-1.19647|}\fi.
+
+\bibitem[McW]{compra_king}
+Michael McWhertor.
+\newblock Activision buys candy crush maker king for \$5.9 billion.
+\newblock \ifshowURL {\showURL
+  \path|https://www.polygon.com/2015/11/2/9662230/activision-buys-candy-crush-maker-king|}\fi.
+
+\bibitem[Nys04]{game_programming_patterns}
+Robert Nystrom.
+\newblock {\em Game Programming Patterns}.
+\newblock Geneber Benning, 2004.
+
+\bibitem[SKK14]{cyber_physics}
+James D.~McCalley Siddhartha Kumar~Khaitan.
+\newblock Design techniques and applications of cyber physical systems: A
+  survey.
+\newblock {\em IEEE Systems Journal}, 9\penalty0 (2):\penalty0 350 -- 365,
+  2014.
+
+\bibitem[uni]{unity_manual}
+Unity manual.
+\newblock \ifshowURL {\showURL
+  \path|https://docs.unity3d.com/Manual/UnityManual.html|}\fi.
+
+\bibitem[War]{game_engine}
+Jeff Ward.
+\newblock What is a game engine?
+\newblock \ifshowURL {\showURL
+  \path|https://www.gamecareerguide.com/features/529/what_is_a_game_.php|}\fi.
+
+\bibitem[Yan12]{ai_revisited}
+Georgios~N. Yannakakis.
+\newblock Game ai revisited.
+\newblock {\em Proceedings of the 9th conference on Computing Frontiers}, pages
+  285 -- 292, 2012.
+
+\bibitem[YT18]{ai_and_games}
+Georgios~N. Yannakakis and Julian Togelius.
+\newblock {\em {Artificial Intelligence and Games}}.
+\newblock Springer, 2018.
+\newblock \url{http://gameaibook.org}.
+
+\end{thebibliography}

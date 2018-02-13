@@ -1,0 +1,61 @@
+\select@language {spanish}
+\contentsline {chapter}{Resumen}{\es@scroman {v}}{chapter*.1}
+\contentsline {chapter}{\'{I}ndice general}{\es@scroman {vii}}{chapter*.2}
+\contentsline {chapter}{\'{I}ndice de figuras}{\es@scroman {ix}}{chapter*.3}
+\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivaci\IeC {\'o}n}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Dise\IeC {\~n}o de juego}{2}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Concepto}{2}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Jugabilidad}{2}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Estilo y Ambientaci\IeC {\'o}n}{4}{subsection.1.2.3}
+\contentsline {subsection}{\numberline {1.2.4}Plataforma}{5}{subsection.1.2.4}
+\contentsline {chapter}{\numberline {2}Estado del arte}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}El mercado de los videojuegos}{7}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Industria mundial del Videojuego}{7}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}La industria de los videojuegos en Espa\IeC {\~n}a}{10}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Retos y tendencias actuales}{14}{subsection.2.1.3}
+\contentsline {subsubsection}{eSports}{14}{subsection.2.1.3}
+\contentsline {subsubsection}{Realidad Virtual y Realidad Aumentada}{17}{figure.2.11}
+\contentsline {subsubsection}{Web 4.0}{18}{figure.2.13}
+\contentsline {section}{\numberline {2.2}El proceso de desarrollo de videojuegos}{21}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Introducci\IeC {\'o}n}{21}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Etapas del desarrollo}{21}{subsection.2.2.2}
+\contentsline {subsubsection}{Desarrollo del Concepto}{21}{subsection.2.2.2}
+\contentsline {subsubsection}{Pre-Producci\IeC {\'o}n}{22}{subsection.2.2.2}
+\contentsline {subsubsection}{Producci\IeC {\'o}n}{23}{subsection.2.2.2}
+\contentsline {subsubsection}{Final de Producci\IeC {\'o}n y Lanzamiento}{24}{subsection.2.2.2}
+\contentsline {subsubsection}{Post-Producci\IeC {\'o}n}{24}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Estructura t\IeC {\'\i }pica de un equipo de desarrollo}{25}{subsection.2.2.3}
+\contentsline {subsubsection}{Dise\IeC {\~n}o}{25}{figure.2.17}
+\contentsline {subsubsection}{Programaci\IeC {\'o}n}{27}{figure.2.18}
+\contentsline {subsubsection}{Arte}{27}{figure.2.19}
+\contentsline {subsubsection}{Audio}{29}{figure.2.20}
+\contentsline {subsubsection}{Testing}{30}{figure.2.21}
+\contentsline {subsubsection}{Producci\IeC {\'o}n}{31}{figure.2.21}
+\contentsline {section}{\numberline {2.3}Motores de juegos}{31}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Unity3D}{32}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Unreal Engine}{33}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Game Maker Studio}{34}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Inteligencia Artificial en Videojuegos}{36}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Historia}{36}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}IA Aplicada a Videojuegos: Contexto Actual}{37}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Futuros campos de aplicaci\IeC {\'o}n}{39}{subsection.2.4.3}
+\contentsline {chapter}{\numberline {3}Arquitectura}{41}{chapter.3}
+\contentsline {section}{\numberline {3.1}Estructura de clases del Proyecto}{41}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Escenas}{41}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}GameObjects, Componentes y Prefabs}{42}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Estructura de Clases}{44}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Prefabs}{45}{subsection.3.1.4}
+\contentsline {section}{\numberline {3.2}Carga y Estructura de Niveles}{52}{section.3.2}
+\contentsline {section}{\numberline {3.3}Control de movimiento y f\IeC {\'\i }sicas}{54}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Personaje principal}{54}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Pelota}{57}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Jefe Final}{59}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Implementaci\IeC {\'o}n}{60}{subsection.3.4.1}
+\contentsline {chapter}{\numberline {4}Conclusiones}{63}{chapter.4}
+\contentsline {section}{\numberline {4.1}Resultados}{63}{section.4.1}
+\contentsline {section}{\numberline {4.2}Mejoras Futuras}{64}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Escenarios}{65}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Enemigos}{66}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Sistemas Complementarios}{67}{subsection.4.2.3}
+\contentsline {chapter}{Referencias}{71}{appendix*.4}
