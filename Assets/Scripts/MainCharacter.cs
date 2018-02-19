@@ -62,7 +62,7 @@ public class MainCharacter : StateBehaviour {
         if (!enterReady) {
             rigidbody.AddForce(new Vector3(0, 0, force));
 
-            if (transform.position.magnitude <= 0.5)
+            if (-transform.position.z <= 0.5)
             {
                 rigidbody.velocity = Vector3.zero;
                 enterReady = true;
