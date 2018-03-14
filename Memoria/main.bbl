@@ -1,4 +1,4 @@
-\begin{thebibliography}{SKK14}
+\begin{thebibliography}{DEV17}
 \ifx \showCODEN  \undefined \def \showCODEN #1{CODEN #1}  \fi
 \ifx \showISBN   \undefined \def \showISBN  #1{ISBN #1}   \fi
 \ifx \showISSN   \undefined \def \showISSN  #1{ISSN #1}   \fi
@@ -11,19 +11,6 @@
      \showURLtrue
 \fi
 
-\bibitem[Ale]{compra_supercell}
-Julia Alexander.
-\newblock Clash of clans developer supercell purchased by chinese giant tencent
-  for \$8.6b.
-\newblock \ifshowURL {\showURL
-  \path|https://www.polygon.com/2016/6/21/11987074/clash-of-clans-supercell-tencent-purchase|}\fi.
-
-\bibitem[Bar]{flow}
-Sean Baron.
-\newblock Cognitive flow: The psychology of great game design.
-\newblock \ifshowURL {\showURL
-  \path|https://www.gamasutra.com/view/feature/166972/cognitive_flow_the_psychology_of_.php|}\fi.
-
 \bibitem[Bat04]{game_design_2}
 Bob Bates.
 \newblock {\em Game Design}.
@@ -34,20 +21,20 @@ Erik Bethke.
 \newblock {\em Game Development and Production}.
 \newblock Wordware Publishing, Plano, Texas, 2003.
 
-\bibitem[BS12]{breaking_game_industry}
-Brenda Brathwaite and Ian Schreiber.
-\newblock {\em Breaking into the Game Industry: Advice for a Successful Career
-  from Those Who Have Done It}.
-\newblock Course Technology, Boston, 2012.
+\bibitem[DEV17]{libro_blanco}
+Desarrollo Español del~Videojuego DEV, editor.
+\newblock {\em Libro Blanco del Desarrollo Español del Videojuego}.
+\newblock Madrid, España, 2017.
 
 \bibitem[DV15]{libro_esi}
 David~Villa David~Vallejo, Carlos~González.
 \newblock {\em Desarrollo de Videojuegos: Un Enfoque Práctico}.
 \newblock Ciudad Real, España, 2015.
 
-\bibitem[lib16]{libro_blanco}
-{\em Libro Blanco del Desarrollo Español del Videojuego}.
-\newblock DEV, Desarrollo Español del Videojuego, Madrid, España, 2016.
+\bibitem[Gre09]{game_engine_architecture}
+Jason Gregory.
+\newblock {\em Game Engine Architecture}.
+\newblock A K Peters, Ltd., Wellesley, Massachusetts, 2009.
 
 \bibitem[Lyd]{web_4_0}
 Bill Lydon.
@@ -55,22 +42,11 @@ Bill Lydon.
 \newblock \ifshowURL {\showURL
   \path|https://www.automation.com/automation-news/article/industry-40-only-one-tenth-of-germanys-high-tech-strategy|}\fi.
 
-\bibitem[Mah]{toxic_wow}
-Brendan Maher.
-\newblock Can a video game company tame toxic behaviour?
-\newblock \ifshowURL {\showURL
-  \path|https://www.nature.com/news/can-a-video-game-company-tame-toxic-behaviour-1.19647|}\fi.
-
-\bibitem[McW]{compra_king}
-Michael McWhertor.
-\newblock Activision buys candy crush maker king for \$5.9 billion.
-\newblock \ifshowURL {\showURL
-  \path|https://www.polygon.com/2015/11/2/9662230/activision-buys-candy-crush-maker-king|}\fi.
-
-\bibitem[Nys04]{game_programming_patterns}
-Robert Nystrom.
-\newblock {\em Game Programming Patterns}.
-\newblock Geneber Benning, 2004.
+\bibitem[Sam59]{machine_learning}
+Arthur~L. Samuel.
+\newblock Some studies in machine learning using the game of checkers.
+\newblock {\em IBM Journal of Research and Development}, pages 210 -- 229,
+  1959.
 
 \bibitem[SKK14]{cyber_physics}
 James D.~McCalley Siddhartha Kumar~Khaitan.
@@ -79,10 +55,10 @@ James D.~McCalley Siddhartha Kumar~Khaitan.
 \newblock {\em IEEE Systems Journal}, 9\penalty0 (2):\penalty0 350 -- 365,
   2014.
 
-\bibitem[uni]{unity_manual}
-Unity manual.
-\newblock \ifshowURL {\showURL
-  \path|https://docs.unity3d.com/Manual/UnityManual.html|}\fi.
+\bibitem[Tur53]{turing_chess}
+Alan~M. Turing.
+\newblock Digital computers applied to games.
+\newblock {\em Faster than thought}, page 101, 1953.
 
 \bibitem[War]{game_engine}
 Jeff Ward.
@@ -98,7 +74,7 @@ Georgios~N. Yannakakis.
 
 \bibitem[YT18]{ai_and_games}
 Georgios~N. Yannakakis and Julian Togelius.
-\newblock {\em {Artificial Intelligence and Games}}.
+\newblock {\em Artificial Intelligence and Games}.
 \newblock Springer, 2018.
 \newblock \url{http://gameaibook.org}.
 

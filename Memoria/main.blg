@@ -3,53 +3,49 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main.aux
 The style file: es-alpha.bst
 Database file #1: main.bib
-Warning--I didn't find a database entry for "game-design-patterns"
-Warning--I didn't find a database entry for "game_design_patters"
-Warning--to sort, need author, editor, or key in libro_blanco
-Warning--to sort, need author or key in unity_manual
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--empty publisher in libro_blanco
 Warning--empty publisher in libro_esi
-Warning--empty author and editor in libro_blanco
-You've used 16 entries,
+You've used 12 entries,
             3036 wiz_defined-function locations,
-            711 strings with 7538 characters,
-and the built_in function-call counts, 5562 in all, are:
-= -- 470
-> -- 136
-< -- 13
-+ -- 36
-- -- 36
-* -- 270
-:= -- 784
-add.period$ -- 47
-call.type$ -- 16
-change.case$ -- 73
-chr.to.int$ -- 16
-cite$ -- 22
-duplicate$ -- 329
-empty$ -- 653
-format.name$ -- 60
-if$ -- 1257
+            699 strings with 6820 characters,
+and the built_in function-call counts, 4965 in all, are:
+= -- 445
+> -- 108
+< -- 14
++ -- 28
+- -- 28
+* -- 241
+:= -- 713
+add.period$ -- 37
+call.type$ -- 12
+change.case$ -- 55
+chr.to.int$ -- 12
+cite$ -- 14
+duplicate$ -- 301
+empty$ -- 531
+format.name$ -- 49
+if$ -- 1136
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 15
-newline$ -- 93
-num.names$ -- 42
-pop$ -- 223
+newline$ -- 75
+num.names$ -- 37
+pop$ -- 155
 preamble$ -- 1
-purify$ -- 96
+purify$ -- 73
 quote$ -- 0
-skip$ -- 212
+skip$ -- 209
 stack$ -- 0
-substring$ -- 240
-swap$ -- 37
-text.length$ -- 13
-text.prefix$ -- 10
+substring$ -- 294
+swap$ -- 67
+text.length$ -- 14
+text.prefix$ -- 9
 top$ -- 0
-type$ -- 100
-warning$ -- 4
-while$ -- 36
-width$ -- 19
-write$ -- 202
-(There were 6 warnings)
+type$ -- 72
+warning$ -- 2
+while$ -- 37
+width$ -- 16
+write$ -- 164
+(There were 2 warnings)
