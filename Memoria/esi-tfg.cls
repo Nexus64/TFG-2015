@@ -204,9 +204,9 @@
 
 
 %% -- BIBLIOGRAFÍA -------------------------------------------------------------
-\bibliographystyle{es-alpha}
+%\bibliographystyle{es-alpha}
 
-\newcommand{\bibfont}{\small}      % Bibliography's font size
+%\newcommand{\bibfont}{\small}      % Bibliography's font size
 %% \setlength{\bibhang}{4ex}       % Indent of Bibliography entries
 %% \setlength{\bibsep}{3pt}
 

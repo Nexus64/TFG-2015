@@ -1,0 +1,13 @@
+\DeclareCiteCommand{\citegame}
+  {\boolfalse{citetracker}%
+   \boolfalse{pagetracker}%
+   \usebibmacro{prenote}}
+  {\ifentrytype{software}{%
+    \printfield{title}%
+    \setunit{\addspace}%
+    \printtext[parens]{%
+    \printnames{author}%
+    \setunit{\addcomma\space}%
+    \printfield{year}}}{\GenericError{}{Not a game entry}{}{}}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}

@@ -1,81 +1,844 @@
-\begin{thebibliography}{DEV17}
-\ifx \showCODEN  \undefined \def \showCODEN #1{CODEN #1}  \fi
-\ifx \showISBN   \undefined \def \showISBN  #1{ISBN #1}   \fi
-\ifx \showISSN   \undefined \def \showISSN  #1{ISSN #1}   \fi
-\ifx \showLCCN   \undefined \def \showLCCN  #1{LCCN #1}   \fi
-\ifx \showPRICE  \undefined \def \showPRICE #1{#1}        \fi
-\ifx \showURL    \undefined \def \showURL {URL }          \fi
-\ifx \path       \undefined \input path.sty               \fi
-\ifx \ifshowURL \undefined
-     \newif \ifshowURL
-     \showURLtrue
-\fi
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem[Bat04]{game_design_2}
-Bob Bates.
-\newblock {\em Game Design}.
-\newblock Thomson Course Technology, Boston, 2004.
 
-\bibitem[Bet03]{development_and_production}
-Erik Bethke.
-\newblock {\em Game Development and Production}.
-\newblock Wordware Publishing, Plano, Texas, 2003.
+\refsection{0}
+  \sortlist[entry]{anyt/global/}
+    \entry{flow}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=55ef27ec6510f31545f9d1929db51c31}{%
+           family={Baron},
+           familyi={B\bibinitperiod},
+           given={Sean},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{55ef27ec6510f31545f9d1929db51c31}
+      \strng{fullhash}{55ef27ec6510f31545f9d1929db51c31}
+      \strng{authornamehash}{55ef27ec6510f31545f9d1929db51c31}
+      \strng{authorfullhash}{55ef27ec6510f31545f9d1929db51c31}
+      \field{labelalpha}{Bar}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cognitive Flow: The Psychology of Great Game Design}
+      \verb{url}
+      \verb https://www.gamasutra.com/view/feature/166972/cognitive_flow_the_psychology_of_.php
+      \endverb
+    \endentry
+    \entry{game_design_2}{book}{}
+      \name{author}{1}{}{%
+        {{hash=2ce71103239fb5089109b4ea4487c431}{%
+           family={Bates},
+           familyi={B\bibinitperiod},
+           given={Bob},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston}%
+      }
+      \list{publisher}{1}{%
+        {Thomson Course Technology}%
+      }
+      \strng{namehash}{2ce71103239fb5089109b4ea4487c431}
+      \strng{fullhash}{2ce71103239fb5089109b4ea4487c431}
+      \strng{authornamehash}{2ce71103239fb5089109b4ea4487c431}
+      \strng{authorfullhash}{2ce71103239fb5089109b4ea4487c431}
+      \field{labelalpha}{Bat04}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Game Design}
+      \field{year}{2004}
+    \endentry
+    \entry{development_and_production}{book}{}
+      \name{author}{1}{}{%
+        {{hash=818ea70f86763e77cdef90513a98a8e0}{%
+           family={Bethke},
+           familyi={B\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Plano, Texas}%
+      }
+      \list{publisher}{1}{%
+        {Wordware Publishing}%
+      }
+      \strng{namehash}{818ea70f86763e77cdef90513a98a8e0}
+      \strng{fullhash}{818ea70f86763e77cdef90513a98a8e0}
+      \strng{authornamehash}{818ea70f86763e77cdef90513a98a8e0}
+      \strng{authorfullhash}{818ea70f86763e77cdef90513a98a8e0}
+      \field{labelalpha}{Bet03}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Game Development and Production}
+      \field{year}{2003}
+    \endentry
+    \entry{game_design_patterns}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=f30d91288bf1361c7b926aca82f086c3}{%
+           family={Bjork},
+           familyi={B\bibinitperiod},
+           given={Staffan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{f30d91288bf1361c7b926aca82f086c3}
+      \strng{fullhash}{f30d91288bf1361c7b926aca82f086c3}
+      \strng{authornamehash}{f30d91288bf1361c7b926aca82f086c3}
+      \strng{authorfullhash}{f30d91288bf1361c7b926aca82f086c3}
+      \field{labelalpha}{Bjo}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Game Design Patterns}
+      \verb{url}
+      \verb http://virt10.itu.chalmers.se/index.php/Main_Page
+      \endverb
+    \endentry
+    \entry{breaking_game_industry}{book}{}
+      \name{author}{2}{}{%
+        {{hash=fcbd38f766229b21f3a9d402dc4f6a29}{%
+           family={Brathwaite},
+           familyi={B\bibinitperiod},
+           given={Brenda},
+           giveni={B\bibinitperiod}}}%
+        {{hash=c7f489bf48510592078d2131fcf613c8}{%
+           family={Schreiber},
+           familyi={S\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston}%
+      }
+      \list{publisher}{1}{%
+        {Course Technology}%
+      }
+      \strng{namehash}{94148cddb24574dc1ed2879b4fb57abf}
+      \strng{fullhash}{94148cddb24574dc1ed2879b4fb57abf}
+      \strng{authornamehash}{94148cddb24574dc1ed2879b4fb57abf}
+      \strng{authorfullhash}{94148cddb24574dc1ed2879b4fb57abf}
+      \field{labelalpha}{BS12}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Breaking into the Game Industry: Advice for a Successful Career from Those Who Have Done It}
+      \field{year}{2012}
+    \endentry
+    \entry{street_fighters_2}{software}{}
+      \name{author}{1}{}{%
+        {{hash=cd34b4df822d7a86e30339f947aa1880}{%
+           family={Capcom},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{cd34b4df822d7a86e30339f947aa1880}
+      \strng{fullhash}{cd34b4df822d7a86e30339f947aa1880}
+      \strng{authornamehash}{cd34b4df822d7a86e30339f947aa1880}
+      \strng{authorfullhash}{cd34b4df822d7a86e30339f947aa1880}
+      \field{labelalpha}{Cap91}
+      \field{sortinit}{C}
+      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{6}
+      \field{month}{2}
+      \field{title}{Street Fighter II: The World Warrior}
+      \field{year}{1991}
+      \field{dateera}{ce}
+    \endentry
+    \entry{dragon_quest}{software}{}
+      \name{author}{1}{}{%
+        {{hash=d0947731579960080b4e96a080b8c677}{%
+           family={Chunsoft},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{d0947731579960080b4e96a080b8c677}
+      \strng{fullhash}{d0947731579960080b4e96a080b8c677}
+      \strng{authornamehash}{d0947731579960080b4e96a080b8c677}
+      \strng{authorfullhash}{d0947731579960080b4e96a080b8c677}
+      \field{labelalpha}{Chu86}
+      \field{sortinit}{C}
+      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{27}
+      \field{month}{5}
+      \field{title}{Dragon Quest}
+      \field{year}{1986}
+      \field{dateera}{ce}
+    \endentry
+    \entry{libro_esi}{book}{}
+      \name{author}{1}{}{%
+        {{hash=8fae8dba8bf82b0e106aa10aff7a6183}{%
+           family={David\bibnamedelima Vallejo},
+           familyi={D\bibinitperiod\bibinitdelim V\bibinitperiod},
+           given={David\bibnamedelima Villa},
+           giveni={D\bibinitperiod\bibinitdelim V\bibinitperiod},
+           suffix={Carlos\bibnamedelima González},
+           suffixi={C\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Ciudad Real, España}%
+      }
+      \strng{namehash}{8fae8dba8bf82b0e106aa10aff7a6183}
+      \strng{fullhash}{8fae8dba8bf82b0e106aa10aff7a6183}
+      \strng{authornamehash}{8fae8dba8bf82b0e106aa10aff7a6183}
+      \strng{authorfullhash}{8fae8dba8bf82b0e106aa10aff7a6183}
+      \field{labelalpha}{Dav15}
+      \field{sortinit}{D}
+      \field{sortinithash}{d10b5413de1f3d197b20897dd0d565bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Desarrollo de Videojuegos: Un Enfoque Práctico}
+      \field{year}{2015}
+    \endentry
+    \entry{libro_blanco}{book}{}
+      \name{editor}{1}{}{%
+        {{hash=a2560f710f5b6accc98142da087cc674}{%
+           family={DEV},
+           familyi={D\bibinitperiod},
+           given={Desarrollo\bibnamedelimb Español\bibnamedelimb del\bibnamedelima Videojuego},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Madrid, España}%
+      }
+      \strng{namehash}{a2560f710f5b6accc98142da087cc674}
+      \strng{fullhash}{a2560f710f5b6accc98142da087cc674}
+      \strng{editornamehash}{a2560f710f5b6accc98142da087cc674}
+      \strng{editorfullhash}{a2560f710f5b6accc98142da087cc674}
+      \field{labelalpha}{DEV17}
+      \field{sortinit}{D}
+      \field{sortinithash}{d10b5413de1f3d197b20897dd0d565bb}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{title}{Libro Blanco del Desarrollo Español del Videojuego}
+      \field{year}{2017}
+    \endentry
+    \entry{oxo}{software}{}
+      \name{author}{1}{}{%
+        {{hash=a354b591c3050e09131699128f1bfa50}{%
+           family={Douglas},
+           familyi={D\bibinitperiod},
+           given={Alexander\bibnamedelima S.},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{a354b591c3050e09131699128f1bfa50}
+      \strng{fullhash}{a354b591c3050e09131699128f1bfa50}
+      \strng{authornamehash}{a354b591c3050e09131699128f1bfa50}
+      \strng{authorfullhash}{a354b591c3050e09131699128f1bfa50}
+      \field{labelalpha}{Dou52}
+      \field{sortinit}{D}
+      \field{sortinithash}{d10b5413de1f3d197b20897dd0d565bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{OXO}
+      \field{year}{1952}
+      \field{dateera}{ce}
+    \endentry
+    \entry{final_fantasy_15}{software}{}
+      \name{author}{1}{}{%
+        {{hash=f0874b3a9b6ad07e6a68d7864b5bfc9a}{%
+           family={Enix},
+           familyi={E\bibinitperiod},
+           given={Square},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{f0874b3a9b6ad07e6a68d7864b5bfc9a}
+      \strng{fullhash}{f0874b3a9b6ad07e6a68d7864b5bfc9a}
+      \strng{authornamehash}{f0874b3a9b6ad07e6a68d7864b5bfc9a}
+      \strng{authorfullhash}{f0874b3a9b6ad07e6a68d7864b5bfc9a}
+      \field{labelalpha}{Eni16}
+      \field{sortinit}{E}
+      \field{sortinithash}{07bbd5a529b5beaa311df5be05b874bc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{29}
+      \field{month}{11}
+      \field{title}{Final Fantasy XV}
+      \field{year}{2016}
+      \field{dateera}{ce}
+    \endentry
+    \entry{world_of_warcraft}{software}{}
+      \name{author}{1}{}{%
+        {{hash=201257b39c508a1377807825e3ad0ca2}{%
+           family={Entertainment},
+           familyi={E\bibinitperiod},
+           given={Blizzard},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{201257b39c508a1377807825e3ad0ca2}
+      \strng{fullhash}{201257b39c508a1377807825e3ad0ca2}
+      \strng{authornamehash}{201257b39c508a1377807825e3ad0ca2}
+      \strng{authorfullhash}{201257b39c508a1377807825e3ad0ca2}
+      \field{labelalpha}{Ent04}
+      \field{sortinit}{E}
+      \field{sortinithash}{07bbd5a529b5beaa311df5be05b874bc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{23}
+      \field{month}{11}
+      \field{title}{World of Warcraft}
+      \field{year}{2004}
+      \field{dateera}{ce}
+      \verb{url}
+      \verb https://worldofwarcraft.com
+      \endverb
+    \endentry
+    \entry{league_of_legends}{software}{}
+      \name{author}{1}{}{%
+        {{hash=88c35b9a642a0f10b3fdba232e42fdba}{%
+           family={Games},
+           familyi={G\bibinitperiod},
+           given={Riot},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{88c35b9a642a0f10b3fdba232e42fdba}
+      \strng{fullhash}{88c35b9a642a0f10b3fdba232e42fdba}
+      \strng{authornamehash}{88c35b9a642a0f10b3fdba232e42fdba}
+      \strng{authorfullhash}{88c35b9a642a0f10b3fdba232e42fdba}
+      \field{labelalpha}{Gam09}
+      \field{sortinit}{G}
+      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{27}
+      \field{month}{10}
+      \field{title}{League of Legends}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \verb{url}
+      \verb https://leagueoflegends.com
+      \endverb
+    \endentry
+    \entry{game_engine_architecture}{book}{}
+      \name{author}{1}{}{%
+        {{hash=b97f772b60bfb5bf77251b45263e44dd}{%
+           family={Gregory},
+           familyi={G\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Wellesley, Massachusetts}%
+      }
+      \list{publisher}{1}{%
+        {A K Peters, Ltd.}%
+      }
+      \strng{namehash}{b97f772b60bfb5bf77251b45263e44dd}
+      \strng{fullhash}{b97f772b60bfb5bf77251b45263e44dd}
+      \strng{authornamehash}{b97f772b60bfb5bf77251b45263e44dd}
+      \strng{authorfullhash}{b97f772b60bfb5bf77251b45263e44dd}
+      \field{labelalpha}{Gre09}
+      \field{sortinit}{G}
+      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Game Engine Architecture}
+      \field{year}{2009}
+    \endentry
+    \entry{web_4_0}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=033c9f46539b66f26f756865e161a20a}{%
+           family={Lydon},
+           familyi={L\bibinitperiod},
+           given={Bill},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{033c9f46539b66f26f756865e161a20a}
+      \strng{fullhash}{033c9f46539b66f26f756865e161a20a}
+      \strng{authornamehash}{033c9f46539b66f26f756865e161a20a}
+      \strng{authorfullhash}{033c9f46539b66f26f756865e161a20a}
+      \field{labelalpha}{Lyd}
+      \field{sortinit}{L}
+      \field{sortinithash}{7bba64db83423e3c29ad597f3b682cf3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Industry 4.0 - Only One-Tenth of Germany's High-Tech Strategy}
+      \verb{url}
+      \verb https://www.automation.com/automation-news/article/industry-40-only-one-tenth-of-germanys-high-tech-strategy
+      \endverb
+    \endentry
+    \entry{sims}{software}{}
+      \name{author}{1}{}{%
+        {{hash=ef4fa7222f3109d16d43931b916e5254}{%
+           family={Maxis},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{ef4fa7222f3109d16d43931b916e5254}
+      \strng{fullhash}{ef4fa7222f3109d16d43931b916e5254}
+      \strng{authornamehash}{ef4fa7222f3109d16d43931b916e5254}
+      \strng{authorfullhash}{ef4fa7222f3109d16d43931b916e5254}
+      \field{labelalpha}{Max00}
+      \field{sortinit}{M}
+      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{4}
+      \field{month}{2}
+      \field{title}{The Sims}
+      \field{year}{2000}
+      \field{dateera}{ce}
+    \endentry
+    \entry{unreal}{software}{}
+      \name{author}{1}{}{%
+        {{hash=525176c8483cbcb88aa4b88a0709c4f4}{%
+           family={MegaGames},
+           familyi={M\bibinitperiod},
+           given={Epic},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{525176c8483cbcb88aa4b88a0709c4f4}
+      \strng{fullhash}{525176c8483cbcb88aa4b88a0709c4f4}
+      \strng{authornamehash}{525176c8483cbcb88aa4b88a0709c4f4}
+      \strng{authorfullhash}{525176c8483cbcb88aa4b88a0709c4f4}
+      \field{labelalpha}{Meg98}
+      \field{sortinit}{M}
+      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{22}
+      \field{month}{5}
+      \field{title}{Unreal}
+      \field{year}{1998}
+      \field{dateera}{ce}
+    \endentry
+    \entry{minecraft}{software}{}
+      \name{author}{1}{}{%
+        {{hash=0cb7511908b2b8719d8a29e921561e21}{%
+           family={Mojang},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{0cb7511908b2b8719d8a29e921561e21}
+      \strng{fullhash}{0cb7511908b2b8719d8a29e921561e21}
+      \strng{authornamehash}{0cb7511908b2b8719d8a29e921561e21}
+      \strng{authorfullhash}{0cb7511908b2b8719d8a29e921561e21}
+      \field{labelalpha}{Moj11}
+      \field{sortinit}{M}
+      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{18}
+      \field{month}{11}
+      \field{title}{Minecraft}
+      \field{year}{2011}
+      \field{dateera}{ce}
+    \endentry
+    \entry{donkey_kong}{software}{}
+      \name{author}{1}{}{%
+        {{hash=073b7e4ff1d153a52b07eadb5898cb92}{%
+           family={Nintendo},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{073b7e4ff1d153a52b07eadb5898cb92}
+      \strng{fullhash}{073b7e4ff1d153a52b07eadb5898cb92}
+      \strng{authornamehash}{073b7e4ff1d153a52b07eadb5898cb92}
+      \strng{authorfullhash}{073b7e4ff1d153a52b07eadb5898cb92}
+      \field{labelalpha}{Nin81}
+      \field{sortinit}{N}
+      \field{sortinithash}{1163c28585427c673ad5a010cbf82f52}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{9}
+      \field{month}{7}
+      \field{title}{Donkey Kong}
+      \field{year}{1981}
+      \field{dateera}{ce}
+    \endentry
+    \entry{super_mario_bros}{software}{}
+      \name{author}{1}{}{%
+        {{hash=073b7e4ff1d153a52b07eadb5898cb92}{%
+           family={Nintendo},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{073b7e4ff1d153a52b07eadb5898cb92}
+      \strng{fullhash}{073b7e4ff1d153a52b07eadb5898cb92}
+      \strng{authornamehash}{073b7e4ff1d153a52b07eadb5898cb92}
+      \strng{authorfullhash}{073b7e4ff1d153a52b07eadb5898cb92}
+      \field{labelalpha}{Nin85}
+      \field{sortinit}{N}
+      \field{sortinithash}{1163c28585427c673ad5a010cbf82f52}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{13}
+      \field{month}{9}
+      \field{title}{Super Mario Bros.}
+      \field{year}{1985}
+      \field{dateera}{ce}
+    \endentry
+    \entry{legend_of_zelda}{software}{}
+      \name{author}{1}{}{%
+        {{hash=073b7e4ff1d153a52b07eadb5898cb92}{%
+           family={Nintendo},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{073b7e4ff1d153a52b07eadb5898cb92}
+      \strng{fullhash}{073b7e4ff1d153a52b07eadb5898cb92}
+      \strng{authornamehash}{073b7e4ff1d153a52b07eadb5898cb92}
+      \strng{authorfullhash}{073b7e4ff1d153a52b07eadb5898cb92}
+      \field{labelalpha}{Nin86}
+      \field{sortinit}{N}
+      \field{sortinithash}{1163c28585427c673ad5a010cbf82f52}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{21}
+      \field{month}{2}
+      \field{title}{The Legend of Zelda}
+      \field{year}{1986}
+      \field{dateera}{ce}
+    \endentry
+    \entry{game_programming_patterns}{book}{}
+      \name{author}{1}{}{%
+        {{hash=26313e6493577f16e529ef2698d1a15c}{%
+           family={Nystrom},
+           familyi={N\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Geneber Benning}%
+      }
+      \strng{namehash}{26313e6493577f16e529ef2698d1a15c}
+      \strng{fullhash}{26313e6493577f16e529ef2698d1a15c}
+      \strng{authornamehash}{26313e6493577f16e529ef2698d1a15c}
+      \strng{authorfullhash}{26313e6493577f16e529ef2698d1a15c}
+      \field{labelalpha}{Nys04}
+      \field{sortinit}{N}
+      \field{sortinithash}{1163c28585427c673ad5a010cbf82f52}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Game Programming Patterns}
+      \field{year}{2004}
+    \endentry
+    \entry{machine_learning}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c8708b20260313e0b68f15695f15986f}{%
+           family={Samuel},
+           familyi={S\bibinitperiod},
+           given={Arthur\bibnamedelima L.},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{c8708b20260313e0b68f15695f15986f}
+      \strng{fullhash}{c8708b20260313e0b68f15695f15986f}
+      \strng{authornamehash}{c8708b20260313e0b68f15695f15986f}
+      \strng{authorfullhash}{c8708b20260313e0b68f15695f15986f}
+      \field{labelalpha}{Sam59}
+      \field{sortinit}{S}
+      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IBM Journal of Research and Development}
+      \field{title}{Some Studies in Machine Learning Using the Game of Checkers}
+      \field{year}{1959}
+      \field{pages}{210\bibrangedash 229}
+      \range{pages}{20}
+    \endentry
+    \entry{cyber_physics}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b925ba8c3779728e24ae613c4e7d11d0}{%
+           family={Siddhartha\bibnamedelimb Kumar\bibnamedelima Khaitan},
+           familyi={S\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={James\bibnamedelimb D.\bibnamedelimi McCalley},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{b925ba8c3779728e24ae613c4e7d11d0}
+      \strng{fullhash}{b925ba8c3779728e24ae613c4e7d11d0}
+      \strng{authornamehash}{b925ba8c3779728e24ae613c4e7d11d0}
+      \strng{authorfullhash}{b925ba8c3779728e24ae613c4e7d11d0}
+      \field{labelalpha}{Sid14}
+      \field{sortinit}{S}
+      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Systems Journal}
+      \field{number}{2}
+      \field{title}{Design Techniques and Applications of Cyber Physical Systems: A Survey}
+      \field{volume}{9}
+      \field{year}{2014}
+      \field{pages}{350\bibrangedash 365}
+      \range{pages}{16}
+      \verb{doi}
+      \verb https://doi.org/10.1109/JSYST.2014.2322503
+      \endverb
+    \endentry
+    \entry{doom}{software}{}
+      \name{author}{1}{}{%
+        {{hash=52179c80aa6f9bfc5552b66ba4b1d86b}{%
+           family={Software},
+           familyi={S\bibinitperiod},
+           prefix={id},
+           prefixi={i\bibinitperiod}}}%
+      }
+      \strng{namehash}{52179c80aa6f9bfc5552b66ba4b1d86b}
+      \strng{fullhash}{52179c80aa6f9bfc5552b66ba4b1d86b}
+      \strng{authornamehash}{52179c80aa6f9bfc5552b66ba4b1d86b}
+      \strng{authorfullhash}{52179c80aa6f9bfc5552b66ba4b1d86b}
+      \field{labelalpha}{Sof93}
+      \field{sortinit}{S}
+      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{10}
+      \field{month}{12}
+      \field{title}{Doom}
+      \field{year}{1993}
+      \field{dateera}{ce}
+    \endentry
+    \entry{heretic}{software}{}
+      \name{author}{1}{}{%
+        {{hash=03a83107c920fe37c5892421ff5bc735}{%
+           family={Software},
+           familyi={S\bibinitperiod},
+           given={Raven},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{03a83107c920fe37c5892421ff5bc735}
+      \strng{fullhash}{03a83107c920fe37c5892421ff5bc735}
+      \strng{authornamehash}{03a83107c920fe37c5892421ff5bc735}
+      \strng{authorfullhash}{03a83107c920fe37c5892421ff5bc735}
+      \field{labelalpha}{Sof94}
+      \field{sortinit}{S}
+      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{23}
+      \field{month}{12}
+      \field{title}{Heretic}
+      \field{year}{1994}
+      \field{dateera}{ce}
+    \endentry
+    \entry{quake}{software}{}
+      \name{author}{1}{}{%
+        {{hash=52179c80aa6f9bfc5552b66ba4b1d86b}{%
+           family={Software},
+           familyi={S\bibinitperiod},
+           prefix={id},
+           prefixi={i\bibinitperiod}}}%
+      }
+      \strng{namehash}{52179c80aa6f9bfc5552b66ba4b1d86b}
+      \strng{fullhash}{52179c80aa6f9bfc5552b66ba4b1d86b}
+      \strng{authornamehash}{52179c80aa6f9bfc5552b66ba4b1d86b}
+      \strng{authorfullhash}{52179c80aa6f9bfc5552b66ba4b1d86b}
+      \field{labelalpha}{Sof96}
+      \field{sortinit}{S}
+      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{22}
+      \field{month}{6}
+      \field{title}{Quake}
+      \field{year}{1996}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Quake_3}{software}{}
+      \name{author}{1}{}{%
+        {{hash=52179c80aa6f9bfc5552b66ba4b1d86b}{%
+           family={Software},
+           familyi={S\bibinitperiod},
+           prefix={id},
+           prefixi={i\bibinitperiod}}}%
+      }
+      \strng{namehash}{52179c80aa6f9bfc5552b66ba4b1d86b}
+      \strng{fullhash}{52179c80aa6f9bfc5552b66ba4b1d86b}
+      \strng{authornamehash}{52179c80aa6f9bfc5552b66ba4b1d86b}
+      \strng{authorfullhash}{52179c80aa6f9bfc5552b66ba4b1d86b}
+      \field{labelalpha}{Sof99}
+      \field{sortinit}{S}
+      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{2}
+      \field{month}{12}
+      \field{title}{Quake III Arena}
+      \field{year}{1999}
+      \field{dateera}{ce}
+    \endentry
+    \entry{chrono_trigger}{software}{}
+      \name{author}{1}{}{%
+        {{hash=ceb46ca115d05c51aa5a16a8867c3304}{%
+           family={Square},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{ceb46ca115d05c51aa5a16a8867c3304}
+      \strng{fullhash}{ceb46ca115d05c51aa5a16a8867c3304}
+      \strng{authornamehash}{ceb46ca115d05c51aa5a16a8867c3304}
+      \strng{authorfullhash}{ceb46ca115d05c51aa5a16a8867c3304}
+      \field{labelalpha}{Squ95}
+      \field{sortinit}{S}
+      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{11}
+      \field{month}{3}
+      \field{title}{Chrono Trigger}
+      \field{year}{1995}
+      \field{dateera}{ce}
+    \endentry
+    \entry{unity_manual}{misc}{}
+      \name{editor}{1}{}{%
+        {{hash=90be999720b0d0b2a8d5132207c73182}{%
+           family={Technologies},
+           familyi={T\bibinitperiod},
+           given={Unity},
+           giveni={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{90be999720b0d0b2a8d5132207c73182}
+      \strng{fullhash}{90be999720b0d0b2a8d5132207c73182}
+      \strng{editornamehash}{90be999720b0d0b2a8d5132207c73182}
+      \strng{editorfullhash}{90be999720b0d0b2a8d5132207c73182}
+      \field{labelalpha}{Tec}
+      \field{sortinit}{T}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{title}{Unity Manual}
+      \verb{url}
+      \verb https://docs.unity3d.com/Manual/UnityManual.html
+      \endverb
+    \endentry
+    \entry{turing_chess}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a0c12e7cf80dbccc7fe8fd0b80f92a48}{%
+           family={Turing},
+           familyi={T\bibinitperiod},
+           given={Alan\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{a0c12e7cf80dbccc7fe8fd0b80f92a48}
+      \strng{fullhash}{a0c12e7cf80dbccc7fe8fd0b80f92a48}
+      \strng{authornamehash}{a0c12e7cf80dbccc7fe8fd0b80f92a48}
+      \strng{authorfullhash}{a0c12e7cf80dbccc7fe8fd0b80f92a48}
+      \field{labelalpha}{Tur53}
+      \field{sortinit}{T}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Faster than thought}
+      \field{title}{Digital computers applied to games}
+      \field{year}{1953}
+      \field{pages}{101}
+      \range{pages}{1}
+    \endentry
+    \entry{team_fortress_2}{software}{}
+      \name{author}{1}{}{%
+        {{hash=104400e7d4632e6a82bf0b206b9c32dd}{%
+           family={Valve},
+           familyi={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{104400e7d4632e6a82bf0b206b9c32dd}
+      \strng{fullhash}{104400e7d4632e6a82bf0b206b9c32dd}
+      \strng{authornamehash}{104400e7d4632e6a82bf0b206b9c32dd}
+      \strng{authorfullhash}{104400e7d4632e6a82bf0b206b9c32dd}
+      \field{labelalpha}{Val07}
+      \field{sortinit}{V}
+      \field{sortinithash}{555737dafdcf1396ebfeae5822e5bde2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{10}
+      \field{month}{10}
+      \field{title}{Team Fortress 2}
+      \field{year}{2007}
+      \field{dateera}{ce}
+      \verb{url}
+      \verb https://teamfortress.com
+      \endverb
+    \endentry
+    \entry{game_engine}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=2ae71a544bfeb82f67f353a353a1d0e8}{%
+           family={Ward},
+           familyi={W\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{2ae71a544bfeb82f67f353a353a1d0e8}
+      \strng{fullhash}{2ae71a544bfeb82f67f353a353a1d0e8}
+      \strng{authornamehash}{2ae71a544bfeb82f67f353a353a1d0e8}
+      \strng{authorfullhash}{2ae71a544bfeb82f67f353a353a1d0e8}
+      \field{labelalpha}{War}
+      \field{sortinit}{W}
+      \field{sortinithash}{6d25b3eefe5aa2147d1f339686808918}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is a Game Engine?}
+      \verb{url}
+      \verb https://www.gamecareerguide.com/features/529/what_is_a_game_.php
+      \endverb
+    \endentry
+    \entry{ai_revisited}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5240cb608961fd79fbb43f35a1f07fd2}{%
+           family={Yannakakis},
+           familyi={Y\bibinitperiod},
+           given={Georgios\bibnamedelima N.},
+           giveni={G\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \strng{namehash}{5240cb608961fd79fbb43f35a1f07fd2}
+      \strng{fullhash}{5240cb608961fd79fbb43f35a1f07fd2}
+      \strng{authornamehash}{5240cb608961fd79fbb43f35a1f07fd2}
+      \strng{authorfullhash}{5240cb608961fd79fbb43f35a1f07fd2}
+      \field{labelalpha}{Yan12}
+      \field{sortinit}{Y}
+      \field{sortinithash}{f86c10978eb0c0879609ce6a4f43da7b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the 9th conference on Computing Frontiers}
+      \field{title}{Game AI Revisited}
+      \field{year}{2012}
+      \field{pages}{285\bibrangedash 292}
+      \range{pages}{8}
+    \endentry
+    \entry{ai_and_games}{book}{}
+      \name{author}{2}{}{%
+        {{hash=5240cb608961fd79fbb43f35a1f07fd2}{%
+           family={Yannakakis},
+           familyi={Y\bibinitperiod},
+           given={Georgios\bibnamedelima N.},
+           giveni={G\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=cbd110b21df9b90cd72ce148aa04de7f}{%
+           family={Togelius},
+           familyi={T\bibinitperiod},
+           given={Julian},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{28a7f47383a19b05e46ff8474447dedb}
+      \strng{fullhash}{28a7f47383a19b05e46ff8474447dedb}
+      \strng{authornamehash}{28a7f47383a19b05e46ff8474447dedb}
+      \strng{authorfullhash}{28a7f47383a19b05e46ff8474447dedb}
+      \field{labelalpha}{YT18}
+      \field{sortinit}{Y}
+      \field{sortinithash}{f86c10978eb0c0879609ce6a4f43da7b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{http://gameaibook.org}}
+      \field{title}{Artificial Intelligence and Games}
+      \field{year}{2018}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
 
-\bibitem[DEV17]{libro_blanco}
-Desarrollo Español del~Videojuego DEV, editor.
-\newblock {\em Libro Blanco del Desarrollo Español del Videojuego}.
-\newblock Madrid, España, 2017.
-
-\bibitem[DV15]{libro_esi}
-David~Villa David~Vallejo, Carlos~González.
-\newblock {\em Desarrollo de Videojuegos: Un Enfoque Práctico}.
-\newblock Ciudad Real, España, 2015.
-
-\bibitem[Gre09]{game_engine_architecture}
-Jason Gregory.
-\newblock {\em Game Engine Architecture}.
-\newblock A K Peters, Ltd., Wellesley, Massachusetts, 2009.
-
-\bibitem[Lyd]{web_4_0}
-Bill Lydon.
-\newblock Industry 4.0 - only one-tenth of germany's high-tech strategy.
-\newblock \ifshowURL {\showURL
-  \path|https://www.automation.com/automation-news/article/industry-40-only-one-tenth-of-germanys-high-tech-strategy|}\fi.
-
-\bibitem[Sam59]{machine_learning}
-Arthur~L. Samuel.
-\newblock Some studies in machine learning using the game of checkers.
-\newblock {\em IBM Journal of Research and Development}, pages 210 -- 229,
-  1959.
-
-\bibitem[SKK14]{cyber_physics}
-James D.~McCalley Siddhartha Kumar~Khaitan.
-\newblock Design techniques and applications of cyber physical systems: A
-  survey.
-\newblock {\em IEEE Systems Journal}, 9\penalty0 (2):\penalty0 350 -- 365,
-  2014.
-
-\bibitem[Tur53]{turing_chess}
-Alan~M. Turing.
-\newblock Digital computers applied to games.
-\newblock {\em Faster than thought}, page 101, 1953.
-
-\bibitem[War]{game_engine}
-Jeff Ward.
-\newblock What is a game engine?
-\newblock \ifshowURL {\showURL
-  \path|https://www.gamecareerguide.com/features/529/what_is_a_game_.php|}\fi.
-
-\bibitem[Yan12]{ai_revisited}
-Georgios~N. Yannakakis.
-\newblock Game ai revisited.
-\newblock {\em Proceedings of the 9th conference on Computing Frontiers}, pages
-  285 -- 292, 2012.
-
-\bibitem[YT18]{ai_and_games}
-Georgios~N. Yannakakis and Julian Togelius.
-\newblock {\em Artificial Intelligence and Games}.
-\newblock Springer, 2018.
-\newblock \url{http://gameaibook.org}.
-
-\end{thebibliography}

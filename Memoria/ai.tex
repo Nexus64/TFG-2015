@@ -2,7 +2,7 @@
 \subsection{Historia}
 Desde los principios de la inteligencia artificial, los expertos han dedicado una importante cantidad de tiempo y esfuerzo para construir sistemas inteligentes con el propósito de que pudiesen jugar a juegos con un nivel igual o superior al humano. Este enfoque en el estudio de los juegos se debe a que ofrecen un campo de estudio ideal para la inteligencia artificial: los juegos son problemas complejos que ofrecen desafíos para múltiples campos de la inteligencia artificial y además son tan populares que se dispone de cantidades inmensas de información sobre ellos\cite{ai_and_games}.
 
-Los primeros programas capaces de jugar contra humanos surgieron en los años cincuenta. Uno de los ejemplos más antiguos es el algoritmo ajedrecista de Alan Turing de 1948\cite{turing_chess}, el cual era ``ejecutado'' en papel por un humano que seguía manualmente los pasos del algoritmo. El primer Software capaz de jugar a un jugo fue la inteligencia artificial para el juego OXO, programada por Alexander Douglas en 1952. En 1959, Arthur L. Samuel\cite{machine_learning} programo una inteligencia artificial para jugar a las Damas la cual contaba con un sistema de aprendizaje. 
+Los primeros programas capaces de jugar contra humanos surgieron en los años cincuenta. Uno de los ejemplos más antiguos es el algoritmo ajedrecista de Alan Turing de 1948\cite{turing_chess}, el cual era ``ejecutado'' en papel por un humano que seguía manualmente los pasos del algoritmo. El primer Software capaz de jugar a un jugo fue la inteligencia artificial para el juego \citegame{oxo}. En 1959, Arthur L. Samuel\cite{machine_learning} programo una inteligencia artificial para jugar a las Damas la cual contaba con un sistema de aprendizaje. 
 
 Sin embargo, estos programas eran muy simples y no planteaban reto alguno contra jugadores experimentados cuando se trataba de juegos con una cierta complejidad, como el ajedrez. Hubo que esperar a los años noventa para que empezaran a surgir programas capaces de derrotar a grandes maestros de distintos juegos: en el año 1994 el programa Chinook Checkers derrotó al campeón mundial de la Damas Marion Tinsley\footnote{https://webdocs.cs.ualberta.ca/~chinook/project/} y 3 años más tarde el super-ordenador Deep Blue venció a Gary Kasparov\footnote{http://www-03.ibm.com/ibm/history/ibm100/us/en/icons/deepblue/}. Hoy en día, la inteligencia artificial ha demostrado ser capaz de superar a los jugadores humanos en casi cualquier juego, con ejemplos tales como la inteligencia artificial Watson ganando el concurso de televisión Jeopardy en 2011\footnote{https://www.youtube.com/watch?v=WFR3lOm\_xhE} o el programa AlphaGo derrotando a Ke Jie, el jugador número uno de Go\footnote{https://www.theverge.com/2017/5/25/15689462/alphago-ke-jie-game-2-result-google-deepmind-china} (un juego con una complejidad varios ordenes de magnitud superior al ajedrez).
 
@@ -24,7 +24,7 @@ En la mayoría de los juegos, la Inteligencia Artificial no se dedica al modelad
 \begin{figure}[h]
 	\includegraphics[width=0.8\textwidth]{images/estadodelarte/ai/sims-captura}
 	\centering
-	\caption{En Los Sims (Maxis, 2000-2014), los personajes pueden tomar decisiones basándose en sus gustos y necesidades.}
+	\caption{En \citegame{sims}, los personajes pueden tomar decisiones basándose en sus gustos y necesidades.}
 \end{figure}
 
 La otra aplicación principal en los videojuegos es la Generación Procedimental de Contenido. La generación Procedimental de Contenido es el nombre que reciben los métodos que permiten generar el contenido de un juego de forma automática o con solo un mínimo de intervención humana. Actualmente, la mayor parte de los juegos que hacen uso de la generación procedimental la utilizan para la creación automática de mapas o niveles o para la creación de objetos. La generación procedimental de contenido puede utilizarse tanto como una herramienta durante el desarrollo, que serviría para generar contenido que luego sería refinado por los desarrolladores; o podría formar parte del juego final, generando nuevo contenido al gusto del jugador de forma automática.
@@ -32,7 +32,7 @@ La otra aplicación principal en los videojuegos es la Generación Procedimental
 \begin{figure}[h]
 	\includegraphics[width=0.75\textwidth]{images/estadodelarte/ai/minecraft}
 	\centering
-	\caption{Minecraft (Mojam, 2009) es un ejemplo claro de generación procedimental de terrenos.}
+	\caption{\citegame{minecraft} es un ejemplo claro de generación procedimental de terrenos.}
 \end{figure}
 
 \subsection{Métodos de la IA}
@@ -93,10 +93,10 @@ La \textbf{Minería de Datos de Juego} es otro uso prometedor de la Inteligencia
 
 La \textbf{Dirección de Juegos} consiste en una Inteligencia Artificial que modifica eventos del juego en tiempo real basándose en las reacciones de los jugadores con acciones tales como modificar la dificultad, reproducir música y sonido o modificar el entorno con tal de mejorar la experiencia del jugador. Actualmente, los juegos que mejor ha implementado un sistema con esta propiedad es la saga Left 4 Death de Valve\footnote{http://www.l4d.com/blog/}. Se trata de una rama con mucho potencial que aún no ha sido explorado completamente.
 
-Finalmente, una tarea de gran importancia para los juegos online, a pesar de no formar parte de los juegos en si, es la \textbf{motorización de los chats}. El gran volumen de mensajes que se envían a través de los chats de los juegos online más populares hace que sea imposible la moderación manual, lo que crea un entorno de juego toxico para los jugadores. Compañías como Riot (creadora del popular MOBA League of Legends) están empezando a utilizar algoritmos de aprendizaje automático para entrenar sistemas para detectar y eliminar los mensajes inapropiados de los chats \footnote{https://www.nature.com/news/can-a-video-game-company-tame-toxic-behaviour-1.19647}.
+Finalmente, una tarea de gran importancia para los juegos online, a pesar de no formar parte de los juegos en si, es la \textbf{motorización de los chats}. El gran volumen de mensajes que se envían a través de los chats de los juegos online más populares hace que sea imposible la moderación manual, lo que crea un entorno de juego toxico para los jugadores. Compañías como Riot Games están empezando a utilizar algoritmos de aprendizaje automático para entrenar sistemas para detectar y eliminar los mensajes inapropiados de los chats \footnote{https://www.nature.com/news/can-a-video-game-company-tame-toxic-behaviour-1.19647}.
 
 \begin{figure}[h]
 	\includegraphics[width=0.45\textwidth]{images/estadodelarte/ai/lol-toxic-capture}
 	\centering
-	\caption{Ejemplo de comportamiento tóxico en League of Legends(Riot Games, 2009).}
+	\caption{Ejemplo de comportamiento tóxico en \citegame{league_of_legends}.}
 \end{figure}

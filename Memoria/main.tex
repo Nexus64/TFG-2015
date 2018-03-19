@@ -4,8 +4,12 @@
 \usepackage{custom}
 \usepackage{lmodern,textcomp}
 \usepackage{float}
-\input{metadata.tex}
+\usepackage[style=alphabetic]{biblatex}
 
+\input{metadata.tex}
+\addbibresource{bibliografia.bib} %Imports bibliography file
+\addbibresource{videojuegos.bib} %Imports bibliography file
+\input{bibconfig.tex}
 
 \begin{document}
 \cover
@@ -16,7 +20,7 @@
 \copyrightpage
 \jury
 
-%\input{resumen.tex}
+\input{resumen.tex}
 
 \input{thanks.tex}
 %\dedication{A alguien querido y/o respetado}
@@ -30,10 +34,10 @@
 
 \mainmatter
 
-%\input{intro.tex}
+\input{intro.tex}
 \input{estadoarte.tex}
-%\input{estructura.tex}
-%\input{futuro.tex}
+\input{estructura.tex}
+\input{futuro.tex}
 
 \backmatter
 
@@ -42,6 +46,10 @@
 %\input{anexo1.tex}
 %{\scriptsize \input{GFDL.tex}}
 
-\bibliography{main}
+\addcontentsline{toc}{chapter}{Bibliografía}
+\printbibliography[title={Bibliografía},nottype=software] 
+
+\addcontentsline{toc}{chapter}{Videojuegos}
+\printbibliography[title={Videojuegos},type=software] 
 \cleardoublepage
 \end{document}

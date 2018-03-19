@@ -1,38 +1,135 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
 \select@language {spanish}
+\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Crecimiento Mundial de la industria del videojuego (por plataformas).}}{1}{figure.1.1}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Distribuci\IeC {\'o}n por regiones del mercado del videojuego.}}{2}{figure.1.2}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Diez principales mercados del videojuego.}}{3}{figure.1.3}
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Mercado del Videojuego en Europa.}}{4}{figure.1.4}
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Distribuci\IeC {\'o}n de las empresas en Espa\IeC {\~n}a por n\IeC {\'u}mero de empleados.}}{5}{figure.1.5}
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Distribuci\IeC {\'o}n de las empresas en Espa\IeC {\~n}a por n\IeC {\'u}mero de empleados.}}{5}{figure.1.6}
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Fotograf\IeC {\'\i }a del torneo Intel\IeC {\textregistered } Extreme Masters en Katowice, Polonia}}{6}{figure.1.7}
-\contentsline {figure}{\numberline {1.8}{\ignorespaces Crecimiento del mercado del eSport}}{6}{figure.1.8}
-\contentsline {figure}{\numberline {1.9}{\ignorespaces League of Legends, uno de los eSports m\IeC {\'a}s populares}}{7}{figure.1.9}
-\contentsline {figure}{\numberline {1.10}{\ignorespaces Previsiones de crecimiento del mercado de Realidad Virtual y Aumentada (miles de millones de d\IeC {\'o}lares))}}{8}{figure.1.10}
-\contentsline {figure}{\numberline {1.11}{\ignorespaces De izquierda a derecha HTC Vive, Oculus Rift, Samsung VR y PlayStation VR}}{9}{figure.1.11}
-\contentsline {figure}{\numberline {1.12}{\ignorespaces \IeC {\'A}reas de la Industria 4.0}}{10}{figure.1.12}
-\contentsline {figure}{\numberline {1.13}{\ignorespaces Impresora 3d ``replicator'' de la compa\IeC {\~n}\IeC {\'\i }a Makerbot}}{11}{figure.1.13}
-\contentsline {figure}{\numberline {1.14}{\ignorespaces Etapas del desarrollo de un videojuego.}}{12}{figure.1.14}
-\contentsline {figure}{\numberline {1.15}{\ignorespaces Distribuci\IeC {\'o}n de roles en un equipo de desarrollo.}}{16}{figure.1.15}
-\contentsline {figure}{\numberline {1.16}{\ignorespaces Shigeru Miyamoto (creador de Super Mario, Zelda y Donkey Kong) es posiblemente el dise\IeC {\~n}ador de videjouegos m\IeC {\'a}s famoso}}{17}{figure.1.16}
-\contentsline {figure}{\numberline {1.17}{\ignorespaces Jonh Romero es el co-fundador de ID Software y programador de juegos como Doom o Quake}}{18}{figure.1.17}
-\contentsline {figure}{\numberline {1.18}{\ignorespaces Akira Toriyama, el autor de Dragon Ball, ha trabajado como artista en juegos como Dragon Quest o Chrono Trigger}}{19}{figure.1.18}
-\contentsline {figure}{\numberline {1.19}{\ignorespaces Yoko Shinomura es una compositora conocida por su trabajo en videojuegos como Final Fantasy o Street Fighters}}{20}{figure.1.19}
-\contentsline {figure}{\numberline {1.20}{\ignorespaces Heretic (Raven Software, 1994), es un juego desarrollado con el motor de Doom.}}{22}{figure.1.20}
-\contentsline {figure}{\numberline {1.21}{\ignorespaces Captura del entorno de desarrollo de Unity}}{25}{figure.1.21}
-\contentsline {figure}{\numberline {1.22}{\ignorespaces A Hat in Time (Gears for Breakfast, 2017)}}{26}{figure.1.22}
-\contentsline {figure}{\numberline {1.23}{\ignorespaces Hollow Knight (Team Cherry, 2017)}}{26}{figure.1.23}
-\contentsline {figure}{\numberline {1.24}{\ignorespaces Juegos desarrollados con Unity3D}}{26}{figure.1.24}
-\contentsline {figure}{\numberline {1.25}{\ignorespaces Captura del entorno de Unreal Engine}}{26}{figure.1.25}
-\contentsline {figure}{\numberline {1.26}{\ignorespaces Unreal (Epic Games, 1998)}}{27}{figure.1.26}
-\contentsline {figure}{\numberline {1.27}{\ignorespaces Batman: Arkham Knight (Rocksteady Studios, 2015)}}{27}{figure.1.27}
-\contentsline {figure}{\numberline {1.28}{\ignorespaces Juegos desarrollados con Unreal Engine}}{27}{figure.1.28}
-\contentsline {figure}{\numberline {1.29}{\ignorespaces Captura del entorno de Game Maker Studio}}{28}{figure.1.29}
-\contentsline {figure}{\numberline {1.30}{\ignorespaces Undertale (Toby Fox, 2015)}}{28}{figure.1.30}
-\contentsline {figure}{\numberline {1.31}{\ignorespaces Hyper Light Drifter (Heart Machine, 2016)}}{28}{figure.1.31}
-\contentsline {figure}{\numberline {1.32}{\ignorespaces Juegos desarrollados con Game Maker}}{28}{figure.1.32}
-\contentsline {figure}{\numberline {1.33}{\ignorespaces El Gran Maestro de ajedrez Garri Kasp\IeC {\'a}rov (izquierda) enfrent\IeC {\'a}ndose al ordenador Deep Blue}}{30}{figure.1.33}
-\contentsline {figure}{\numberline {1.34}{\ignorespaces En Los Sims (Maxis, 2000-2014), los personajes pueden tomar decisiones bas\IeC {\'a}ndose en sus gustos y necesidades.}}{31}{figure.1.34}
-\contentsline {figure}{\numberline {1.35}{\ignorespaces Minecraft (Mojam, 2009) es un ejemplo claro de generaci\IeC {\'o}n procedimental de terrenos.}}{32}{figure.1.35}
-\contentsline {figure}{\numberline {1.36}{\ignorespaces Ejemplo de comportamiento t\IeC {\'o}xico en League of Legends(Riot Games, 2009).}}{36}{figure.1.36}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Breakout (Atari, 1976)}}{2}{figure.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Relaci\IeC {\'o}n entre desaf\IeC {\'\i }o y la ansiedad/aburrimiento.}}{4}{figure.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.3}{\ignorespaces El estilo del juego est\IeC {\'a} influenciado por t\IeC {\'\i }tulos como Megaman Legends(Capcom, 1997)}}{5}{figure.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Gamejolt}}{6}{figure.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Itch.io}}{6}{figure.1.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Juegos desarrollados con Unity3D}}{6}{figure.1.6}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Crecimiento Mundial de la industria del videojuego (por plataformas).}}{7}{figure.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Distribuci\IeC {\'o}n por regiones del mercado del videojuego.}}{8}{figure.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Diez principales mercados del videojuego.}}{9}{figure.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Mercado del Videojuego en Europa.}}{10}{figure.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Distribuci\IeC {\'o}n de las empresas en Espa\IeC {\~n}a por n\IeC {\'u}mero de empleados.}}{11}{figure.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Distribuci\IeC {\'o}n de las empresas en Espa\IeC {\~n}a por n\IeC {\'u}mero de empleados.}}{11}{figure.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Fotograf\IeC {\'\i }a del torneo Intel\IeC {\textregistered } Extreme Masters en Katowice, Polonia}}{12}{figure.2.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Crecimiento del mercado del eSport}}{12}{figure.2.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.9}{\ignorespaces \citegame {league_of_legends}, uno de los eSports m\IeC {\'a}s populares}}{13}{figure.2.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Previsiones de crecimiento del mercado de Realidad Virtual y Aumentada (miles de millones de d\IeC {\'o}lares))}}{14}{figure.2.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.11}{\ignorespaces De izquierda a derecha HTC Vive, Oculus Rift, Samsung VR y PlayStation VR}}{15}{figure.2.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.12}{\ignorespaces \IeC {\'A}reas de la Industria 4.0}}{16}{figure.2.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Impresora 3d ``replicator'' de la compa\IeC {\~n}\IeC {\'\i }a Makerbot.}}{17}{figure.2.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Etapas del desarrollo de un videojuego.}}{18}{figure.2.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Distribuci\IeC {\'o}n de roles en un equipo de desarrollo.}}{22}{figure.2.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Shigeru Miyamoto (creador de \citegame {super_mario_bros}, \citegame {legend_of_zelda} y \citegame {donkey_kong}) es posiblemente el dise\IeC {\~n}ador de videjouegos m\IeC {\'a}s famoso.}}{23}{figure.2.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Jonh Romero es el co-fundador de ID Software y programador de juegos como \citegame {doom} o \citegame {quake}.}}{24}{figure.2.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Akira Toriyama, el autor de Dragon Ball, ha trabajado como artista en juegos como \citegame {dragon_quest} o \citegame {chrono_trigger}.}}{25}{figure.2.18}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Yoko Shinomura es una compositora conocida por su trabajo en videojuegos como \citegame {final_fantasy_15} o \citegame {street_fighters_2}.}}{26}{figure.2.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.20}{\ignorespaces \citegame {heretic}, es un juego desarrollado con el motor de Doom.}}{28}{figure.2.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.21}{\ignorespaces Captura del entorno de desarrollo de Unity}}{31}{figure.2.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.22}{\ignorespaces A Hat in Time (Gears for Breakfast, 2017)}}{32}{figure.2.22}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.23}{\ignorespaces Hollow Knight (Team Cherry, 2017)}}{32}{figure.2.23}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.24}{\ignorespaces Juegos desarrollados con Unity3D}}{32}{figure.2.24}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.25}{\ignorespaces Captura del entorno de Unreal Engine}}{32}{figure.2.25}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.26}{\ignorespaces Unreal (Epic Games, 1998)}}{33}{figure.2.26}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.27}{\ignorespaces Batman: Arkham Knight (Rocksteady Studios, 2015)}}{33}{figure.2.27}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.28}{\ignorespaces Juegos desarrollados con Unreal Engine}}{33}{figure.2.28}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.29}{\ignorespaces Captura del entorno de Game Maker Studio}}{34}{figure.2.29}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.30}{\ignorespaces Undertale (Toby Fox, 2015)}}{34}{figure.2.30}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.31}{\ignorespaces Hyper Light Drifter (Heart Machine, 2016)}}{34}{figure.2.31}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.32}{\ignorespaces Juegos desarrollados con Game Maker}}{34}{figure.2.32}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.33}{\ignorespaces El Gran Maestro de ajedrez Garri Kasp\IeC {\'a}rov (izquierda) enfrent\IeC {\'a}ndose al ordenador Deep Blue}}{36}{figure.2.33}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.34}{\ignorespaces En \citegame {sims}, los personajes pueden tomar decisiones bas\IeC {\'a}ndose en sus gustos y necesidades.}}{37}{figure.2.34}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.35}{\ignorespaces \citegame {minecraft} es un ejemplo claro de generaci\IeC {\'o}n procedimental de terrenos.}}{38}{figure.2.35}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.36}{\ignorespaces Ejemplo de comportamiento t\IeC {\'o}xico en \citegame {league_of_legends}.}}{42}{figure.2.36}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de las escenas del juego}}{44}{figure.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Inspector de objetos mostrando los componentes del objeto \textit {Paddle}}}{45}{figure.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Estructura de clases}}{47}{figure.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Lista de GameObjets en la escena principal}}{49}{figure.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Prefabs de la escena Principal}}{52}{figure.3.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Lista de GameObjets en los men\IeC {\'u}s}}{53}{figure.3.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Homenaje a Space Invaders(Taito, 1978) dentro de Arkanoid: Doh it Again (Taito, 1997)}}{54}{figure.3.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Modelo del personaje principal}}{57}{figure.3.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Diagrama de estados del personaje principal}}{58}{figure.3.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Personaje principal activando la paleta}}{59}{figure.3.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Pelota movi\IeC {\'e}ndose}}{60}{figure.3.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Direcciones que tomar\IeC {\'\i }a la pelota dependiendo del punto de la paleta que golpee (Aproximada)}}{60}{figure.3.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Efectos de part\IeC {\'\i }culas: impacto en muro (izquierda) y explosi\IeC {\'o}n (derecha)}}{61}{figure.3.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Modelo del Jefe.}}{62}{figure.3.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Inspector mostrando los componentes del Jefe.}}{63}{figure.3.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Diagrama de estados del jefe.}}{64}{figure.3.16}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Relaci\IeC {\'o}n entre desaf\IeC {\'\i }o y la ansiedad/aburrimiento.}}{65}{figure.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Relaci\IeC {\'o}n entre desaf\IeC {\'\i }o y la ansiedad/aburrimiento.}}{66}{figure.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Relaci\IeC {\'o}n entre desaf\IeC {\'\i }o y la ansiedad/aburrimiento.}}{67}{figure.4.3}

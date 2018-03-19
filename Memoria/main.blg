@@ -1,51 +1,17 @@
-This is BibTeX, Version 0.99d (TeX Live 2017/W32TeX)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
-The top-level auxiliary file: main.aux
-The style file: es-alpha.bst
-Database file #1: main.bib
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Warning--empty publisher in libro_blanco
-Warning--empty publisher in libro_esi
-You've used 12 entries,
-            3036 wiz_defined-function locations,
-            699 strings with 6820 characters,
-and the built_in function-call counts, 4965 in all, are:
-= -- 445
-> -- 108
-< -- 14
-+ -- 28
-- -- 28
-* -- 241
-:= -- 713
-add.period$ -- 37
-call.type$ -- 12
-change.case$ -- 55
-chr.to.int$ -- 12
-cite$ -- 14
-duplicate$ -- 301
-empty$ -- 531
-format.name$ -- 49
-if$ -- 1136
-int.to.chr$ -- 1
-int.to.str$ -- 0
-missing$ -- 15
-newline$ -- 75
-num.names$ -- 37
-pop$ -- 155
-preamble$ -- 1
-purify$ -- 73
-quote$ -- 0
-skip$ -- 209
-stack$ -- 0
-substring$ -- 294
-swap$ -- 67
-text.length$ -- 14
-text.prefix$ -- 9
-top$ -- 0
-type$ -- 72
-warning$ -- 2
-while$ -- 37
-width$ -- 16
-write$ -- 164
-(There were 2 warnings)
+[0] Config.pm:354> INFO - This is Biber 2.7
+[0] Config.pm:357> INFO - Logfile is 'main.blg'
+[57] biber-MSWIN32:303> INFO - === 
+[95] Biber.pm:359> INFO - Reading 'main.bcf'
+[283] Biber.pm:835> INFO - Found 35 citekeys in bib section 0
+[310] Biber.pm:3670> INFO - Processing section 0
+[340] Biber.pm:3840> INFO - Looking for bibtex format file 'bibliografia.bib' for section 0
+[345] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[354] bibtex.pm:1292> INFO - Found BibTeX data source 'bibliografia.bib'
+[400] Biber.pm:3840> INFO - Looking for bibtex format file 'videojuegos.bib' for section 0
+[415] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[417] bibtex.pm:1292> INFO - Found BibTeX data source 'videojuegos.bib'
+[627] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[627] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[627] Biber.pm:3499> INFO - Sorting list 'anyt/global/' of type 'entry' with scheme 'anyt' and locale 'es-ES'
+[679] bbl.pm:608> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[686] bbl.pm:712> INFO - Output to main.bbl
