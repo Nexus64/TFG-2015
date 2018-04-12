@@ -19,28 +19,6 @@
 
 \refsection{0}
   \sortlist[entry]{anyt/global/}
-    \entry{flow}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=55ef27ec6510f31545f9d1929db51c31}{%
-           family={Baron},
-           familyi={B\bibinitperiod},
-           given={Sean},
-           giveni={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{55ef27ec6510f31545f9d1929db51c31}
-      \strng{fullhash}{55ef27ec6510f31545f9d1929db51c31}
-      \strng{authornamehash}{55ef27ec6510f31545f9d1929db51c31}
-      \strng{authorfullhash}{55ef27ec6510f31545f9d1929db51c31}
-      \field{labelalpha}{Bar}
-      \field{sortinit}{B}
-      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Cognitive Flow: The Psychology of Great Game Design}
-      \verb{url}
-      \verb https://www.gamasutra.com/view/feature/166972/cognitive_flow_the_psychology_of_.php
-      \endverb
-    \endentry
     \entry{game_design_2}{book}{}
       \name{author}{1}{}{%
         {{hash=2ce71103239fb5089109b4ea4487c431}{%
@@ -92,59 +70,6 @@
       \field{labeltitlesource}{title}
       \field{title}{Game Development and Production}
       \field{year}{2003}
-    \endentry
-    \entry{game_design_patterns}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=f30d91288bf1361c7b926aca82f086c3}{%
-           family={Bjork},
-           familyi={B\bibinitperiod},
-           given={Staffan},
-           giveni={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{f30d91288bf1361c7b926aca82f086c3}
-      \strng{fullhash}{f30d91288bf1361c7b926aca82f086c3}
-      \strng{authornamehash}{f30d91288bf1361c7b926aca82f086c3}
-      \strng{authorfullhash}{f30d91288bf1361c7b926aca82f086c3}
-      \field{labelalpha}{Bjo}
-      \field{sortinit}{B}
-      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Game Design Patterns}
-      \verb{url}
-      \verb http://virt10.itu.chalmers.se/index.php/Main_Page
-      \endverb
-    \endentry
-    \entry{breaking_game_industry}{book}{}
-      \name{author}{2}{}{%
-        {{hash=fcbd38f766229b21f3a9d402dc4f6a29}{%
-           family={Brathwaite},
-           familyi={B\bibinitperiod},
-           given={Brenda},
-           giveni={B\bibinitperiod}}}%
-        {{hash=c7f489bf48510592078d2131fcf613c8}{%
-           family={Schreiber},
-           familyi={S\bibinitperiod},
-           given={Ian},
-           giveni={I\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Boston}%
-      }
-      \list{publisher}{1}{%
-        {Course Technology}%
-      }
-      \strng{namehash}{94148cddb24574dc1ed2879b4fb57abf}
-      \strng{fullhash}{94148cddb24574dc1ed2879b4fb57abf}
-      \strng{authornamehash}{94148cddb24574dc1ed2879b4fb57abf}
-      \strng{authorfullhash}{94148cddb24574dc1ed2879b4fb57abf}
-      \field{labelalpha}{BS12}
-      \field{sortinit}{B}
-      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Breaking into the Game Industry: Advice for a Successful Career from Those Who Have Done It}
-      \field{year}{2012}
     \endentry
     \entry{street_fighters_2}{software}{}
       \name{author}{1}{}{%
@@ -280,6 +205,29 @@
       \field{year}{2016}
       \field{dateera}{ce}
     \endentry
+    \entry{diablo_2}{software}{}
+      \name{author}{1}{}{%
+        {{hash=201257b39c508a1377807825e3ad0ca2}{%
+           family={Entertainment},
+           familyi={E\bibinitperiod},
+           given={Blizzard},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{201257b39c508a1377807825e3ad0ca2}
+      \strng{fullhash}{201257b39c508a1377807825e3ad0ca2}
+      \strng{authornamehash}{201257b39c508a1377807825e3ad0ca2}
+      \strng{authorfullhash}{201257b39c508a1377807825e3ad0ca2}
+      \field{labelalpha}{Ent00}
+      \field{sortinit}{E}
+      \field{sortinithash}{07bbd5a529b5beaa311df5be05b874bc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{29}
+      \field{month}{7}
+      \field{title}{Diablo II}
+      \field{year}{2000}
+      \field{dateera}{ce}
+    \endentry
     \entry{world_of_warcraft}{software}{}
       \name{author}{1}{}{%
         {{hash=201257b39c508a1377807825e3ad0ca2}{%
@@ -305,6 +253,52 @@
       \verb{url}
       \verb https://worldofwarcraft.com
       \endverb
+    \endentry
+    \entry{undertale}{software}{}
+      \name{author}{1}{}{%
+        {{hash=27a78097ef6ed499ca832313c065831c}{%
+           family={Fox},
+           familyi={F\bibinitperiod},
+           given={Toby},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{27a78097ef6ed499ca832313c065831c}
+      \strng{fullhash}{27a78097ef6ed499ca832313c065831c}
+      \strng{authornamehash}{27a78097ef6ed499ca832313c065831c}
+      \strng{authorfullhash}{27a78097ef6ed499ca832313c065831c}
+      \field{labelalpha}{Fox15}
+      \field{sortinit}{F}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{15}
+      \field{month}{9}
+      \field{title}{Undertale}
+      \field{year}{2015}
+      \field{dateera}{ce}
+    \endentry
+    \entry{bioshock}{software}{}
+      \name{author}{1}{}{%
+        {{hash=6345fb21dc80a10784be20e912162228}{%
+           family={Games},
+           familyi={G\bibinitperiod},
+           given={2K},
+           giveni={2\bibinitperiod}}}%
+      }
+      \strng{namehash}{6345fb21dc80a10784be20e912162228}
+      \strng{fullhash}{6345fb21dc80a10784be20e912162228}
+      \strng{authornamehash}{6345fb21dc80a10784be20e912162228}
+      \strng{authorfullhash}{6345fb21dc80a10784be20e912162228}
+      \field{labelalpha}{Gam07}
+      \field{sortinit}{G}
+      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{19}
+      \field{month}{8}
+      \field{title}{BioShock}
+      \field{year}{2007}
+      \field{dateera}{ce}
     \endentry
     \entry{league_of_legends}{software}{}
       \name{author}{1}{}{%
@@ -357,6 +351,26 @@
       \field{labeltitlesource}{title}
       \field{title}{Game Engine Architecture}
       \field{year}{2009}
+    \endentry
+    \entry{unity_story}{article}{}
+      \name{author}{1}{}{%
+        {{hash=719ca2e3687f415d3f6ee3762afdc74a}{%
+           family={Haas},
+           familyi={H\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{719ca2e3687f415d3f6ee3762afdc74a}
+      \strng{fullhash}{719ca2e3687f415d3f6ee3762afdc74a}
+      \strng{authornamehash}{719ca2e3687f415d3f6ee3762afdc74a}
+      \strng{authorfullhash}{719ca2e3687f415d3f6ee3762afdc74a}
+      \field{labelalpha}{Haa14}
+      \field{sortinit}{H}
+      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A History of the Unity Game Engine}
+      \field{year}{2014}
     \endentry
     \entry{web_4_0}{misc}{}
       \name{author}{1}{}{%
@@ -445,6 +459,48 @@
       \field{year}{2011}
       \field{dateera}{ce}
     \endentry
+    \entry{pacman}{software}{}
+      \name{author}{1}{}{%
+        {{hash=c5605905b763609e5ffdd5c4d2de8659}{%
+           family={Namco},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{c5605905b763609e5ffdd5c4d2de8659}
+      \strng{fullhash}{c5605905b763609e5ffdd5c4d2de8659}
+      \strng{authornamehash}{c5605905b763609e5ffdd5c4d2de8659}
+      \strng{authorfullhash}{c5605905b763609e5ffdd5c4d2de8659}
+      \field{labelalpha}{Nam80}
+      \field{sortinit}{N}
+      \field{sortinithash}{1163c28585427c673ad5a010cbf82f52}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{21}
+      \field{month}{5}
+      \field{title}{Pac-Man}
+      \field{year}{1980}
+      \field{dateera}{ce}
+    \endentry
+    \entry{pokemon_go}{software}{}
+      \name{author}{1}{}{%
+        {{hash=6cb714de3b94bb8d9774f3d2642d49b1}{%
+           family={Niantic},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{6cb714de3b94bb8d9774f3d2642d49b1}
+      \strng{fullhash}{6cb714de3b94bb8d9774f3d2642d49b1}
+      \strng{authornamehash}{6cb714de3b94bb8d9774f3d2642d49b1}
+      \strng{authorfullhash}{6cb714de3b94bb8d9774f3d2642d49b1}
+      \field{labelalpha}{Nia16}
+      \field{sortinit}{N}
+      \field{sortinithash}{1163c28585427c673ad5a010cbf82f52}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{6}
+      \field{month}{7}
+      \field{title}{Pokémon Go}
+      \field{year}{2016}
+      \field{dateera}{ce}
+    \endentry
     \entry{donkey_kong}{software}{}
       \name{author}{1}{}{%
         {{hash=073b7e4ff1d153a52b07eadb5898cb92}{%
@@ -508,28 +564,33 @@
       \field{year}{1986}
       \field{dateera}{ce}
     \endentry
-    \entry{game_programming_patterns}{book}{}
-      \name{author}{1}{}{%
-        {{hash=26313e6493577f16e529ef2698d1a15c}{%
-           family={Nystrom},
+    \entry{ia_moderno}{book}{}
+      \name{author}{2}{}{%
+        {{hash=143fa183327d9fcd9de18eec99d6ca97}{%
+           family={Russell},
+           familyi={R\bibinitperiod},
+           given={Stuart},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5de798d5fa3c0236c0478134cd23f52a}{%
+           family={Norvig},
            familyi={N\bibinitperiod},
-           given={Robert},
-           giveni={R\bibinitperiod}}}%
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
-        {Geneber Benning}%
+        {Pearson}%
       }
-      \strng{namehash}{26313e6493577f16e529ef2698d1a15c}
-      \strng{fullhash}{26313e6493577f16e529ef2698d1a15c}
-      \strng{authornamehash}{26313e6493577f16e529ef2698d1a15c}
-      \strng{authorfullhash}{26313e6493577f16e529ef2698d1a15c}
-      \field{labelalpha}{Nys04}
-      \field{sortinit}{N}
-      \field{sortinithash}{1163c28585427c673ad5a010cbf82f52}
+      \strng{namehash}{b280605b721b4ebcba5395298499f924}
+      \strng{fullhash}{b280605b721b4ebcba5395298499f924}
+      \strng{authornamehash}{b280605b721b4ebcba5395298499f924}
+      \strng{authorfullhash}{b280605b721b4ebcba5395298499f924}
+      \field{labelalpha}{RN08}
+      \field{sortinit}{R}
+      \field{sortinithash}{c15bc8eb6936bc6b3c8baa9e8575af53}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Game Programming Patterns}
-      \field{year}{2004}
+      \field{title}{Inteligencia Artificial: Un Enfoque Moderno}
+      \field{year}{2008}
     \endentry
     \entry{machine_learning}{article}{}
       \name{author}{1}{}{%
@@ -695,27 +756,28 @@
       \field{year}{1995}
       \field{dateera}{ce}
     \endentry
-    \entry{unity_manual}{misc}{}
-      \name{editor}{1}{}{%
-        {{hash=90be999720b0d0b2a8d5132207c73182}{%
-           family={Technologies},
-           familyi={T\bibinitperiod},
-           given={Unity},
-           giveni={U\bibinitperiod}}}%
+    \entry{halo_2}{software}{}
+      \name{author}{1}{}{%
+        {{hash=6b0c18461ddfd88407d2d9995a70ff53}{%
+           family={Studios},
+           familyi={S\bibinitperiod},
+           given={Bungie},
+           giveni={B\bibinitperiod}}}%
       }
-      \strng{namehash}{90be999720b0d0b2a8d5132207c73182}
-      \strng{fullhash}{90be999720b0d0b2a8d5132207c73182}
-      \strng{editornamehash}{90be999720b0d0b2a8d5132207c73182}
-      \strng{editorfullhash}{90be999720b0d0b2a8d5132207c73182}
-      \field{labelalpha}{Tec}
-      \field{sortinit}{T}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
-      \field{labelnamesource}{editor}
+      \strng{namehash}{6b0c18461ddfd88407d2d9995a70ff53}
+      \strng{fullhash}{6b0c18461ddfd88407d2d9995a70ff53}
+      \strng{authornamehash}{6b0c18461ddfd88407d2d9995a70ff53}
+      \strng{authorfullhash}{6b0c18461ddfd88407d2d9995a70ff53}
+      \field{labelalpha}{Stu04}
+      \field{sortinit}{S}
+      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Unity Manual}
-      \verb{url}
-      \verb https://docs.unity3d.com/Manual/UnityManual.html
-      \endverb
+      \field{day}{9}
+      \field{month}{11}
+      \field{title}{Halo 2}
+      \field{year}{2004}
+      \field{dateera}{ce}
     \endentry
     \entry{turing_chess}{article}{}
       \name{author}{1}{}{%
@@ -785,6 +847,29 @@
       \verb{url}
       \verb https://www.gamecareerguide.com/features/529/what_is_a_game_.php
       \endverb
+    \endentry
+    \entry{pacman_256}{software}{}
+      \name{author}{1}{}{%
+        {{hash=6ae063d199c153f96d0ca9927753c8ef}{%
+           family={Whale},
+           familyi={W\bibinitperiod},
+           given={Hipster},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ae063d199c153f96d0ca9927753c8ef}
+      \strng{fullhash}{6ae063d199c153f96d0ca9927753c8ef}
+      \strng{authornamehash}{6ae063d199c153f96d0ca9927753c8ef}
+      \strng{authorfullhash}{6ae063d199c153f96d0ca9927753c8ef}
+      \field{labelalpha}{Wha15}
+      \field{sortinit}{W}
+      \field{sortinithash}{6d25b3eefe5aa2147d1f339686808918}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{20}
+      \field{month}{8}
+      \field{title}{Pac-Man 256}
+      \field{year}{2015}
+      \field{dateera}{ce}
     \endentry
     \entry{ai_revisited}{article}{}
       \name{author}{1}{}{%

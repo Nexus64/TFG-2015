@@ -1,17 +1,17 @@
 [0] Config.pm:354> INFO - This is Biber 2.7
 [0] Config.pm:357> INFO - Logfile is 'main.blg'
-[57] biber-MSWIN32:303> INFO - === 
-[95] Biber.pm:359> INFO - Reading 'main.bcf'
-[283] Biber.pm:835> INFO - Found 35 citekeys in bib section 0
-[310] Biber.pm:3670> INFO - Processing section 0
-[340] Biber.pm:3840> INFO - Looking for bibtex format file 'bibliografia.bib' for section 0
-[345] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
-[354] bibtex.pm:1292> INFO - Found BibTeX data source 'bibliografia.bib'
-[400] Biber.pm:3840> INFO - Looking for bibtex format file 'videojuegos.bib' for section 0
-[415] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
-[417] bibtex.pm:1292> INFO - Found BibTeX data source 'videojuegos.bib'
-[627] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[627] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[627] Biber.pm:3499> INFO - Sorting list 'anyt/global/' of type 'entry' with scheme 'anyt' and locale 'es-ES'
-[679] bbl.pm:608> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[686] bbl.pm:712> INFO - Output to main.bbl
+[2940] biber-MSWIN32:303> INFO - === 
+[4648] Biber.pm:359> INFO - Reading 'main.bcf'
+[4969] Biber.pm:835> INFO - Found 39 citekeys in bib section 0
+[5074] Biber.pm:3670> INFO - Processing section 0
+[5388] Biber.pm:3840> INFO - Looking for bibtex format file 'bibliografia.bib' for section 0
+[5734] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[5790] bibtex.pm:1292> INFO - Found BibTeX data source 'bibliografia.bib'
+[6942] Biber.pm:3840> INFO - Looking for bibtex format file 'videojuegos.bib' for section 0
+[6947] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[6949] bibtex.pm:1292> INFO - Found BibTeX data source 'videojuegos.bib'
+[7792] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[7792] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[7792] Biber.pm:3499> INFO - Sorting list 'anyt/global/' of type 'entry' with scheme 'anyt' and locale 'es-ES'
+[7868] bbl.pm:608> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[7875] bbl.pm:712> INFO - Output to main.bbl
