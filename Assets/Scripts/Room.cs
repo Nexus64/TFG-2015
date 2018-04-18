@@ -91,7 +91,7 @@ public class Room : MonoBehaviour {
 		brick.transform.SetParent (brickWall);
 		brick.localPosition = location+Mathf.Round(Mathf.Sin (rotation))*new Vector3(1,-2,0);
 		brick.rotation=Quaternion.Euler(new Vector3(0,0,rotation));
-		brick.GetComponent<BasicBrick> ().color = color;
+		brick.GetComponent<Brick> ().color = color;
 	}
 
 	void CreateUnbreakable(Vector3 location, float rotation, Color color){
@@ -99,7 +99,7 @@ public class Room : MonoBehaviour {
 		brick.transform.SetParent (brickWall);
 		brick.localPosition = location + new Vector3 (1f, 0.5f, 0);
 		brick.rotation=Quaternion.Euler(new Vector3(0,0,rotation));
-		brick.GetComponent<BasicBrick> ().color = color;
+		brick.GetComponent<Brick> ().color = color;
 	}
 
 	void CreateTripleBrick(Vector3 location, float rotation, Color color){
@@ -107,7 +107,7 @@ public class Room : MonoBehaviour {
 		brick.transform.SetParent (brickWall);
 		brick.localPosition = location+Mathf.Round(Mathf.Sin (rotation))*new Vector3(1,-2,0);
 		brick.rotation=Quaternion.Euler(new Vector3(0,0,rotation));
-		brick.GetComponent<BasicBrick> ().color = color;
+		brick.GetComponent<Brick> ().color = color;
 		brick.GetComponent<Brick> ().maxLive = 3;
 	}
 	void CreateSquared(Vector3 location, float rotation, Color color){
@@ -115,6 +115,6 @@ public class Room : MonoBehaviour {
 		brick.transform.SetParent (brickWall);
 		brick.localPosition = location;
 		brick.rotation=Quaternion.Euler(new Vector3(0,0,rotation));
-		brick.GetComponent<BasicBrick> ().color = color;
+		brick.GetComponent<Brick> ().color = color;
 	}
 }

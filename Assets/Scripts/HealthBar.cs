@@ -6,19 +6,9 @@ public class HealthBar : MonoBehaviour {
     public float maxHealth;
     public RectTransform healthTransform;
 
-	private float cachedY;
 	private float minXValue;
 	private float maxXValue;
 	private int currentHealth;
-	private Image healthImage;
-    private RectTransform healthReact;
-
-	// Use this for initialization
-	void Start () {
-        healthImage = healthTransform.GetComponent<Image>();
-        healthReact = healthTransform.GetComponent<RectTransform>();
-
-    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -39,7 +29,6 @@ public class HealthBar : MonoBehaviour {
     {
         maxHealth = newHealth;
         currentHealth = (int)(int)maxHealth; ;
-        cachedY = transform.localPosition.y;
         maxXValue = healthTransform.localPosition.x;
         minXValue = healthTransform.localPosition.x - healthTransform.rect.width;
         print(healthTransform.rect);

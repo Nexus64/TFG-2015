@@ -20,7 +20,7 @@ public class LevelGenerator : MonoBehaviour
     protected MainCharacter player;
     protected bool isBossLevel;
 
-    protected List<BasicBrick> brickList;
+    protected List<Brick> brickList;
     protected LevelInfo levelInfo;
     protected Texture2D tileTypes;
     protected Texture2D tileColor;
@@ -37,7 +37,7 @@ public class LevelGenerator : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        brickList = new List<BasicBrick>();
+        brickList = new List<Brick>();
         doorScript = GameObject.FindGameObjectWithTag("Door").GetComponent<Door>();
         tutorialScript = GameObject.FindGameObjectWithTag("TutorialGUI").GetComponent<TutorialGUI>();
 
@@ -129,7 +129,7 @@ public class LevelGenerator : MonoBehaviour
                     Transform tile = Instantiate(colorMapping.prefab);
                     tile.transform.SetParent(brickWall);
                     tile.transform.localPosition = position;
-                    BasicBrick brick = tile.GetComponent<BasicBrick>();
+                    Brick brick = tile.GetComponent<Brick>();
                     brick.color = tileColor.GetPixel(x, y);
                     OccupedTile(x, y, colorMapping.horSize, colorMapping.verSize, occupiedMap);
                     brickList.Add(brick);
@@ -193,7 +193,7 @@ public class LevelGenerator : MonoBehaviour
 
     public void DestroyBricks()
     {
-        foreach (BasicBrick brick in brickList)
+        foreach (Brick brick in brickList)
         {
             brick.DoDamage(99);
         }

@@ -1,30 +1,49 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
-public class Brick : BasicBrick {
-    public List<Texture> textures = new List<Texture>();
-    public int listIndex = 0;
-
-    new Renderer renderer;
-
+public class Brick: MonoBehaviour {
 	// Use this for initialization
-    public new void Start()
-    {
-        base.Start();
-        live = maxLive;
-        Transform child = transform.GetChild(0);
-        renderer = child.GetComponent<Renderer>();
+	public Transform model;
+	public Color color = Color.white;
+    public int maxLive;
+    protected int live;
+
+    protected new ParticleSystem particleSystem;
+
+	public void Start () {
+		model.GetComponent<MeshRenderer> ().sharedMaterial.color = color;
+        particleSystem = GetComponent<ParticleSystem>();
+
+        ParticleSystem.MainModule main = particleSystem.main;
+        main.startColor = color;
+
     }
 
-    void OnCollisionEnter(Collision collision){
-		if (collision.transform.tag=="Ball"){
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.tag == "Ball")
+        {
             DoDamage(1);
-            if (listIndex < textures.Count)
-            {
-                renderer.material.SetTexture("_MainTex", textures[listIndex]);
-                listIndex++;
-            }
         }
-	}
+    }
+
+    public virtual void DoDamage(int damage)
+    {
+        particleSystem.Emit(30);
+
+        live -= damage;
+        if (live <= 0)
+        {
+            BreakBrick();
+        }
+    }
+
+    protected virtual void BreakBrick()
+    {
+        model.GetComponent<MeshRenderer>().enabled = false;
+        model.gameObject.SetActive(false);
+        
+        GetComponent<Collider>().enabled = false;
+    }
 }
+
