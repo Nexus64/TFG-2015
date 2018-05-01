@@ -1,17 +1,20 @@
 [0] Config.pm:354> INFO - This is Biber 2.7
 [0] Config.pm:357> INFO - Logfile is 'main.blg'
-[2940] biber-MSWIN32:303> INFO - === 
-[4648] Biber.pm:359> INFO - Reading 'main.bcf'
-[4969] Biber.pm:835> INFO - Found 39 citekeys in bib section 0
-[5074] Biber.pm:3670> INFO - Processing section 0
-[5388] Biber.pm:3840> INFO - Looking for bibtex format file 'bibliografia.bib' for section 0
-[5734] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
-[5790] bibtex.pm:1292> INFO - Found BibTeX data source 'bibliografia.bib'
-[6942] Biber.pm:3840> INFO - Looking for bibtex format file 'videojuegos.bib' for section 0
-[6947] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
-[6949] bibtex.pm:1292> INFO - Found BibTeX data source 'videojuegos.bib'
-[7792] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[7792] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[7792] Biber.pm:3499> INFO - Sorting list 'anyt/global/' of type 'entry' with scheme 'anyt' and locale 'es-ES'
-[7868] bbl.pm:608> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[7875] bbl.pm:712> INFO - Output to main.bbl
+[100] biber-MSWIN32:303> INFO - === 
+[252] Biber.pm:359> INFO - Reading 'main.bcf'
+[439] Biber.pm:835> INFO - Found 44 citekeys in bib section 0
+[470] Biber.pm:3670> INFO - Processing section 0
+[539] Biber.pm:3840> INFO - Looking for bibtex format file 'bibliografia.bib' for section 0
+[581] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[610] bibtex.pm:1292> INFO - Found BibTeX data source 'bibliografia.bib'
+[784] Biber.pm:3840> INFO - Looking for bibtex format file 'videojuegos.bib' for section 0
+[873] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[878] bibtex.pm:1292> INFO - Found BibTeX data source 'videojuegos.bib'
+[945] Utils.pm:164> WARN - I didn't find a database entry for 'flow' (section 0)
+[945] Utils.pm:164> WARN - I didn't find a database entry for 'game_programing_patterns' (section 0)
+[1044] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1045] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1046] Biber.pm:3499> INFO - Sorting list 'anyt/global/' of type 'entry' with scheme 'anyt' and locale 'es-ES'
+[1111] bbl.pm:608> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[1120] bbl.pm:712> INFO - Output to main.bbl
+[1120] Biber.pm:109> INFO - WARNINGS: 2

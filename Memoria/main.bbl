@@ -19,6 +19,17 @@
 
 \refsection{0}
   \sortlist[entry]{anyt/global/}
+    \entry{apple_ui}{book}{}
+      \list{publisher}{1}{%
+        {Apple Computer, Inc}%
+      }
+      \field{labelalpha}{05}
+      \field{sortinit}{0}
+      \field{sortinithash}{e07d8eeb31ded4126e0aa0cfcdcb5a8f}
+      \field{labeltitlesource}{title}
+      \field{title}{Appel Human Interface Guidelines}
+      \field{year}{2005}
+    \endentry
     \entry{game_design_2}{book}{}
       \name{author}{1}{}{%
         {{hash=2ce71103239fb5089109b4ea4487c431}{%
@@ -70,6 +81,59 @@
       \field{labeltitlesource}{title}
       \field{title}{Game Development and Production}
       \field{year}{2003}
+    \endentry
+    \entry{game_design_patterns}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=f30d91288bf1361c7b926aca82f086c3}{%
+           family={Bjork},
+           familyi={B\bibinitperiod},
+           given={Staffan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{f30d91288bf1361c7b926aca82f086c3}
+      \strng{fullhash}{f30d91288bf1361c7b926aca82f086c3}
+      \strng{authornamehash}{f30d91288bf1361c7b926aca82f086c3}
+      \strng{authorfullhash}{f30d91288bf1361c7b926aca82f086c3}
+      \field{labelalpha}{Bjo}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Game Design Patterns}
+      \verb{url}
+      \verb http://virt10.itu.chalmers.se/index.php/Main_Page
+      \endverb
+    \endentry
+    \entry{breaking_game_industry}{book}{}
+      \name{author}{2}{}{%
+        {{hash=fcbd38f766229b21f3a9d402dc4f6a29}{%
+           family={Brathwaite},
+           familyi={B\bibinitperiod},
+           given={Brenda},
+           giveni={B\bibinitperiod}}}%
+        {{hash=c7f489bf48510592078d2131fcf613c8}{%
+           family={Schreiber},
+           familyi={S\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston}%
+      }
+      \list{publisher}{1}{%
+        {Course Technology}%
+      }
+      \strng{namehash}{94148cddb24574dc1ed2879b4fb57abf}
+      \strng{fullhash}{94148cddb24574dc1ed2879b4fb57abf}
+      \strng{authornamehash}{94148cddb24574dc1ed2879b4fb57abf}
+      \strng{authorfullhash}{94148cddb24574dc1ed2879b4fb57abf}
+      \field{labelalpha}{BS12}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Breaking into the Game Industry: Advice for a Successful Career from Those Who Have Done It}
+      \field{year}{2012}
     \endentry
     \entry{street_fighters_2}{software}{}
       \name{author}{1}{}{%
@@ -924,6 +988,8 @@
       \field{year}{2018}
     \endentry
   \endsortlist
+  \missing{flow}
+  \missing{game_programing_patterns}
 \endrefsection
 \endinput
 

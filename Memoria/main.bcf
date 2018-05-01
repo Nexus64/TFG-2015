@@ -2258,12 +2258,10 @@
     <bcf:citekey order="131">libro_esi</bcf:citekey>
     <bcf:citekey order="132">libro_esi</bcf:citekey>
     <bcf:citekey order="133">apple_ui</bcf:citekey>
-    <bcf:citekey order="134">unity_manual</bcf:citekey>
-    <bcf:citekey order="135">game_programming_patterns</bcf:citekey>
-    <bcf:citekey order="136">game_programming_patterns</bcf:citekey>
-    <bcf:citekey order="137">game_programming_patterns</bcf:citekey>
-    <bcf:citekey order="138">game_design_patterns</bcf:citekey>
-    <bcf:citekey order="139">game_design_patterns</bcf:citekey>
+    <bcf:citekey order="134">game_programming_patterns</bcf:citekey>
+    <bcf:citekey order="135">game_design_patterns</bcf:citekey>
+    <bcf:citekey order="136">libro_esi</bcf:citekey>
+    <bcf:citekey order="137">game_design_patterns</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="anyt/global/" type="entry" sortscheme="anyt" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>

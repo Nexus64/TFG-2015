@@ -108,7 +108,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Descripci\IeC {\'o}n del Juego}{49}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Escenas}{50}{section.3.2}
+\contentsline {section}{\numberline {3.2}Escenas}{51}{section.3.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.1}Menus}{52}{subsection.3.2.1}
 \defcounter {refsection}{0}\relax 
@@ -116,17 +116,17 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Carga de Niveles}{54}{Item.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Objetos}{56}{section.3.3}
+\contentsline {section}{\numberline {3.3}Objetos}{57}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.1}Personaje Principal}{66}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.1}Personaje Principal}{59}{subsection.3.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.2}Bola}{68}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.2}Bola}{62}{subsection.3.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.3}Ladrillos}{71}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.3}Ladrillos}{65}{subsection.3.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.4}Puerta}{71}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.4}Sala y Puerta}{67}{subsection.3.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.5}Jefe}{71}{subsection.3.3.5}
+\contentsline {subsection}{\numberline {3.3.5}Jefe}{70}{subsection.3.3.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Conclusiones}{75}{chapter.4}
 \defcounter {refsection}{0}\relax 
