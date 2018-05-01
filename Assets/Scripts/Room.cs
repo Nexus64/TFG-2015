@@ -1,120 +1,118 @@
 using UnityEngine;
 using System.Collections;
-using System.Xml;
-using System.IO;
+using System.Collections.Generic;
 
 public class Room : MonoBehaviour {
-	public Transform brickPrefab;
-	public Transform unbreakablePrefab;
-	public Transform squaredPrefab;
-	public Transform brickWall;
-	public Transform boss;
-	public int debugLevel = -1;
+    public static bool firstGame = true;
+    public int victoryScene = 0;
 
-	// Use this for initialization
-	void Awake () {
-		if (debugLevel < 0){
-			loadBricks (PlayerPrefs.GetInt ("level"));
-		}else if (debugLevel > 9){
-			LoadBoss();
-		}else{
-			loadBricks (debugLevel);
-			//PlayerPrefs.SetInt("level", debugLevel);
-			PlayerPrefs.Save();
-            debugLevel = 0;
-		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public bool debug;
+    public int levelID;
+    public int levelCount;
+    public float endLevelTime;
 
-	void LoadBoss ()
-	{
-		Instantiate (boss);
-	}
+    private Door doorScript;
+    private MainCharacter player;
+    private TutorialGUI tutorialScript;
+    private LevelGenerator levelGenerator;
 
-	void loadBricks(int level){
-		XmlTextReader reader = (XmlTextReader)XmlTextReader.Create("assets/Resources/map/level"+level.ToString()+".tmx");
-		while (reader.Read()) {
-			if (reader.Name=="object" && reader.AttributeCount>0){
-				//Debug.Log(reader.Name);
-				float x=float.Parse(reader.GetAttribute("x"))/16;
-				float y=float.Parse(reader.GetAttribute("y"))/16;
-				string rstring=reader.GetAttribute("rotation");
-				float rotation=0;
-				if (rstring!=null){
-					rotation=float.Parse(reader.GetAttribute("rotation"));
-				}
-				int gid=int.Parse(reader.GetAttribute("gid"));
+    void Awake()
+    {
+        doorScript = GameObject.FindGameObjectWithTag("Door").GetComponent<Door>();
+        tutorialScript = GameObject.FindGameObjectWithTag("TutorialGUI").GetComponent<TutorialGUI>();
+        levelGenerator = GetComponent<LevelGenerator>();
+    }
 
-				do{
-					reader.Read();
-				}while(reader.Name!="property");
+    void Start()
+    {
+        if (!debug)
+        {
+            levelID = GetLevelId();
+        }
+        else
+        {
+            PlayerPrefs.DeleteAll();
+        }
 
-                float b = float.Parse(reader.GetAttribute("value"));
-                b /= 256;
-                do
-                {
-					reader.Read();
-				}while(reader.Name!="property");
+        if (firstGame)
+        {
+            tutorialScript.SetVisible(true);
+            firstGame = false;
+        }
 
-				float g=float.Parse(reader.GetAttribute("value"))/256;
-				do{
-					reader.Read();
-				}while(reader.Name!="property");
-                float r=float.Parse(reader.GetAttribute("value"))/256;
-				Vector3 location=new Vector3(x,16-(y),0);
-				Color color=new Color(r,g,b,1);
-				switch(gid){
-				case 1:
-					//Debug.Log(r.ToString()+" "+g.ToString()+" "+b.ToString());
-					CreateBrick(location, rotation, color);
-					break;
-				case 2:
-					CreateTripleBrick(location, rotation, color);
-					break;
-				case 5:
-					CreateUnbreakable(location, rotation, color);
-					break;
-				case 6:
-					CreateUnbreakable(location, rotation, color);
-					break;
-				}
-			}
-		}
-	}
+        levelGenerator.Generate(levelID);
+    }
 
-	void CreateBrick(Vector3 location, float rotation, Color color){
-		Transform brick = Instantiate (brickPrefab);
-		brick.transform.SetParent (brickWall);
-		brick.localPosition = location+Mathf.Round(Mathf.Sin (rotation))*new Vector3(1,-2,0);
-		brick.rotation=Quaternion.Euler(new Vector3(0,0,rotation));
-		brick.GetComponent<Brick> ().color = color;
-	}
+    int GetLevelId()
+    {
+        return PlayerPrefs.GetInt("level") + 1;
+    }
 
-	void CreateUnbreakable(Vector3 location, float rotation, Color color){
-		Transform brick = Instantiate (unbreakablePrefab);
-		brick.transform.SetParent (brickWall);
-		brick.localPosition = location + new Vector3 (1f, 0.5f, 0);
-		brick.rotation=Quaternion.Euler(new Vector3(0,0,rotation));
-		brick.GetComponent<Brick> ().color = color;
-	}
+    public void NextStage()
+    {
+        PlayerPrefs.SetInt("level", PlayerPrefs.GetInt("level") + 1);
+        PlayerPrefs.Save();
+        FlashTransition transition = Camera.main.GetComponent<FlashTransition>();
 
-	void CreateTripleBrick(Vector3 location, float rotation, Color color){
-		Transform brick = Instantiate (brickPrefab);
-		brick.transform.SetParent (brickWall);
-		brick.localPosition = location+Mathf.Round(Mathf.Sin (rotation))*new Vector3(1,-2,0);
-		brick.rotation=Quaternion.Euler(new Vector3(0,0,rotation));
-		brick.GetComponent<Brick> ().color = color;
-		brick.GetComponent<Brick> ().maxLive = 3;
-	}
-	void CreateSquared(Vector3 location, float rotation, Color color){
-		Transform brick = Instantiate (squaredPrefab);
-		brick.transform.SetParent (brickWall);
-		brick.localPosition = location;
-		brick.rotation=Quaternion.Euler(new Vector3(0,0,rotation));
-		brick.GetComponent<Brick> ().color = color;
-	}
+        if (PlayerPrefs.GetInt("level") < levelCount)
+        {
+            transition.StartTransition(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("level", 0);
+            transition.StartTransition(victoryScene);
+        }
+    }
+
+    public void DestroyBricks()
+    {
+        List<Brick> brickList = levelGenerator.GetBrickList();
+        foreach (Brick brick in brickList)
+        {
+            brick.DoDamage(99);
+        }
+    }
+
+    public float DestroyBoss()
+    {
+        BossController boss = levelGenerator.GetBoss();
+
+        if (boss != null)
+        {
+            boss.StartDestruction();
+        }
+
+        return endLevelTime;
+    }
+
+    public void DamageBoss(int damage)
+    {
+        BossController boss = levelGenerator.GetBoss();
+
+        if (boss != null)
+        {
+            boss.DoDamage(damage);
+        }
+    }
+
+    public void PlayerReady(MainCharacter _player)
+    {
+        player = _player;
+        BossController boss = levelGenerator.GetBoss();
+
+        if (boss != null)
+        {
+            boss.Activate();
+        }
+        else
+        {
+            player.Activate();
+        }
+    }
+
+    public void BossReady(BossIA bossIA)
+    {
+        player.Activate();
+    }
 }

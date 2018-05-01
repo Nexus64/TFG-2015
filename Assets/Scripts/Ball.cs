@@ -160,8 +160,8 @@ public class Ball : StateBehaviour {
 
     void BossActions(Collision collision)
     {
-        BossIA bossIA = collision.transform.GetComponent<BossIA>();
-        bossIA.BallCollision();
+        BossController boss = collision.transform.GetComponent<BossController>();
+        boss.BallCollision(this);
 
         HitParticles(collision);
     }

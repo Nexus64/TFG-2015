@@ -10,29 +10,24 @@ public class Door : MonoBehaviour {
 
     protected Animator animator;
     protected MainCharacter player;
-    protected LevelGenerator levelControler;
+    protected Room roomControler;
 
     // Use this for initialization
-    void Start () {
-		live = maxLive;
+    void Awake () {
         animator = GetComponent<Animator>();
-        GameObject room = GameObject.FindGameObjectWithTag("Room");
-        levelControler = room.GetComponent<LevelGenerator>();
-        GameObject playerObjects = GameObject.FindGameObjectWithTag("Player");
-        player = playerObjects.GetComponent<MainCharacter>();
-
+        roomControler = GameObject.FindGameObjectWithTag("Room").GetComponent<Room>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<MainCharacter>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-
+        live = maxLive;
     }
 
     public bool DoDamage(int damage) {
         live -= damage;
         health.DecreaseLife(damage);
-        levelControler.DamageBoss(damage);
+        roomControler.DamageBoss(damage);
         animator.SetTrigger("Hit");
         animator.SetInteger("Live", live);
         animator.SetInteger("Repetition", hitRepetition);
@@ -42,12 +37,12 @@ public class Door : MonoBehaviour {
 
     public void EndLevel() {
         player.WinCinematic();
-        levelControler.DestroyBricks();
+        roomControler.DestroyBricks();
     }
 
     public void DestroyBoss()
     {
-        float destroyTime = levelControler.DestroyBoss();
+        float destroyTime = roomControler.DestroyBoss();
         Invoke("Open", destroyTime);
     }
 

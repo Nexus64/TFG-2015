@@ -15,7 +15,7 @@ public class MainCharacter : StateBehaviour {
     protected Animator animator;
     protected new Rigidbody rigidbody;
     protected new Collider collider;
-    protected LevelGenerator roomController;
+    protected Room roomController;
 
     public enum States
 	{
@@ -35,7 +35,7 @@ public class MainCharacter : StateBehaviour {
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody>();
         collider = GetComponent<Collider>();
-        roomController = GameObject.FindGameObjectWithTag("Room").GetComponent<LevelGenerator>();
+        roomController = GameObject.FindGameObjectWithTag("Room").GetComponent<Room>();
         normalDrag = rigidbody.drag;
         paddleDrag = normalDrag * 0.4f;
 
@@ -179,10 +179,7 @@ public class MainCharacter : StateBehaviour {
 
     void ChangeLevel()
     {
-        GameObject room = GameObject.FindGameObjectWithTag("Room");
-        LevelGenerator levelControler = room.GetComponent<LevelGenerator>();
-
-        levelControler.NextStage();
+        roomController.NextStage();
     }
 
     Vector3 CalculateRotation (){

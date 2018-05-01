@@ -1,23 +1,19 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelGenerator : MonoBehaviour
 {
-    public static bool firstGame = true;
-    public bool debug = false;
-    public int levelID = 0;
     public int levelCount = 11;
-    public int victoryScene = 0;
 
     public ColorToPrefab[] colorMappings;
     public Transform bossPrefab;
     public Transform brickWall;
     public Vector3 location = new Vector3(0, 16, 0);
 
-    protected Transform boss;
-    protected MainCharacter player;
+    protected BossController boss;
     protected bool isBossLevel;
 
     protected List<Brick> brickList;
@@ -35,20 +31,11 @@ public class LevelGenerator : MonoBehaviour
     protected TutorialGUI tutorialScript;
 
     // Use this for initialization
-    void Start()
+    public void Generate(int levelID)
     {
         brickList = new List<Brick>();
         doorScript = GameObject.FindGameObjectWithTag("Door").GetComponent<Door>();
         tutorialScript = GameObject.FindGameObjectWithTag("TutorialGUI").GetComponent<TutorialGUI>();
-
-        if (!debug)
-        {
-            levelID = GetLevelId();
-        }
-        else
-        {
-            PlayerPrefs.DeleteAll();
-        }
 
         string levelPath = levelFileBase.Replace("#", levelID.ToString());
 
@@ -68,11 +55,6 @@ public class LevelGenerator : MonoBehaviour
         }
 
         doorScript.SetLive(levelInfo.doorHP);
-        if (firstGame)
-        {
-            tutorialScript.SetVisible(true);
-            firstGame = false;
-        }
     }
 
     // Update is called once per frame
@@ -94,9 +76,9 @@ public class LevelGenerator : MonoBehaviour
 
     void GenerateBoss()
     {
-        boss = Instantiate(bossPrefab, doorScript.transform);
-        boss.position += doorScript.transform.position;
-        //boss.SetParent(doorScript.transform);
+        Transform bossTransform = Instantiate(bossPrefab, doorScript.transform);
+        bossTransform.position += doorScript.transform.position;
+        boss = bossTransform.GetComponent<BossController>();
     }
 
     bool[,] GenerateEmptyArray(int width, int height)
@@ -151,12 +133,7 @@ public class LevelGenerator : MonoBehaviour
         }
     }
 
-    int GetLevelId()
-    {
-        return PlayerPrefs.GetInt("level") + 1;
-    }
-
-    Texture2D GetFormTexture()
+    Texture2D GetFormTexture(int levelID)
     {
         string fullPath = mapPath + formName + subFix;
         fullPath = fullPath.Replace("#", levelID.ToString());
@@ -166,7 +143,7 @@ public class LevelGenerator : MonoBehaviour
         return map;
     }
 
-    Texture2D GetColorTexture()
+    Texture2D GetColorTexture(int levelID)
     {
         string fullPath = mapPath + colorName + subFix;
         fullPath = fullPath.Replace("#", levelID.ToString());
@@ -175,67 +152,13 @@ public class LevelGenerator : MonoBehaviour
         return map;
     }
 
-    public void NextStage()
+    public List<Brick> GetBrickList()
     {
-        PlayerPrefs.SetInt("level", PlayerPrefs.GetInt("level") + 1);
-        PlayerPrefs.Save();
-        FlashTransition transition = Camera.main.GetComponent<FlashTransition>();
-
-        if (PlayerPrefs.GetInt("level") < levelCount)
-        {
-            transition.StartTransition(SceneManager.GetActiveScene().buildIndex);
-        } else
-        {
-            PlayerPrefs.SetInt("level", 0);
-            transition.StartTransition(victoryScene);
-        }
+        return brickList;
     }
 
-    public void DestroyBricks()
+    public BossController GetBoss()
     {
-        foreach (Brick brick in brickList)
-        {
-            brick.DoDamage(99);
-        }
-    }
-
-    public float DestroyBoss()
-    {
-        float destroyTime = 0;
-        if (isBossLevel)
-        {
-            BossIA bossIA = boss.GetComponent<BossIA>();
-            destroyTime = bossIA.StartDestruction();
-        }
-
-        return destroyTime;
-    }
-
-    public void DamageBoss(int damage)
-    {
-        if (isBossLevel)
-        {
-            BossIA bossIA = boss.GetComponent<BossIA>();
-            bossIA.DoDamage(damage);
-        }
-    }
-
-    public void PlayerReady(MainCharacter _player)
-    {
-        player = _player;
-        if (isBossLevel)
-        {
-            BossIA bossIA = boss.GetComponent<BossIA>();
-            bossIA.Activate();
-        }
-        else
-        {
-            player.Activate();
-        }
-    }
-
-    public void BossReady(BossIA bossIA)
-    {
-        player.Activate();
+        return boss;
     }
 }

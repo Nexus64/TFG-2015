@@ -4,6 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BossController : MonoBehaviour {
+    public bool active;
+    public bool damaged;
+    public bool destroy;
+
     public float moveAngle = 0;
     public float velocity = 10;
     public float accelerationTime = 0.2f;
@@ -12,7 +16,14 @@ public class BossController : MonoBehaviour {
     public float energyIncrement = 1.25f;
     public float energyDecrement = 2;
 
+    public AudioClip startSound;
+    public AudioClip ballSound;
+    public AudioClip hurtSound;
+    public AudioClip defeatSound;
+    public Transform explosionParticle;
+
     protected Rigidbody rigidBody;
+    protected AudioSource audioSource;
 
     protected bool isColliding;
     protected float maxEnergy;
@@ -22,6 +33,7 @@ public class BossController : MonoBehaviour {
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
 
         maxEnergy = baseEnergy;
         energy = maxEnergy;
@@ -69,6 +81,42 @@ public class BossController : MonoBehaviour {
         return isColliding;
     }
 
+    public void BallCollision(Ball ball)
+    {
+        MainCharacter player = ball.player;
+        Vector3 playerDirection = Vector3.Normalize(player.transform.position - ball.transform.position) *
+                                    ball.GetVelocity().magnitude;
+
+        ball.SetVelocity(playerDirection);
+        DecrementEnergy(1);
+        PlayBallSound();
+    }
+
+    public void Activate()
+    {
+        active = true;
+    }
+
+    public void DoDamage(int damage)
+    {
+        IncrementMaxEnergy(1);
+        damaged = true;
+        
+    }
+
+    public void Explosion()
+    {
+        Transform particleInstance = Instantiate(explosionParticle);
+        particleInstance.position = transform.position;
+
+        particleInstance.position = transform.position;
+    }
+
+    public void StartDestruction()
+    {
+        destroy = true;
+    }
+
     void OnDrawGizmos()
     {
         Gizmos.DrawLine(transform.position, transform.position + rigidBody.velocity);
@@ -85,5 +133,25 @@ public class BossController : MonoBehaviour {
         maxEnergy = maxEnergy * energyIncrement * amount;
         energy = Math.Max(0, maxEnergy);
         speedMod = energy / baseEnergy;
+    }
+
+    public void PlayStartSound()
+    {
+        audioSource.PlayOneShot(startSound);
+    }
+
+    public void PlayBallSound()
+    {
+        audioSource.PlayOneShot(ballSound);
+    }
+
+    public void PlayHurtSound()
+    {
+        audioSource.PlayOneShot(hurtSound);
+    }
+
+    public void PlayDefeatSound()
+    {
+        audioSource.PlayOneShot(defeatSound);
     }
 }

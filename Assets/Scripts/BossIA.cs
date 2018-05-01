@@ -13,15 +13,9 @@ public class BossIA : StateBehaviour {
     public float deathTime = 2f;
     public float hurtTime = 0.75f;
 
-    public AudioClip startSound;
-    public AudioClip ballSound;
-    public AudioClip hurtSound;
-    public AudioClip defeatSound;
-    public Transform explosionParticle;
-
     protected Ball ball;
     protected BossController mainController;
-    protected LevelGenerator roomController;
+    protected Room roomController;
     protected Animator animator;
     protected AudioSource audioSource;
 
@@ -47,10 +41,34 @@ public class BossIA : StateBehaviour {
         mainController = GetComponent<BossController>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
-        roomController = GameObject.FindGameObjectWithTag("Room").GetComponent<LevelGenerator>();
+        roomController = GameObject.FindGameObjectWithTag("Room").GetComponent<Room>();
 
         Initialize<States>();
         ChangeState(States.Out);
+    }
+
+    void Update()
+    {
+        if (mainController.damaged && (States)GetState() != States.Hurt)
+        {
+            ChangeState(States.Hurt, StateTransition.Safe);
+            animator.SetBool("Hurt", true);
+        }
+
+        if (mainController.destroy && (States)GetState() != States.Death)
+        {
+            ChangeState(States.Death, StateTransition.Safe);
+            animator.SetBool("Destroy", true);
+        }
+    }
+
+    void Out_Update()
+    {
+        if (mainController.active)
+        {
+            animator.SetBool("Activated", true);
+            ChangeState(States.Intro, StateTransition.Safe);
+        }
     }
 
     void Intro_Enter()
@@ -128,7 +146,8 @@ public class BossIA : StateBehaviour {
     {
         state = "Hurt";
         animator.SetBool("Hurt", true);
-        PlayHurtSound();
+        mainController.PlayHurtSound();
+        mainController.damaged = false;
     }
 
     void Hurt_Update()
@@ -167,57 +186,5 @@ public class BossIA : StateBehaviour {
     bool BallApproaching()
     {
         return ball.GetVelocity().z > 0;
-    }
-
-    public void BallCollision()
-    {
-        MainCharacter player = ball.player;
-        Vector3 playerDirection = Vector3.Normalize(player.transform.position - ball.transform.position) * 
-                                    ball.GetVelocity().magnitude;
-
-        ball.SetVelocity(playerDirection);
-        mainController.DecrementEnergy(1);
-        PlayBallSound();
-    }
-
-    public void DoDamage(int damage)
-    {
-        mainController.IncrementMaxEnergy(1);
-        ChangeState(States.Hurt, StateTransition.Overwrite);
-        
-    }
-
-    public float StartDestruction()
-    {
-        ChangeState(States.Death, StateTransition.Overwrite);
-        return deathTime;
-    }
-
-    public void Explosion()
-    {
-        Transform particleInstance = Instantiate(explosionParticle);
-        particleInstance.position = transform.position;
-
-        particleInstance.position = transform.position;
-    }
-
-    public void PlayStartSound()
-    {
-        audioSource.PlayOneShot(startSound);
-    }
-
-    public void PlayBallSound()
-    {
-        audioSource.PlayOneShot(ballSound);
-    }
-
-    public void PlayHurtSound()
-    {
-        audioSource.PlayOneShot(hurtSound);
-    }
-
-    public void PlayDefeatSound()
-    {
-        audioSource.PlayOneShot(defeatSound);
     }
 }
