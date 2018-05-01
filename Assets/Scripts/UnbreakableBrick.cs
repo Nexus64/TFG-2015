@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class UnbreakableBrick : Brick
 {
-
-    public override void DoDamage(int damage)
+    protected new void OnCollisionEnter(Collision collision)
     {
-        particleSystem.Emit(30);
+        if (collision.transform.tag == "Ball")
+        {
+            particleSystem.Emit(30);
+        }
     }
 }

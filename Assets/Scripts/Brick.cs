@@ -11,15 +11,14 @@ public class Brick: MonoBehaviour {
     protected new ParticleSystem particleSystem;
 
 	public void Start () {
-		model.GetComponent<MeshRenderer> ().sharedMaterial.color = color;
+		model.GetComponent<MeshRenderer> ().material.color = color;
         particleSystem = GetComponent<ParticleSystem>();
 
         ParticleSystem.MainModule main = particleSystem.main;
         main.startColor = color;
-
     }
 
-    void OnCollisionEnter(Collision collision)
+    protected void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.tag == "Ball")
         {
