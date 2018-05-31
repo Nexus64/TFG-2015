@@ -135,48 +135,6 @@
       \field{title}{Breaking into the Game Industry: Advice for a Successful Career from Those Who Have Done It}
       \field{year}{2012}
     \endentry
-    \entry{street_fighters_2}{software}{}
-      \name{author}{1}{}{%
-        {{hash=cd34b4df822d7a86e30339f947aa1880}{%
-           family={Capcom},
-           familyi={C\bibinitperiod}}}%
-      }
-      \strng{namehash}{cd34b4df822d7a86e30339f947aa1880}
-      \strng{fullhash}{cd34b4df822d7a86e30339f947aa1880}
-      \strng{authornamehash}{cd34b4df822d7a86e30339f947aa1880}
-      \strng{authorfullhash}{cd34b4df822d7a86e30339f947aa1880}
-      \field{labelalpha}{Cap91}
-      \field{sortinit}{C}
-      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{day}{6}
-      \field{month}{2}
-      \field{title}{Street Fighter II: The World Warrior}
-      \field{year}{1991}
-      \field{dateera}{ce}
-    \endentry
-    \entry{dragon_quest}{software}{}
-      \name{author}{1}{}{%
-        {{hash=d0947731579960080b4e96a080b8c677}{%
-           family={Chunsoft},
-           familyi={C\bibinitperiod}}}%
-      }
-      \strng{namehash}{d0947731579960080b4e96a080b8c677}
-      \strng{fullhash}{d0947731579960080b4e96a080b8c677}
-      \strng{authornamehash}{d0947731579960080b4e96a080b8c677}
-      \strng{authorfullhash}{d0947731579960080b4e96a080b8c677}
-      \field{labelalpha}{Chu86}
-      \field{sortinit}{C}
-      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{day}{27}
-      \field{month}{5}
-      \field{title}{Dragon Quest}
-      \field{year}{1986}
-      \field{dateera}{ce}
-    \endentry
     \entry{libro_esi}{book}{}
       \name{author}{1}{}{%
         {{hash=8fae8dba8bf82b0e106aa10aff7a6183}{%
@@ -244,29 +202,6 @@
       \field{labeltitlesource}{title}
       \field{title}{OXO}
       \field{year}{1952}
-      \field{dateera}{ce}
-    \endentry
-    \entry{final_fantasy_15}{software}{}
-      \name{author}{1}{}{%
-        {{hash=f0874b3a9b6ad07e6a68d7864b5bfc9a}{%
-           family={Enix},
-           familyi={E\bibinitperiod},
-           given={Square},
-           giveni={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{f0874b3a9b6ad07e6a68d7864b5bfc9a}
-      \strng{fullhash}{f0874b3a9b6ad07e6a68d7864b5bfc9a}
-      \strng{authornamehash}{f0874b3a9b6ad07e6a68d7864b5bfc9a}
-      \strng{authorfullhash}{f0874b3a9b6ad07e6a68d7864b5bfc9a}
-      \field{labelalpha}{Eni16}
-      \field{sortinit}{E}
-      \field{sortinithash}{07bbd5a529b5beaa311df5be05b874bc}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{day}{29}
-      \field{month}{11}
-      \field{title}{Final Fantasy XV}
-      \field{year}{2016}
       \field{dateera}{ce}
     \endentry
     \entry{diablo_2}{software}{}
@@ -565,68 +500,28 @@
       \field{year}{2016}
       \field{dateera}{ce}
     \endentry
-    \entry{donkey_kong}{software}{}
+    \entry{game_programming_patterns}{book}{}
       \name{author}{1}{}{%
-        {{hash=073b7e4ff1d153a52b07eadb5898cb92}{%
-           family={Nintendo},
-           familyi={N\bibinitperiod}}}%
+        {{hash=26313e6493577f16e529ef2698d1a15c}{%
+           family={Nystrom},
+           familyi={N\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
       }
-      \strng{namehash}{073b7e4ff1d153a52b07eadb5898cb92}
-      \strng{fullhash}{073b7e4ff1d153a52b07eadb5898cb92}
-      \strng{authornamehash}{073b7e4ff1d153a52b07eadb5898cb92}
-      \strng{authorfullhash}{073b7e4ff1d153a52b07eadb5898cb92}
-      \field{labelalpha}{Nin81}
+      \list{publisher}{1}{%
+        {Geneber Benning}%
+      }
+      \strng{namehash}{26313e6493577f16e529ef2698d1a15c}
+      \strng{fullhash}{26313e6493577f16e529ef2698d1a15c}
+      \strng{authornamehash}{26313e6493577f16e529ef2698d1a15c}
+      \strng{authorfullhash}{26313e6493577f16e529ef2698d1a15c}
+      \field{labelalpha}{Nys04}
       \field{sortinit}{N}
       \field{sortinithash}{1163c28585427c673ad5a010cbf82f52}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{day}{9}
-      \field{month}{7}
-      \field{title}{Donkey Kong}
-      \field{year}{1981}
-      \field{dateera}{ce}
-    \endentry
-    \entry{super_mario_bros}{software}{}
-      \name{author}{1}{}{%
-        {{hash=073b7e4ff1d153a52b07eadb5898cb92}{%
-           family={Nintendo},
-           familyi={N\bibinitperiod}}}%
-      }
-      \strng{namehash}{073b7e4ff1d153a52b07eadb5898cb92}
-      \strng{fullhash}{073b7e4ff1d153a52b07eadb5898cb92}
-      \strng{authornamehash}{073b7e4ff1d153a52b07eadb5898cb92}
-      \strng{authorfullhash}{073b7e4ff1d153a52b07eadb5898cb92}
-      \field{labelalpha}{Nin85}
-      \field{sortinit}{N}
-      \field{sortinithash}{1163c28585427c673ad5a010cbf82f52}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{day}{13}
-      \field{month}{9}
-      \field{title}{Super Mario Bros.}
-      \field{year}{1985}
-      \field{dateera}{ce}
-    \endentry
-    \entry{legend_of_zelda}{software}{}
-      \name{author}{1}{}{%
-        {{hash=073b7e4ff1d153a52b07eadb5898cb92}{%
-           family={Nintendo},
-           familyi={N\bibinitperiod}}}%
-      }
-      \strng{namehash}{073b7e4ff1d153a52b07eadb5898cb92}
-      \strng{fullhash}{073b7e4ff1d153a52b07eadb5898cb92}
-      \strng{authornamehash}{073b7e4ff1d153a52b07eadb5898cb92}
-      \strng{authorfullhash}{073b7e4ff1d153a52b07eadb5898cb92}
-      \field{labelalpha}{Nin86}
-      \field{sortinit}{N}
-      \field{sortinithash}{1163c28585427c673ad5a010cbf82f52}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{day}{21}
-      \field{month}{2}
-      \field{title}{The Legend of Zelda}
-      \field{year}{1986}
-      \field{dateera}{ce}
+      \field{title}{Game Programming Patterns}
+      \field{year}{2004}
     \endentry
     \entry{ia_moderno}{book}{}
       \name{author}{2}{}{%
@@ -753,29 +648,6 @@
       \field{year}{1994}
       \field{dateera}{ce}
     \endentry
-    \entry{quake}{software}{}
-      \name{author}{1}{}{%
-        {{hash=52179c80aa6f9bfc5552b66ba4b1d86b}{%
-           family={Software},
-           familyi={S\bibinitperiod},
-           prefix={id},
-           prefixi={i\bibinitperiod}}}%
-      }
-      \strng{namehash}{52179c80aa6f9bfc5552b66ba4b1d86b}
-      \strng{fullhash}{52179c80aa6f9bfc5552b66ba4b1d86b}
-      \strng{authornamehash}{52179c80aa6f9bfc5552b66ba4b1d86b}
-      \strng{authorfullhash}{52179c80aa6f9bfc5552b66ba4b1d86b}
-      \field{labelalpha}{Sof96}
-      \field{sortinit}{S}
-      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{day}{22}
-      \field{month}{6}
-      \field{title}{Quake}
-      \field{year}{1996}
-      \field{dateera}{ce}
-    \endentry
     \entry{Quake_3}{software}{}
       \name{author}{1}{}{%
         {{hash=52179c80aa6f9bfc5552b66ba4b1d86b}{%
@@ -797,27 +669,6 @@
       \field{month}{12}
       \field{title}{Quake III Arena}
       \field{year}{1999}
-      \field{dateera}{ce}
-    \endentry
-    \entry{chrono_trigger}{software}{}
-      \name{author}{1}{}{%
-        {{hash=ceb46ca115d05c51aa5a16a8867c3304}{%
-           family={Square},
-           familyi={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{ceb46ca115d05c51aa5a16a8867c3304}
-      \strng{fullhash}{ceb46ca115d05c51aa5a16a8867c3304}
-      \strng{authornamehash}{ceb46ca115d05c51aa5a16a8867c3304}
-      \strng{authorfullhash}{ceb46ca115d05c51aa5a16a8867c3304}
-      \field{labelalpha}{Squ95}
-      \field{sortinit}{S}
-      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{day}{11}
-      \field{month}{3}
-      \field{title}{Chrono Trigger}
-      \field{year}{1995}
       \field{dateera}{ce}
     \endentry
     \entry{halo_2}{software}{}
@@ -989,7 +840,6 @@
     \endentry
   \endsortlist
   \missing{flow}
-  \missing{game_programing_patterns}
 \endrefsection
 \endinput
 
