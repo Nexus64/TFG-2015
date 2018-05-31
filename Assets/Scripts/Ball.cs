@@ -6,6 +6,7 @@ using MonsterLove.StateMachine;
 public class Ball : StateBehaviour {
 	public float speed;
 	public float realspeed;
+    public Projector shadowProjector;
 	public Vector3 newVelocity;
 	public AudioClip hitFloor;
 	public AudioClip hitBrick;
@@ -47,6 +48,7 @@ public class Ball : StateBehaviour {
 		rigidbody.velocity = direction.normalized * speed;
         HitParticles(transform.position, Vector3.forward);
         hitCounter = 0;
+        shadowProjector.enabled = true;
 	}
 
     void Locked_Enter()
@@ -55,6 +57,7 @@ public class Ball : StateBehaviour {
         renderer.enabled = false;
         collider.enabled = false;
         rigidbody.useGravity = false;
+        shadowProjector.enabled = false;
     }
 
     void Locked_Exit()
@@ -216,8 +219,8 @@ public class Ball : StateBehaviour {
     }
 
 	public void Gameover(){
-		Debug.Log ("gameover");
-		SceneManager.LoadScene("game over");
+        Room room = GameObject.FindGameObjectWithTag("room").GetComponent<Room>();
+        room.GameOver();
 	}
 
     public void HitParticles(Collision collision)

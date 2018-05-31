@@ -77,7 +77,7 @@ public class LevelGenerator : MonoBehaviour
     void GenerateBoss()
     {
         Transform bossTransform = Instantiate(bossPrefab, doorScript.transform);
-        bossTransform.position += doorScript.transform.position;
+        //bossTransform.position += doorScript.transform.position + location;
         boss = bossTransform.GetComponent<BossController>();
     }
 

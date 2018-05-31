@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class Room : MonoBehaviour {
     public static bool firstGame = true;
     public int victoryScene = 0;
+    public int gameOverScene = 2;
 
     public bool debug;
     public int levelID;
@@ -65,6 +66,12 @@ public class Room : MonoBehaviour {
         }
     }
 
+    public void GameOver()
+    {
+        FlashTransition transition = Camera.main.GetComponent<FlashTransition>();
+        transition.StartTransition(gameOverScene);
+    }
+
     public void DestroyBricks()
     {
         List<Brick> brickList = levelGenerator.GetBrickList();
@@ -81,9 +88,10 @@ public class Room : MonoBehaviour {
         if (boss != null)
         {
             boss.StartDestruction();
+            return endLevelTime;
         }
 
-        return endLevelTime;
+        return 0;
     }
 
     public void DamageBoss(int damage)
