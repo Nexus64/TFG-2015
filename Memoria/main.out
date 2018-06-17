@@ -1,27 +1,65 @@
 \BOOKMARK [0][-]{chapter*.1}{\315ndice general}{}% 1
 \BOOKMARK [0][-]{chapter*.2}{\315ndice de figuras}{}% 2
-\BOOKMARK [0][-]{chapter.1}{Arquitectura}{}% 3
-\BOOKMARK [1][-]{section.1.1}{Descripci\363n del Juego}{chapter.1}% 4
-\BOOKMARK [1][-]{section.1.2}{Visi\363n general}{chapter.1}% 5
-\BOOKMARK [1][-]{section.1.3}{Men\372}{chapter.1}% 6
-\BOOKMARK [1][-]{section.1.4}{Control de niveles}{chapter.1}% 7
-\BOOKMARK [2][-]{subsection.1.4.1}{Carga de Niveles}{section.1.4}% 8
-\BOOKMARK [2][-]{subsection.1.4.2}{Inicio del juego}{section.1.4}% 9
-\BOOKMARK [2][-]{subsection.1.4.3}{Condiciones de fin del juego}{section.1.4}% 10
-\BOOKMARK [1][-]{section.1.5}{Control del jugador}{chapter.1}% 11
-\BOOKMARK [2][-]{subsection.1.5.1}{Componentes}{section.1.5}% 12
-\BOOKMARK [2][-]{subsection.1.5.2}{Comportamiento del personaje}{section.1.5}% 13
-\BOOKMARK [1][-]{section.1.6}{F\355sicas e interacci\363n}{chapter.1}% 14
-\BOOKMARK [2][-]{subsection.1.6.1}{Pelota}{section.1.6}% 15
-\BOOKMARK [2][-]{subsection.1.6.2}{Elementos Interactivos}{section.1.6}% 16
-\BOOKMARK [1][-]{section.1.7}{Jefe Final}{chapter.1}% 17
-\BOOKMARK [2][-]{subsection.1.7.1}{Componentes}{section.1.7}% 18
-\BOOKMARK [2][-]{subsection.1.7.2}{Movimiento}{section.1.7}% 19
-\BOOKMARK [2][-]{subsection.1.7.3}{Inteligencia Artificial}{section.1.7}% 20
-\BOOKMARK [1][-]{section.1.8}{Patrones de Dise\361o}{chapter.1}% 21
-\BOOKMARK [2][-]{subsection.1.8.1}{State}{section.1.8}% 22
-\BOOKMARK [2][-]{subsection.1.8.2}{Component}{section.1.8}% 23
-\BOOKMARK [2][-]{subsection.1.8.3}{Prototype}{section.1.8}% 24
-\BOOKMARK [2][-]{subsection.1.8.4}{Singleton}{section.1.8}% 25
-\BOOKMARK [0][-]{Item.25}{Bibliograf\355a}{}% 26
-\BOOKMARK [0][-]{appendix*.3}{Videojuegos}{}% 27
+\BOOKMARK [0][-]{chapter.1}{Introducci\363n}{}% 3
+\BOOKMARK [1][-]{section.1.1}{Contexto}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.2}{Motivaci\363n}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.3}{Descripci\363n del Proyecto}{chapter.1}% 6
+\BOOKMARK [0][-]{chapter.2}{Estado del Arte}{}% 7
+\BOOKMARK [1][-]{section.2.1}{El mercado de los videojuegos}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.1.1}{Industria Mundial del Videojuego}{section.2.1}% 9
+\BOOKMARK [2][-]{subsection.2.1.2}{La industria de los videojuegos en Espa\361a}{section.2.1}% 10
+\BOOKMARK [2][-]{subsection.2.1.3}{Retos y tendencias actuales}{section.2.1}% 11
+\BOOKMARK [1][-]{section.2.2}{El proceso de desarrollo de videojuegos}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.1}{Etapas del desarrollo}{section.2.2}% 13
+\BOOKMARK [2][-]{subsection.2.2.2}{Estructura t\355pica de un equipo de desarrollo}{section.2.2}% 14
+\BOOKMARK [1][-]{section.2.3}{Motores de juegos}{chapter.2}% 15
+\BOOKMARK [2][-]{subsection.2.3.1}{Descripci\363n}{section.2.3}% 16
+\BOOKMARK [2][-]{subsection.2.3.2}{Ejemplos de Motores}{section.2.3}% 17
+\BOOKMARK [2][-]{subsection.2.3.3}{Unity 3D}{section.2.3}% 18
+\BOOKMARK [1][-]{section.2.4}{Inteligencia Artificial en Videojuegos}{chapter.2}% 19
+\BOOKMARK [2][-]{subsection.2.4.1}{Historia}{section.2.4}% 20
+\BOOKMARK [2][-]{subsection.2.4.2}{IA Aplicada a Videojuegos: Contexto Actual}{section.2.4}% 21
+\BOOKMARK [2][-]{subsection.2.4.3}{M\351todos de la IA}{section.2.4}% 22
+\BOOKMARK [2][-]{subsection.2.4.4}{Futuros campos de aplicaci\363n}{section.2.4}% 23
+\BOOKMARK [0][-]{chapter.3}{Arquitectura}{}% 24
+\BOOKMARK [1][-]{section.3.1}{Descripci\363n del Juego}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.2}{Visi\363n General de la Arquitectura}{chapter.3}% 26
+\BOOKMARK [1][-]{section.3.3}{Men\372}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.4}{Control de niveles}{chapter.3}% 28
+\BOOKMARK [2][-]{subsection.3.4.1}{Carga de Niveles}{section.3.4}% 29
+\BOOKMARK [2][-]{subsection.3.4.2}{Inicio del juego}{section.3.4}% 30
+\BOOKMARK [2][-]{subsection.3.4.3}{Condiciones de fin del juego}{section.3.4}% 31
+\BOOKMARK [1][-]{section.3.5}{Control del jugador}{chapter.3}% 32
+\BOOKMARK [2][-]{subsection.3.5.1}{Componentes}{section.3.5}% 33
+\BOOKMARK [2][-]{subsection.3.5.2}{Comportamiento del personaje}{section.3.5}% 34
+\BOOKMARK [1][-]{section.3.6}{F\355sicas e interacci\363n}{chapter.3}% 35
+\BOOKMARK [2][-]{subsection.3.6.1}{Pelota}{section.3.6}% 36
+\BOOKMARK [2][-]{subsection.3.6.2}{Elementos Interactivos}{section.3.6}% 37
+\BOOKMARK [1][-]{section.3.7}{Jefe Final}{chapter.3}% 38
+\BOOKMARK [2][-]{subsection.3.7.1}{Componentes}{section.3.7}% 39
+\BOOKMARK [2][-]{subsection.3.7.2}{Movimiento}{section.3.7}% 40
+\BOOKMARK [2][-]{subsection.3.7.3}{Inteligencia Artificial}{section.3.7}% 41
+\BOOKMARK [1][-]{section.3.8}{Patrones de Dise\361o}{chapter.3}% 42
+\BOOKMARK [2][-]{subsection.3.8.1}{State}{section.3.8}% 43
+\BOOKMARK [2][-]{subsection.3.8.2}{Component}{section.3.8}% 44
+\BOOKMARK [2][-]{subsection.3.8.3}{Prototype}{section.3.8}% 45
+\BOOKMARK [2][-]{subsection.3.8.4}{Singleton}{section.3.8}% 46
+\BOOKMARK [0][-]{chapter.4}{Resultados}{}% 47
+\BOOKMARK [1][-]{section.4.1}{Proceso de Desarrollo}{chapter.4}% 48
+\BOOKMARK [2][-]{subsection.4.1.1}{Prototipo}{section.4.1}% 49
+\BOOKMARK [2][-]{subsection.4.1.2}{Mec\341nicas de Juego Complementarias}{section.4.1}% 50
+\BOOKMARK [2][-]{subsection.4.1.3}{Cambios Est\351ticos}{section.4.1}% 51
+\BOOKMARK [2][-]{subsection.4.1.4}{Carga de Niveles}{section.4.1}% 52
+\BOOKMARK [2][-]{subsection.4.1.5}{Jefe Final}{section.4.1}% 53
+\BOOKMARK [2][-]{subsection.4.1.6}{Ajustes, Refactorizaci\363n y Correcciones}{section.4.1}% 54
+\BOOKMARK [1][-]{section.4.2}{Encuesta de Opini\363n}{chapter.4}% 55
+\BOOKMARK [2][-]{subsection.4.2.1}{Descripci\363n}{section.4.2}% 56
+\BOOKMARK [2][-]{subsection.4.2.2}{Resultados}{section.4.2}% 57
+\BOOKMARK [0][-]{chapter.5}{Conclusiones y Trabajos Futuros}{}% 58
+\BOOKMARK [1][-]{section.5.1}{Conclusiones}{chapter.5}% 59
+\BOOKMARK [2][-]{subsection.5.1.1}{Grado de Cumplimiento de los Objetivos}{section.5.1}% 60
+\BOOKMARK [2][-]{subsection.5.1.2}{Grado de Cumplimiento de Competencias}{section.5.1}% 61
+\BOOKMARK [2][-]{subsection.5.1.3}{Valoraci\363n Personal}{section.5.1}% 62
+\BOOKMARK [1][-]{section.5.2}{L\355neas de Trabajo Futuro}{chapter.5}% 63
+\BOOKMARK [0][-]{section.5.2}{Bibliograf\355a}{}% 64
+\BOOKMARK [0][-]{chapter*.3}{Videojuegos}{}% 65

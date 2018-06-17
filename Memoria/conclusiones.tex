@@ -1,0 +1,68 @@
+\chapter{Conclusiones y Trabajos Futuros}
+\label{Conclusiones}
+%resumen del capítulo
+\section{Conclusiones}
+El desarrollo de este proyecto comenzó con la imposición de una serie de \textbf{objetivos} que debían ser completados para que el proyecto pudiese ser considerado exitoso. Estos objetivos incluían tanto requisitos formales del software tanto como unas expectativas de como luciría el resultado final. En esta sección, se va a realizar una comparación entre el juego en su versión final y estos objetivos.
+
+\subsection{Grado de Cumplimiento de los Objetivos}
+\subsubsection{Objetivo Principal}
+El objetivo de este proyecto es el de \textbf{diseñar y desarrollar un videojuego completo con gráficos en tres dimensiones para PC} utilizando el motor de juegos \textbf{Unity}. Como todo producto software, el desarrollo de un videojuego requiere de una producción bien planificada que permita terminar el proyecto dentro de los márgenes de tiempo y presupuesto previstos, sin embargo, en la elaboración de un videojuego intervienen factores que no son frecuentes en el desarrollo software. El desarrollo de videojuegos es un proceso multidisciplinar en el que se debe integrar código, arte, sonido y animación en un qué además de funcional debe de resultar \textbf{divertido} para sus usuarios.
+
+El resultado del \textbf{proyecto es un videojuego completo} en el que se encuentran \textbf{implementadas todas las características básicas} incluidas en el diseño. Para su desarrollo fue necesario utilizar el entorno integrado de desarrollo Unity3D, el cual utiliza una metodología de desarrollo no convencional en el desarrollo de software, pero bastante común en el ámbito de los videojuegos. El desarrollo software fue complementado con la elaboración de \textbf{modelos 3D y texturas} para los diversos elementos del juego. Al carecer de un artista dedicado en el equipo, la tarea de elaborar estos gráficos recayó también en el programador.
+
+\subsubsection{Objetivos Secundarios}
+De forma paralela al objetivo principal, también se plantearon unos objetivos secundarios en relación con la clase del juego que se pretendía desarrollar. 
+
+El primero de estos objetivos era el de \textbf{trasladar la jugabilidad del género a un entorno 3D}, solucionando los diversos problemas que suponía el traslado de las mecánicas de un juego tradicionalmente bidimensional a las tres dimensiones. El juego final logra adaptar perfectamente el género Breakout a este nuevo entorno gracias a los ajustes realizados en los elementos principales del juego. Los cambios realizados en las físicas de la pelota y el control de personaje principal sirvieron para corregir los problemas intrínsecos del nuevo medio 3D al mismo tiempo que mantenían la esencia de este tipo de juegos.
+
+Sin embargo, la falta de tiempo provocó que algunos elementos y mecánicas comunes en el género Breakout no pudieron ser implementados en el juego. Los \textbf{Power-Ups} o potenciadores, objetos que al ser recolectados mejoran temporalmente al jugador, y un \textbf{sistema de puntuación} acompañado de un sistema de ranking son dos constantes en el género que no pudieron ser implementadas.
+
+El segundo objetivo secundario era el de implementar el juego de forma que sea \textbf{fácilmente expandible} con más niveles y elementos según fuese necesario. Este objetivo fue cumplido de forma parcial debido a que, aunque la creación de niveles es un proceso sencillo y rápido, y es posible añadir nuevos tipos de ladrillos con relativa facilidad, el sistema es bastante cerrado a ampliaciones en bastantes áreas. Tareas como niveles con distintos tamaños o con elementos en los suelos y paredes requerirían de cambios importantes en los sistemas actuales. 
+
+\subsection{Grado de Cumplimiento de Competencias}
+%listar las competencias que se intentaron desarrollar y como
+Con el desarrollo de este videojuego se quería poner a prueba las \textbf{competencias} adquiridas en el grado en ingeniería informática, en especial dos competencias de la rama de la computación: 
+\begin{itemize}
+\item La capacidad para desarrollar y evaluar sistemas interactivos y de presentación de información compleja y su aplicación a la resolución de problemas de diseño de \textbf{interacción persona computadora}. 
+\item Capacidad para conocer los fundamentos, paradigmas y técnicas propias de los \textbf{sistemas inteligentes} y analizar, diseñar y construir sistemas, servicios y aplicaciones informáticas que utilicen dichas técnicas en cualquier ámbito de aplicación. 
+\end{itemize}
+
+Los videojuegos son, por definición, sistemas interactivos. Desde las primeras etapas del proyecto, la principal prioridad del proyecto fue que la \textbf{interacción entre el jugador y el juego} fuese lo más natural y cómoda posible. Durante el desarrollo, numerosos ajustes y sistemas fueron añadidos sobre la jugabilidad base para mejorar la experiencia de juego. Algunos de estos cambios fueron:
+\begin{itemize}
+\item El tutorial al principio del juego, el cual está diseñado para informar al usuario sin resultar molesto o intrusivo.
+\item El control del personaje principal fue ajustado para que respondiera a la perfección a la entrada del jugador. 
+\item La dirección en la que se mueve la pelota es modificada mediante código adicional para que se adapte a las expectativas del jugador, aunque no se correspondan con el movimiento natural.
+\item La paleta de colores y la iluminación está ajustada para que al jugador le resulte fácil distinguir los distintos elementos del juego entre sí.
+\end{itemize}
+
+%en inteligencia artificial, hablar del estudio realizado en la planificación
+El comportamiento del jefe final es la principal muestra de \textbf{inteligencia artificial} del proyecto. Este enemigo es utilizado en el nivel final del juego como el último desafío para el jugador, sirviendo como clausura de la experiencia de juego. Lejos de comportarse de forma perfecta para evitar que el jugador gane el juego, el jefe se comporta como si se tratase de un oponente humano, introduciendo defectos intencionales en sus movimientos.
+
+Este comportamiento está implementado mediante una \textbf{máquina de estados finitos}. Sin ser una implementación demasiado compleja, la máquina de estados permite encapsular los distintos comportamientos del jefe y asegurar que en todo momento el jefe reacciona de la manera esperada. Gracias al sistema de componentes de Unity, \textbf{la inteligencia artificial es independiente de la implementación del movimiento del jefe}, lo que nos permitiría cambiarla con facilidad por otra con un comportamiento distinto en caso de necesidad.
+
+\subsection{Valoración Personal}
+%hablar tanto de positivo como de negativo
+Aparte de los objetivos cumplidos y de las competencias demostradas, durante el desarrollo de este proyecto pudieron completarse \textbf{varios logros que son dignos de menció}n. De la misma forma, el proyecto tuvo varios fallos importantes que deben evitarse en futuros trabajos.
+
+%en positivo sobre la carga de niveles y el estilo grafico
+El principal logro del proyecto es el \textbf{sistema de carga de niveles}. Aunque de alcance reducido, este sistema cumple con todos los requisitos necesarios para el desarrollo rápido de niveles. Al no estar incluido en el diseño original del juego, la carga de niveles tuvo que ser diseñada a mitad del desarrollo e integrada con el resto de los sistemas. A pesar de las dificultades, el sistema de carga de niveles pudo ser implementado de forma satisfactoria, lo que prueba la capacidad de adaptación del modelo de desarrollo iterativo.
+
+Otro logro importante del proyecto fue el de \textbf{implementar completamente el estilo artístico}: todos los elementos del juego cuentan con su modelo y textura propios, junto con pequeñas animaciones simples al personaje principal, a la puerta, al jefe y a los textos de los menús. Los efectos de partículas añadidos a ciertas animaciones ayudaron enormemente a dar dinamismo a los elementos del juego. Esto pudo lograrse a pesar de \textbf{no contar con un artista dedicado para el proyecto}, gracias a la elección de un estilo artístico minimista.
+
+%negativo 1: los elementos que no pudieron ser introducidos en el juego
+Por otro lado, el principal punto negativo del juego es su \textbf{poca extensión}. Aunque el juego cumple con los requisitos mínimos para estar dentro del género \textbf{Breakout}, también carece de muchos de los elementos comunes en el género, especialmente en los representantes más modernos. Elementos del juego como potenciadores o enemigos, que habrían servido para dar más variedad a los niveles; sistemas suplementarios para alargar la vida del juego, como una tabla de puntuaciones o un selector de niveles.
+
+%negativo 2: plugin de la máquina de estados.
+Otro punto negativo, esta vez a nivel técnico, fue el sistema escogido para implementar las \textbf{máquinas de estados finitos}. El plugin utilizado funciona dividiendo la ejecución de un componente en varios estados, creando \textbf{eventos} para cada estado. El problema es que todos los eventos se implementan dentro de la misma clase y, por tanto, del mismo archivo, por lo que hasta el tamaño de las clases crece muy rápidamente con cada estado añadido. 
+
+Este problema, junto con la \textbf{falta de funcionalidad suplementaria para los estados} (como la posibilidad de ejecutar acciones al finalizar un estado), hacían muy difícil implementar correctamente los estados y provocaron varios fallos que costaron mucho tiempo y esfuerzo en ser resueltos, pero el plugin estaba tan integrado en la base del proyecto que no era posible sustituirlo. Alternativas a esta implementación deberán ser tomadas en cuenta en futuros proyectos.
+
+\section{Líneas de Trabajo Futuro}
+%descripción de la sección futuro
+Debido a las limitaciones de tiempo y alcance de este proyecto, el juego resultante está lejos de los estándares de calidad de la industria actual. Para alcanzar un \textbf{nivel de calidad profesional}, el juego deberá ser ampliado en múltiples áreas para añadir gráficos y sonidos de mejor calidad, aumentar su duración con más niveles y optimizar su código. 
+
+Uno de los problemas a la hora de expandir el juego en su versión actual es que el \textbf{sistema que controla los eventos del juego esta descentralizado}, dividido entre los distintos objetos del juego. Para poder añadir nuevos elementos más rápidamente, sería conveniente desarrollar un sistema centralizado localizado en un único objeto que se encargue de coordinar el resto de los elementos del juego. De esta forma, futuras adiciones al juego supondrían modificar un solo objeto en lugar de a todos los objetos.
+
+Otro factor limitante en la expansión del juego es la \textbf{carga de niveles}. El sistema actual, si bien cumple con los requisitos esperados, no da soporte a características tan básicas como salas de distintos tamaños o de colocar elementos en puntos que no sean la puerta de la sala. La mejor opción para el desarrollo de la nueva carga de niveles es implementar el sistema dentro del editor de Unity mediante \textbf{scripts de editor}, lo que ahorraría la necesidad de integrar una herramienta nueva al proceso de desarrollo.
+
+Finalmente, un punto importante a mejorar del desarrollo es realizar una mejor \textbf{campaña de difusión}, que permita llegar a un público mayor. Un componente importante de la futura campaña sería el de elaborar un \textbf{blog de desarrollo} en el que se publicaría de forma regular los avances en el proyecto para así atraer a jugadores antes incluso de que el proyecto esté terminado. También será importante publicitar el juego antes de su lanzamiento con un tráiler.

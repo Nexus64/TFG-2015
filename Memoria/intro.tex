@@ -1,84 +1,46 @@
 \chapter{Introducción}
 \label{chap:introducción}
+\section{Contexto}
+%comparativa con otras industrias
+La industria del videojuego es el \textbf{principal mercado del ocio y entretenimiento del mundo}, el cual engloba docenas de disciplinas de trabajo y da trabajo a miles de personas alrededor del mundo. Con unas ventas de 116.000 millones de dólares\cite{libro_blanco} en el año 2017, este mercado ha superado creces a sus competidores más cercanos: sus ganancias son dos veces y media superiores a las del mercado del cine y más de seis veces las del mercado de la música.
+
+%industria en crecimiento
+El éxito de esta industria se debe principalmente a su gran \textbf{capacidad para evolucionar} rápidamente para adaptarse a los gustos y tendencias de los consumidores. Esto ha permitido que los videojuegos hayan podido integrarse con las principales tendencias en tecnología, como lo fue en su momento la aparición de Internet o de los dispositivos móviles o como actualmente está ocurriendo con la realidad virtual o los servicios de distribución en línea.  
+
+%Ampliación del público; creadores de contenido
+La expansión del mercado del videojuego conlleva también una \textbf{expansión del perfil de sus jugadores}. La aparición de nuevos modelos de juego, como los juegos casuales, ha permitido llevar el mercado a un público que no probaría otros juegos más tradicionales. Adicionalmente, hay que incluir a los usuarios que utilizan los videojuegos para \textbf{crear su propio contenido}, como videos o modificaciones de juegos, o los que disfrutan como espectadores viendo jugar a jugadores profesionales.  
+
+%Conclusión/En resumen...
+En resumen, la industria del videojuego no solo es uno de los \textbf{mayores mercados actualmente}, también es un sector económico puntero en constante evolución y la forma de vida de millones de jugadores en todo el mundo. 
+
 \section{Motivación}
-Independientemente de la rama del desarrollo de los videojuegos en la que se pretenda trabajar, el factor decisivo que usan las empresas para determinar a qué profesional contratar son los juegos que ha desarrollado\cite{breaking_game_industry}. 
+%Descripción de un videojuego como software multimedia
+Los videojuegos, desde un punto formal, son \textbf{aplicaciones gráficas en tiempo real e interactivas}\cite{libro_esi}. Para que el jugador pueda reaccionar de forma adecuada a los eventos del juego, la aplicación debe de ser capaz de renderizar el entorno del juego con una \textbf{frecuencia} lo suficientemente alta. Si no, el jugador solo percibirá una sucesión de imágenes estáticas. El componente gráfico del videojuego está acompañado de muchos otros sistemas que sirven para recrear el entorno del juego con la máxima precisión posible: simulaciones físicas, sistemas de sonido, inteligencias artificiales, etcétera.
 
-A través de la lista de juegos en las que una persona ha trabajado, los reclutadores y directores de recursos humanos pueden determinar la valía de un futuro empleado. Especialmente, sirve para valorar la capacidad de la persona para terminar un proyecto de gran envergadura, realizar una gestión de recursos correcta y su creatividad e iniciativa. De forma más específica, en el caso concrete do los programadores, una lista de proyectos completados (que pueden ser tanto juegos como herramientas de desarrollo) permite valorar su forma de desarrollar, mostrando si es capaz de escribir código comprensible y libre de errores.
+%El desarrollo integra diversas tecnologías
+Diseñar un software en el que se integren tantos sistemas de áreas diversas como los que incluye un videojuego \textbf{no es una tarea trivial}. Es necesario diseñar y planificar los distintos sistemas de forma que no haya conflictos o acoplamientos entre ellos. Además, el programa debe estar optimizado de para obtener una frecuencia de refresco de imagen aceptable. La complejidad de esta tarea es tan elevada que muchos estudios utilizan \textbf{motores de juego}, frameworks de desarrollo que suministran gran cantidad de funcionalidad necesaria para el desarrollo de juegos. 
 
-La visibilidad que te da tener juegos completados no solo afecta a las empresas que buscan empleados. Tener una lista de juegos también sirve como carta de presentación para los jugadores, los cuales la podrán utilizar a la hora de decidir si deben o no adquirir un juego de dicho desarrollador, o invertir en una campaña de \textit{crownfunding}.
+Al desarrollo puramente software del videojuego hay que añadir la elaboración de los \textbf{recursos audiovisuales} que serán utilizados en él. La elaboración de modelos 3D, texturas, músicas, efectos de sonido, animaciones, cinemáticas y demás recursos son procesos que pueden llegar a ser tan complejos como el propio desarrollo software, y requieren de sus propias \textbf{herramientas y tecnologías específicas} que deben ser integradas en el proyecto. 
 
-Desarrollar videojuegos también es beneficial para cualquier aspirante a desarrollador de videojuegos. Durante el desarrollo de cualquier videojuego se plantearán problemas (``¿Cómo se modela el comportamiento de un enemigo?'', ``¿Qué editor de niveles es más conveniente?'' ``¿Cuánto tiempo me llevará implementar esta característica concreta?'') los cuales muchas veces volverán a aparecer en muchos, sino todos, los futuros proyectos, por lo que con cada juego, el desarrollador ganará experiencia que le facilitará el trabajo en sus siguientes proyecto y le permitirá emprender proyectos cada vez más ambiciosos. 
+%Dirección de equipos multidisciplinarios
+Ante la enorme dificultad para una sola persona para contar con el conocimiento y la experiencia necesarios en todas las áreas involucradas, en el desarrollo de videojuegos suele realizarse mediante \textbf{equipos de desarrollo}. Dada la naturaleza interdisciplinar de estos equipos, la coordinación es de vital importancia para evitar malentendidos entre profesionales de distintas áreas que puedan desembocar en retrasos en el proyecto.
 
-Con estas ventajas en mente se eligió el desarrollo de un videojuego completo como proyecto de Fin de Grado.
+%Importancia de la experiencia
+Los videojuegos cuentan además con un requisito adicional que la diferencia de otros proyectos software: deben resultar \textbf{divertidos para el jugador}. La diversión del jugador es un factor aparte de la usabilidad o la experiencia de usuario que requiere de un buen \textbf{diseño de juego} y de realizar \textbf{pruebas con jugadores} para poder obtener un resultado óptimo.
 
-\section{Diseño de juego}
-\subsection{Concepto}
-Este juego será de estilo-Breakout, género que se caracteriza por controlar una paleta con la que se redirige una pelota con el objetivo de destruir un muro de ladrillos o bloques. Sin embargo, este juego transcurrirá en un entorno totalmente tridimensional (a diferencia que otros juegos del género, los cuales tiene una área de juego bidimensional). 
+\section{Descripción del Proyecto}
+%Descripción alto nivel del producto y distribución
+El objetivo de este proyecto es el diseño y desarrollo de un \textbf{videojuego completo} utilizando el motor de videojuegos Unity3D. El videojuego en cuestión será un juego del género Breakout que se desarrollará en un entorno tridimensional. El producto resultante del proyecto será distribuido a través de Internet mediante una o varias de las plataformas de distribución de juegos. 
 
-En esta adaptación a las tres dimensiones, determinados elementos del juego han sido modificados respecto al estándar del género, inspirándose en otros juegos o deportes como el Squash \footnote{http://www.realfederaciondesquash.com/}
+%Problemas de diseño de juego que deben abordarse
+El juego elegido para ser desarrollado en el proyecto es una \textbf{adaptación a las tres dimensiones del género Breakout}, un género que nació con el juego clásico del mismo nombre \citegame{breakout}. Se trata de un género tradicionalmente 2D, por lo que en esta versión será necesario introducir cambios a las bases de su diseño e implementar una serie de sistemas que mejoren la experiencia del jugador, compensando las dificultades intrínsecas a un entorno 3D (zona de juego más grande, dificultad para apreciar perspectiva...). 
 
-\begin{figure}[h]
-	\includegraphics[width=0.8\textwidth]{images/intro/design/breakout}
-	\centering
-	\caption{Breakout (Atari, 1976)}
-\end{figure}
+%Implementación software en detalle (Unity, Windows, prestaciones, lenguaje...)
+El desarrollo del proyecto se realizará mediante el uso de \textbf{Unity3D}, un \textbf{motor de juegos} multiplataformas enfocado al desarrollo de videojuegos en 2D y 3D. Se trata de un motor de calidad profesional, dotado de renderizado en tiempo real, simulación de físicas (implementado mediante la librería \textbf{PhysX} de Nvidia), tecnología de animación. La funcionalidad central motor está implementada en el lenguaje de programación C++, mientras que la lógica de juego se implementará mediante el lenguaje C\#. El entorno de desarrollo integrado \textbf{Microsoft VisualStudio} se utilizará para la escritura de código, el entorno recomendado para Unity; mientras que la integración de recursos se realizará en el \textbf{editor de Unity}.
 
-\subsection{Jugabilidad}
-En este juego, el jugador controla a un personaje encerrado en una sala cubica. El objetivo del juego es el de salir de la sala abriendo una enorme puerta que ocupa la totalidad de la pared norte de la sala. Para lograrlo, el jugador debe golpear una pelota usando una paleta para golpear con ella la puerta. Tras varios golpes, la puerta se abrirá. Sin embargo, la puerta estará cubierta por un muro de ladrillos que el jugador deberá romper primero para poder alcanzar la puerta. Por otro lado, si la pelota golpea tres veces consecutivas el suelo, el jugador perderá la partida.
+%Arte y sonido (blender, photoshop y recursos open source)
+Los componentes gráficos del juego se elaborarán mediante el uso de herramientas externas. Los modelos 3D de personajes y otros elementos se modelarán mediante la herramienta de código libre \textbf{Blender}, que permite una exportación de modelos sencilla a los formatos admitidos en Unity. Para la elaboración de las texturas de los modelos, los elementos de la interfaz gráfica de usuario y otras imágenes del proyecto se utilizará el editor gráfico \textbf{Adobe Photoshop}, por su buena relación potencia/simplicidad y por su mayor base de usuarios frente a la competencia, lo que permite obtener soporte con mayor facilidad.
 
-El control del personaje principal es sencillo, ya que solo cuenta con dos acciones: moverse por el suelo de la sala y activar la paleta. El movimiento del personaje es un movimiento en ocho direcciones (delante, atrás, derecha, izquierda y diagonales), con una aceleración alta para dar una buena sensación de control. La activación de la paleta permitirá controlar la dirección de la bola, haciendo que esta rebote, impidiendo que caiga en al suelo y, idealmente, redirigiéndola hacia la puerta. La paleta estará activa durante un tiempo limitado, durante el cual el personaje permanecerá inmóvil. Si el personaje es golpeado por la pelota directamente, cuando la paleta está desactivada, el personaje quedará aturdido unos instantes, durante los cuales no podrá realizar ninguna acción.
-
-La pelota se moverá por la sala rebotando de forma natural por sus paredes. Al golpear la puerta, o los bloques que la cubren, la pelota les causará daño. Los bloques se destruirán tras recibir daño suficiente, mientras que la puerta se abrirá, permitiendo al jugador salir de la sala. Si la pelota rebota tres veces en el suelo de la sala sin que el jugador la golpee con la paleta, esta será destruida y la partida se acabará.
-
-La puerta de la sala está cubierta por un muro de ladrillos o bloques. Los bloques se colocan sobre la puerta alineados en una cuadricula de 16 X 16 unidades. Existen varios tipos de bloques, con distintas propiedades, los cuales pueden estar colocados con una rotación de 0º o de 90º y pintados de distintos colores. Los tipos de bloques son los siguientes:
-\begin{itemize}
-  \item Bloque Básico: Es el bloque normal, el cual se rompe al recibir un golpe de la pelota. Las dimensiones de este bloque son una unidad de altura y dos de anchura.
-  \item Bloque Triple: Idéntico en dimensiones al bloque básico, pero se romperá tras recibir tres golpes en lugar de uno. 
-  \item Bloque Divisible: Se trata de un bloque cuadrado de dos unidades de altura y anchura. Al ser golpeado, este bloque se romperá en cuatro Bloques Pequeños. 
-  \item Bloque Pequeño: Es un bloque de pequeño tamaño (una unidad de altura y anchura).
-  \item Bloque Irrompible: Este bloque no puede ser destruido por la pelota, por muchos golpes que reciba. Es también un bloque de gran tamaño, ya que mide el doble que el bloque básico (cuatro unidades de ancho y dos de altura).
-\end{itemize}
-
-El juego contendrá varias salas. Las salas tendrán unas dimensiones constantes, pero distintas configuraciones de bloques cubriendo la puerta, y distintos valores de ``puntos de vida'' para la puerta. Cuando el jugador abra la puerta de una sala, el personaje saldrá de ella y se moverá a otra sala distinta.  Las salas están ordenadas con dificultad creciente, de modo que el jugador se encontrará primero con las salas más sencillas antes de tener que enfrentarse a las más complicadas. Este aumento gradual mantendrá al jugador en un estado mental llamado ``fluir'' en el cual se tiene una concentración extrema en el juego \cite{flow}. De forma similar, los distintos tipos de bloques serán introducidos de forma progresiva
-
-\begin{figure}[h]
-	\includegraphics[width=0.8\textwidth]{images/intro/design/flow}
-	\centering
-	\caption{Relación entre desafío y la ansiedad/aburrimiento.}
-\end{figure}
-
-\subsection{Estilo y Ambientación}
-El equipo de desarrollo de este juego está formado por una única persona, la cual debe realizar la producción completa del juego, que incluye diseño, programación, producción de los assets gráficos y creación de la música y sonidos. Dado que la responsabilidad de la producción artística cae en manos de un desarrollador que debe, además, ocuparse de otras responsabilidades dentro del proyecto en lugar de en un profesional que se dedique a tiempo completo en la producción, los posibles estilos gráficos y sonoros son limitados.
-
-La elección del estilo artístico se limitaba a dos opciones: utilizar assets con licencia de libre uso, obtenidos de páginas como OpenGameArt.com\footnote{https://opengameart.org/}, o producir el arte utilizando un estilo sencillo y minimalista que pueda producirse en poco tiempo. La opción que se eligió fue la producción propia utilizando un estilo minimalista, ya que daría al juego un aspecto más único y cohesivo.
-Dado que el diseño del juego requiere de gráficos tridimensionales, se optó por un diseño de personajes y escenarios con un bajo número de polígonos, al mismo tiempo que se empleaban texturas con una resolución y paleta de colores muy limitada, creadas usando el estilo artístico ``Pixel Art'', el cual imita las limitaciones gráficas de los ordenadores y videoconsolas antiguas. Los modelos resultantes de aplicar este estilo recuerdan a modelos de papel o maquetas construidas con bloques.
-
-\begin{figure}[h]
-	\includegraphics[width=0.8\textwidth]{images/intro/design/megaman}
-	\centering
-	\caption{El estilo del juego está influenciado por títulos como Megaman Legends(Capcom, 1997)}
-\end{figure}
-
-Las opciones para la producción musical son mucho más reducidas. Debido a la dificultad de crear una banda sonora desde cero, la única opción es utilizar música con licencia de libre uso. Para que la música esté en consonancia con el estilo artístico, se utilizará música de estilo ``Chiptune'' el cual, al igual que los gráficos, imita las limitaciones técnicas de videoconsolas y ordenadores antiguos. Esto mismo se aplicará a los efectos de sonido, también con licencia de libre uso e inspirados en los sonidos de videojuegos antiguos.
-
-El estilo artístico resultante es muy ``Digital'', con polígonos visibles, pixeles de gran tamaño, colores limitados y música y sonido sintéticos. La consolidación de este estilo sirvió para definir la ambientación narrativa del juego: se decidió que el juego estará ambientado en el interior de un ordenador, con los personajes y entornos representando programas. Aunque el juego no hace uso de esta narrativa, al carecer de diálogos y cinemáticas, esta temática se empleó en el diseño de los gráficos.
-
-\subsection{Plataforma}
-Este juego ha sido diseñado para ser jugado en un PC. El control del personaje principal se realiza mediante las flechas de dirección (movimiento) y la tecla Espacio (paleta y navegar por menús). 
-
-La exportación de este juego a dispositivos móviles como Android o IOS no sería posible debido a que el sistema de control no es compatible con pantallas táctiles, por lo que sería necesario realizar una adaptación, ya sea implementado un sistema de control del personaje basado en la pantalla táctil o mediante un controlador virtual en pantalla. Ambas aproximaciones aumentarían el coste de desarrollo del juego. Además, el juego no está optimizado para este tipo de dispositivos, de menor potencia que los PC, por lo que podría no funcionar correctamente.
-
-La distribución del juego se realizará online, a través de las páginas de distribución de juegos Game Jolt\footnote{https://gamejolt.com/} y itch.io\footnote{https://itch.io/}. Estos sitios ofrecen a sus usuarios la posibilidad de subir, sin ningún tipo de coste, el juego a la página para que otros usuarios puedan descargarlos (o, en el caso de Game Jolt, jugarlos directamente en el navegador si el juego es compatible). Ambas páginas ofrecen la posibilidad tanto de vender el juego como de distribuirlo de forma gratuita. Dada la naturaleza del proyecto, se ha optado por la distribución gratuita del mismo.
-\begin{figure}[!htb]
-   \begin{minipage}{0.50\textwidth}
-     \centering
-     \includegraphics[width=0.9\linewidth, left]{images/intro/design/gamejolt}
-     \caption{Gamejolt}
-   \end{minipage}\hfill
-   \begin {minipage}{0.50\textwidth}
-     \centering
-     \includegraphics[width=0.9\linewidth, right]{images/intro/design/itchio}
-     \caption{Itch.io}
-   \end{minipage}
-   \caption{Juegos desarrollados con Unity3D}
-\end{figure}
+%Control de versiones y distribución.
+Durante el desarrollo del proyecto, se llevará a cabo un \textbf{control de versiones} mediante el software \textbf{Git}, utilizando la plataforma \textbf{GitHub} para el almacenamiento de versiones. Para simplificar el uso de Git, se utilizará la herramienta \textbf{SourceTree}, una aplicación que funciona como interfaz gráfica para Git.  Una vez finalizado el proyecto, la distribución de la aplicación resultante se realizará mediante las plataformas en línea de distribución de juegos \textbf{Gamejolt}\footnote{https://gamejolt.com/} y \textbf{Itch.io}\footnote{https://itch.io/
+}.

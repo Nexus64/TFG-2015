@@ -4,70 +4,204 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\'{I}ndice general}{\es@scroman {v}}{chapter*.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\'{I}ndice de figuras}{\es@scroman {vii}}{chapter*.2}
+\contentsline {chapter}{\'{I}ndice de figuras}{\es@scroman {ix}}{chapter*.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Arquitectura}{1}{chapter.1}
+\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{1}{chapter.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}Descripci\IeC {\'o}n del Juego}{1}{section.1.1}
+\contentsline {section}{\numberline {1.1}Contexto}{1}{section.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}Visi\IeC {\'o}n general}{3}{section.1.2}
+\contentsline {section}{\numberline {1.2}Motivaci\IeC {\'o}n}{1}{section.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Men\IeC {\'u}}{3}{section.1.3}
+\contentsline {section}{\numberline {1.3}Descripci\IeC {\'o}n del Proyecto}{2}{section.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.4}Control de niveles}{6}{section.1.4}
+\contentsline {chapter}{\numberline {2}Estado del Arte}{5}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.1}Carga de Niveles}{7}{subsection.1.4.1}
+\contentsline {section}{\numberline {2.1}El mercado de los videojuegos}{5}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Implementaci\IeC {\'o}n}{8}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {2.1.1}Industria Mundial del Videojuego}{5}{subsection.2.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{desarrollo}{10}{figure.1.9}
+\contentsline {subsection}{\numberline {2.1.2}La industria de los videojuegos en Espa\IeC {\~n}a}{6}{subsection.2.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.2}Inicio del juego}{12}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {2.1.3}Retos y tendencias actuales}{8}{subsection.2.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.3}Condiciones de fin del juego}{13}{subsection.1.4.3}
+\contentsline {subsubsection}{eSports}{8}{subsection.2.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.5}Control del jugador}{14}{section.1.5}
+\contentsline {subsubsection}{Realidad Virtual y Realidad Aumentada}{11}{figure.2.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.1}Componentes}{15}{subsection.1.5.1}
+\contentsline {subsubsection}{Web 4.0}{13}{figure.2.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.2}Comportamiento del personaje}{16}{subsection.1.5.2}
+\contentsline {section}{\numberline {2.2}El proceso de desarrollo de videojuegos}{15}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.6}F\IeC {\'\i }sicas e interacci\IeC {\'o}n}{18}{section.1.6}
+\contentsline {subsection}{\numberline {2.2.1}Etapas del desarrollo}{15}{subsection.2.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.6.1}Pelota}{19}{subsection.1.6.1}
+\contentsline {subsubsection}{Desarrollo del Concepto}{16}{figure.2.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Componentes}{19}{figure.1.15}
+\contentsline {subsubsection}{Pre-Producci\IeC {\'o}n}{17}{figure.2.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Comportamiento}{21}{figure.1.17}
+\contentsline {subsubsection}{Producci\IeC {\'o}n}{18}{figure.2.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.6.2}Elementos Interactivos}{22}{subsection.1.6.2}
+\contentsline {subsubsection}{Final de Producci\IeC {\'o}n y Lanzamiento}{18}{figure.2.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Paredes y Suelo}{22}{subsection.1.6.2}
+\contentsline {subsubsection}{Postproducci\IeC {\'o}n}{19}{figure.2.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Personaje Principal}{22}{subsection.1.6.2}
+\contentsline {subsection}{\numberline {2.2.2}Estructura t\IeC {\'\i }pica de un equipo de desarrollo}{19}{subsection.2.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Puerta}{23}{figure.1.18}
+\contentsline {subsubsection}{Dise\IeC {\~n}o}{20}{figure.2.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Ladrillos}{24}{figure.1.20}
+\contentsline {subsubsection}{Programaci\IeC {\'o}n}{21}{Item.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.7}Jefe Final}{26}{section.1.7}
+\contentsline {subsubsection}{Arte}{22}{Item.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.7.1}Componentes}{27}{subsection.1.7.1}
+\contentsline {subsubsection}{Audio}{23}{Item.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.7.2}Movimiento}{29}{subsection.1.7.2}
+\contentsline {subsubsection}{Testing}{23}{Item.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.7.3}Inteligencia Artificial}{30}{subsection.1.7.3}
+\contentsline {subsubsection}{Producci\IeC {\'o}n}{24}{Item.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.8}Patrones de Dise\IeC {\~n}o}{31}{section.1.8}
+\contentsline {section}{\numberline {2.3}Motores de juegos}{25}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.8.1}State}{32}{subsection.1.8.1}
+\contentsline {subsection}{\numberline {2.3.1}Descripci\IeC {\'o}n}{25}{subsection.2.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.8.2}Component}{33}{subsection.1.8.2}
+\contentsline {subsubsection}{Componentes de un Motor}{26}{figure.2.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.8.3}Prototype}{34}{subsection.1.8.3}
+\contentsline {subsection}{\numberline {2.3.2}Ejemplos de Motores}{27}{subsection.2.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.8.4}Singleton}{35}{subsection.1.8.4}
+\contentsline {subsubsection}{Unreal Engine}{27}{subsection.2.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{37}{Item.25}
+\contentsline {subsubsection}{Game Maker Studio}{29}{figure.2.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Videojuegos}{40}{appendix*.3}
+\contentsline {subsection}{\numberline {2.3.3}Unity 3D}{31}{subsection.2.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Caracter\IeC {\'\i }sticas T\IeC {\'e}cnicas}{31}{subsection.2.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Programaci\IeC {\'o}n}{33}{figure.2.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Licencia y Plataformas}{34}{figure.2.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Inteligencia Artificial en Videojuegos}{36}{section.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.1}Historia}{36}{subsection.2.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.2}IA Aplicada a Videojuegos: Contexto Actual}{37}{subsection.2.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.3}M\IeC {\'e}todos de la IA}{39}{subsection.2.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{M\IeC {\'e}todos Ad Hoc}{39}{subsection.2.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Algoritmos de b\IeC {\'u}squeda}{41}{figure.2.24}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Algoritmos de Optimizaci\IeC {\'o}n}{42}{figure.2.24}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Aprendizaje Autom\IeC {\'a}tico}{43}{figure.2.24}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.4}Futuros campos de aplicaci\IeC {\'o}n}{44}{subsection.2.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Arquitectura}{47}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Descripci\IeC {\'o}n del Juego}{47}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Visi\IeC {\'o}n General de la Arquitectura}{49}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Men\IeC {\'u}}{50}{section.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Control de niveles}{53}{section.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.1}Carga de Niveles}{54}{subsection.3.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Implementaci\IeC {\'o}n}{55}{subsection.3.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Justificaci\IeC {\'o}n}{57}{figure.3.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.2}Inicio del juego}{60}{subsection.3.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.3}Condiciones de fin del juego}{60}{subsection.3.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.5}Control del jugador}{62}{section.3.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5.1}Componentes}{63}{subsection.3.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5.2}Comportamiento del personaje}{64}{subsection.3.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.6}F\IeC {\'\i }sicas e interacci\IeC {\'o}n}{67}{section.3.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.6.1}Pelota}{67}{subsection.3.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Componentes}{68}{figure.3.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Comportamiento}{70}{figure.3.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.6.2}Elementos Interactivos}{71}{subsection.3.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Paredes y Suelo}{71}{subsection.3.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Personaje Principal}{72}{subsection.3.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Puerta}{72}{figure.3.22}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Ladrillos}{74}{figure.3.25}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.7}Jefe Final}{77}{section.3.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.7.1}Componentes}{78}{subsection.3.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.7.2}Movimiento}{79}{subsection.3.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.7.3}Inteligencia Artificial}{80}{subsection.3.7.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.8}Patrones de Dise\IeC {\~n}o}{82}{section.3.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.8.1}State}{83}{subsection.3.8.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.8.2}Component}{83}{subsection.3.8.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.8.3}Prototype}{84}{subsection.3.8.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.8.4}Singleton}{85}{subsection.3.8.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Resultados}{87}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Proceso de Desarrollo}{87}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.1}Prototipo}{87}{subsection.4.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.2}Mec\IeC {\'a}nicas de Juego Complementarias}{89}{subsection.4.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.3}Cambios Est\IeC {\'e}ticos}{91}{subsection.4.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.4}Carga de Niveles}{93}{subsection.4.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.5}Jefe Final}{95}{subsection.4.1.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.6}Ajustes, Refactorizaci\IeC {\'o}n y Correcciones}{96}{subsection.4.1.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Encuesta de Opini\IeC {\'o}n}{98}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.1}Descripci\IeC {\'o}n}{98}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.2}Resultados}{99}{subsection.4.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Audiencia}{100}{subsection.4.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Opini\IeC {\'o}n}{100}{figure.4.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Conclusiones}{103}{figure.4.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Conclusiones y Trabajos Futuros}{105}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Conclusiones}{105}{section.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.1}Grado de Cumplimiento de los Objetivos}{105}{subsection.5.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Objetivo Principal}{105}{subsection.5.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Objetivos Secundarios}{105}{subsection.5.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.2}Grado de Cumplimiento de Competencias}{106}{subsection.5.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.3}Valoraci\IeC {\'o}n Personal}{107}{subsection.5.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}L\IeC {\'\i }neas de Trabajo Futuro}{108}{section.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{111}{section.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Videojuegos}{112}{chapter*.3}

@@ -1,0 +1,12 @@
+\subsection{Desarrollo}
+Durante el desarrollo del juego, se barajaron varios posibles enemigos para ser el jefe final del juego. Estos posibles jefes eran:
+\begin{itemize}
+\item Un \textbf{Cienpies gigante}, el cual se movía por las paredes y suelos de la sala de forma pseudoaleatoria entorpeciendo al jugador. Tendría una inteligencia artificial que le permitiría moverse sin nunca colisionar con su propio cuerpo.
+\item Una \textbf{Figura hecha de ladrillos}. Este jefe funcionaba de forma opuesta al actual, moviéndose para evitar que la pelota golpeara sus ladrillos, ya que el jugador ganaba si le golpeaba suficientes veces.
+\item Un \textbf{Mago}, el cual no interaccionaba directamente con el jugador, pero podía dificultar la partida del jugador reparando ladrillos y desviando la pelota.
+\end{itemize}
+El coste en tiempo de implementar un jefe obligaba a elegir a un solo jefe para el juego, por lo que el resto de los jefes fueron descartados una vez que se eligió al jefe actual.
+
+En la primera etapa de su desarrollo, el comportamiento del jefe se modeló como un único componente \textbf{Boss}. Esta implementación estaba plagada de errores, el más notable era que el jefe se ``despegaba'' de la puerta a la hora de buscar la pelota. Al tratarse de un diseño monolítico, era casi imposible aislar el error, ya que podía ser a cause de una implementación incorrecta del movimiento o de un cálculo equivocado de la dirección.
+
+Estos errores provocaron que la clase Boss fuera descartada completamente y en se construyera el sistema actual desde cero. Su desarrollo empezó con la implementación de \textbf{BossController}, implementando el movimiento de forma que el jefe solo pudiese moverse dentro de los límites de la pared. Para probar este componente durante su desarrollo, se utilizó una clase (ahora eliminada del proyecto) llamada \textbf{BossManual}, la cual permitía enviar ordenes de movimiento al jefe utilizando las flechas del teclado. Una vez finalizado BossController, se pudo realizar la implementación de \textbf{BossIA} con la seguridad de que cada nuevo error sería causa de la inteligencia artificial, no del movimiento o las físicas.

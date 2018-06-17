@@ -3,43 +3,37 @@
 Este apartado describe la arquitectura software de \textbf{Virus Breaker}. La descripción comenzará con una recapitulación de los eventos con los que un jugador se encontrará cuando inicie una sesión de juego. A esta descripción le seguirá a un análisis técnico de la estructura interna del juego, comenzando por las \textbf{escenas} en las que este se divide y terminando con un análisis de cada uno de los \textbf{objetos} que intervienen en el desarrollo de la acción.
 
 \section{Descripción del Juego}
-Como programa informático, Virus Breaker constara de un \textbf{archivo ejecutable}, acompañado de una carpeta que almacena ficheros complementarios. Para iniciar el juego, el jugador deberá simplemente iniciar el archivo ejecutable, sin necesidad de ningún tipo de instalación previa.
-
-Una vez iniciado, el juego presentará al jugador una sencilla \textbf{pantalla de titulo}. La funcionalidad de esta pantalla será limitada, solo mostrará el título y el nombre del desarrollador del juego e informará al jugador de que botón debe pulsar para iniciar una partida. En la figura \ref{titulo} se puede ver la apariencia de esta pantalla de título en la versión final del juego.
-\begin{figure}[h]
+En Virus Breaker (figura \ref{juego}), el jugador controla a un personaje encerrado en una sala cubica. El objetivo del juego es el de \textbf{salir de la sala abriendo una enorme puerta} que ocupa la totalidad de la pared norte de la sala. Para lograrlo, el jugador debe \textbf{golpear una pelota} usando una paleta para golpear con ella la puerta. Tras varios golpes, la puerta se abrirá. Sin embargo, la puerta estará cubierta por un \textbf{muro de ladrillos} que el jugador deberá romper primero para poder alcanzar la puerta. Por otro lado, si la pelota golpea tres veces consecutivas el suelo, el jugador perderá la partida.
+\begin{figure}[!t]
     \centering
-    \includegraphics[width=0.6\textwidth]{images/estructura/descripcion/titulo}
-    \caption{Pantalla de título.}
-    \label{titulo}
-\end{figure}
-
-Una vez iniciada la partida, el jugador pasará a controlar al \textbf{personaje principal} e intentará superar los desafíos que le presente el juego. Una versión básica de esta pantalla se puede ver en la figura \ref{juego}. El juego se dividirá en varios \textbf{niveles}, cada vez que el jugador supere uno, el juego le presentará otro de dificultad mayor. Esta secuencia de niveles concluirá con el enfrentamiento contra un \textbf{Jefe Final}. Al derrotar al jefe final, el juego mostrara una \textbf{pantalla de victoria}. Esta pantalla será funcionalmente idéntica a la pantalla de título: mostrará un mensaje y permitirá al jugador volver a jugar al juego si pulsa un botón. 
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.6\textwidth]{images/estructura/descripcion/juego}
-    \caption{Pantalla de juego.}
+    \includegraphics[width=1\textwidth]{images/estructura/descripcion/juego}
+    \caption{Captura de pantalla de Virus Breaker.}
     \label{juego}
 \end{figure}
 
-Si el jugador es derrotado durante el juego, se le mostrará una pantalla de \textbf{fin del juego}, donde se le ofrecerá la posibilidad de volver a iniciar la partida desde el ultimo nivel superado. A igual que la pantalla de victoria, la funcionalidad de esta pantalla será idéntica a la de la pantalla de título. La similitud entre estas tres pantallas se puede apreciar en la figura \ref{win_lose}.
+El juego contendrá varias \textbf{salas}. Las salas tendrán unas dimensiones constantes, pero distintas configuraciones de bloques cubriendo la puerta, y distintos valores de ``puntos de vida'' para la puerta. Cuando el jugador abra la puerta de una sala, el personaje saldrá de ella y se moverá a otra sala distinta.  Las salas están \textbf{ordenadas con dificultad creciente}, de modo que el jugador se encontrará primero con las salas más sencillas antes de tener que enfrentarse a las más complicadas. 
 
-\begin{figure}[h]
+La última sala del juego contendrá un \textbf{jefe final} al que el jugador deberá derrotar para completar el juego. Este jefe es un enemigo móvil que, adherido a la puerta de la sala, intentará bloquear la pelota para evitar que esta golpee la puerta. El jefe se comportará de \textbf{forma natural} para que el jugador tenga la impresión de que se está enfrentando a un oponente inteligente.
+
+Adicionalmente a la jugabilidad principal, el juego contará una serie de \textbf{menús} que servirán de puente entre las distintas sesiones de juego. Estos menús son: la \textbf{pantalla de título}, que se muestra al principio del juego, la \textbf{pantalla de fin del juego} que aparece cuando el jugador es derrotado y la \textbf{pantalla de victoria}. En la figura \ref{win_lose} pueden verse las pantallas de victoria y fin de juego.
+\begin{figure}[!t]
     \centering
     \includegraphics[width=1\textwidth]{images/estructura/descripcion/win_lose}
     \caption{Pantallas de victoria y derrota.}
     \label{win_lose}
 \end{figure}
 
-El progreso del jugador en el juego se guarda entre partidas, de forma que, si el juego se cierra, el jugador pueda empezar por el mismo nivel en el que se encontraba la siguiente vez que inicie el juego. Cuando se derrota al jefe final, la partida guardada se elimina para permitir que el jugador pueda volver a jugar desde el principio si lo desea.
+El \textbf{progreso del jugador} en el juego se guarda entre partidas, de forma que, si el juego se cierra, el jugador pueda empezar por el mismo nivel en el que se encontraba la siguiente vez que inicie el juego. Cuando se derrota al jefe final, la partida guardada se elimina para permitir que el jugador pueda volver a jugar desde el principio si lo desea.
 
-\section{Visión general}
+Como programa informático, Virus Breaker constara de un \textbf{archivo ejecutable}, acompañado de una carpeta que almacena ficheros complementarios. Para iniciar el juego, el jugador deberá simplemente iniciar el archivo ejecutable, sin necesidad de ningún tipo de instalación previa. 
+
+\section{Visión General de la Arquitectura}
 La arquitectura de este proyecto está basada en la \textbf{arquitectura de componentes} de Unity, en la que el comportamiento y propiedades de los objetos está determinado por los \textbf{componentes} que estos tengan adheridos. Sin contar con los componentes incluidos de serie en Unity3D, para este proyecto se implementaron \textbf{17 componentes}.
 
-Para implementar los componentes se utilizó el lenguaje de programación \textbf{C\#} al ser el lenguaje más utilizado en el desarrollo con Unity3D. Los componentes desarrollados son \textbf{clases} de C\# que heredan de la clase \textbf{MonoBehaviour}, clase abstracta que implementa la funcionalidad común a todos los componentes. En adición a los componentes, también se implementaron dos \textbf{clases de soporte} adicionales para facilitar el funcionamiento de ciertos componentes.
+Para implementar los componentes se utilizó el lenguaje de programación \textbf{C\#} debido a que es el lenguaje más utilizado en el desarrollo con Unity3D y por tanto es para el que existen un mayor número de recursos como librerías o tutoriales. Los componentes desarrollados son \textbf{clases} de C\# que heredan de la clase \textbf{MonoBehaviour}, clase abstracta que implementa la funcionalidad común a todos los componentes. En adición a los componentes, también se implementaron dos \textbf{clases de soporte} adicionales para facilitar el funcionamiento de ciertos componentes.
 
-Las clases elaboradas para el proyecto pueden agruparse en varios \textbf{grupos funcionales} según la función que cumplan en el proyecto. En la figura \ref{diagrama_clases} pueden verse la organización de las clases en sus respectivos grupos.
-\begin{figure}[h]
+Las clases elaboradas para el proyecto pueden agruparse en varios \textbf{grupos funcionales} según su papel dentro del proyecto. En la figura \ref{diagrama_clases} pueden verse la organización de las clases en sus respectivos grupos.
+\begin{figure}[!t]
     \centering
     \includegraphics[width=1\textwidth]{images/estructura/vision/diagram}
     \caption{Diagrama de clases.}
@@ -56,38 +50,45 @@ Los grupos funcionales son los siguientes:
 \end{itemize}
 
 \section{Menú}
-Virus Breaker cuenta con cuatro \textbf{Escenas}: La \textbf{escena de juego}, que es donde ocurre toda la acción y tres \textbf{escenas de menú}. Las escenas de menú sirven como intermedio entre sucesivas sesiones de juego y permiten que el jugador se pueda prepararse antes de empezar con el juego.
+Virus Breaker cuenta con cuatro \textbf{escenas}: La \textbf{escena de juego}, que es donde ocurre toda la acción y tres \textbf{escenas de menú}. Las escenas de menú sirven como intermedio entre sucesivas sesiones de juego y permiten que el jugador se pueda prepararse antes de empezar con el juego. Esta división se eligió por encima de utilizar una única escena debido a que permite llevar un \textbf{control implícito del estado del juego}. Si todo el juego se desarrollase en la misma escena, sería necesario implementar sistemas adicionales para controlar que los comportamientos de los objetos solo se ejecuten en los momentos adecuados.
 
 El comportamiento del juego en estas tres escenas es prácticamente es muy básico: El juego muestra un texto animado de gran tamaño, acompañado de un segundo texto (también animado) con instrucciones para el jugador. Si el jugador pulsa la tecla \textbf{espacio}, la escena cambiará a la escena de juego. Los tres menús son los siguientes:
 \begin{itemize}
-\item \textbf{La escena de titulo}. Esta escena aparece nada más iniciar el juego. Esta escena muestra el título del juego, el nombre del desarrollador.
+\item \textbf{La escena de título}. Esta escena aparece nada más iniciar el juego. Esta escena muestra el título del juego, el nombre del desarrollador.
 \item \textbf{La escena de fin del juego}. Esta escena aparece cuando el jugador pierde durante la partida.
 \item \textbf{La escena de fin del juego}. Esta escena aparece cuando el jugador supera todos los niveles del juego.
 \end{itemize}
 En la figura \ref{diagrama_escenas} se pueden ver las transiciones entre las distintas escenas a modo de diagrama de estados.
-
-\begin{figure}[h]
+\begin{figure}[!t]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/estructura/menu/scenes}
+    \includegraphics[width=1\textwidth]{images/estructura/menu/scenes}
     \caption{Diagrama de escenas.}
     \label{diagrama_escenas}
 \end{figure}
 
-La clase que controla el comportamiento de los menús es \textbf{Menu}. Esta clase lee la entrada del jugador durante el método \textbf{Update} a la espera de que este pulse la tecla espacio. Cuando detecta la pulsación, la clase inicia el cambio de escena. Esta clase es un componente asociado al texto que muestra las instrucciones.
+Las clases que gestionan el comportamiento de los menús y otros comportamientos ajenos a la jugabilidad se encuentran el grupo funcional \textbf{Menú}. Se trata de un grupo pequeño, aislado del resto de grupos funcionales ya que su funcionalidad es exclusiva de los menús. Las clases de este grupo son \textbf{Menu}, \textbf{EscapeController} y \textbf{FlashTransition}. En la figura \ref{diagrama_clases} se puede ver un diagrama de las clases de este grupo.
+\begin{figure}[!t]
+    \centering
+    \includegraphics[width=1\textwidth]{images/estructura/menu/class_diagram}
+    \caption{Diagrama del grupo funcional \textbf{Menu}.}
+    \label{diagrama_clases}
+\end{figure}
+
+La clase primera clase, \textbf{Menu}, se encarga de controlar el comportamiento de los menús. Esta clase lee la entrada del jugador durante el método \textbf{Update} a la espera de que este pulse la tecla espacio. Cuando detecta la pulsación, la clase inicia el cambio de escena. Esta clase es un componente asociado al texto que muestra las instrucciones.
 
 El cambio de escena se lleva a cabo mediante la clase \textbf{FlashTransition}. Esta clase es un componente asociado a la cámara de la escena (el objeto encargado de renderizar la escena) que se encarga de producir una transición suave entre dos escenas. La transición se activa el método publico \textbf{StartTransition}, a través del cual el componente recibe la escena de destino. El componente aplica un fundido en negro a la escena para a continuación cargar la escena de destino mediante el \textbf{SceneManager} el gestor de escenas de Unity. En la escena destino, una cámara idéntica produce el efecto a la inversa.
 
 El fundido en negro se implementa aplicando una textura semitransparente sobre la imagen capturada por la cámara, cuyo grado de transparencia cambia con el tiempo gracias a un componente \textbf{Animator}. En la figura \ref{camara_components} puede verse la configuración de componentes de la cámara.
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.6\textwidth]{images/estructura/menu/camera}
+    \includegraphics[width=0.75\textwidth]{images/estructura/menu/camera}
     \caption{Componentes de la cámara.}
     \label{camara_components}
 \end{figure}
 
-Para la animación de los textos también se utilizó un componente Animator que variaba con el tiempo el ángulo y tamaño de estos. Los textos pequeños fueron creados mediante el sistema de interfaz gráfica de usuario de Unity, pero los textos grandes fueron modelados en \textbf{Blender}\footnote{https://www.blender.org/} y luego importados en Unity.
+Para la animación de los textos también se utilizó un componente Animator que variaba con el tiempo el ángulo y tamaño de estos. Los textos pequeños fueron creados mediante el sistema de interfaz gráfica de usuario de Unity, pero los textos grandes fueron modelados en \textbf{Blender} y luego importados en Unity.
 
-Adicionalmente al controlador de menús se encuentra la clase \textbf{EscapeController}. Esta clase permite al jugador cerrar el juego en cualquier momento pulsando la tecla \textbf{escape}. La clase es un componente asociado a un objeto vació en la \textbf{escena de titulo} el cual persiste entre escenas gracias al método de Unity \textbf{DontDestroyOnLoad}. Para evitar que varias instancias de este controlador estén presentes, lo que podría provocar errores, se utiliza el patrón de diseño \textbf{Singleton}.
+Adicionalmente al controlador de menús se encuentra la clase \textbf{EscapeController}. Esta clase permite al jugador cerrar el juego en cualquier momento pulsando la tecla \textbf{escape}. La clase es un componente asociado a un objeto vació en la \textbf{escena de título} el cual persiste entre escenas gracias al método de Unity \textbf{DontDestroyOnLoad}. Para evitar que varias instancias de este controlador estén presentes, lo que podría provocar errores, se utiliza el patrón de diseño \textbf{Singleton}.
 
 \section{Control de niveles}
 La acción del juego ocurre principalmente en la \textbf{escena de juego}. Esta escena contiene la \textbf{sala}, el escenario donde tiene lugar el juego, así como los diversos objetos que forman el juego como el personaje principal o la pelota. Aunque la mayor parte de la acción viene dada por la interacción de los objetos contenidos en la sala, la propia sala también tiene su propio comportamiento, indispensable para la ejecución correcta del juego.
@@ -99,7 +100,6 @@ Esta sala es un conjunto de GameObjects agrupados de forma jerárquica (figura \
 \item \textbf{Floor}: El suelo de la sala es similar a las paredes (un GameObject con un \textbf{MeshCollider} y un \textbf{Renderer}), pero está marcado de forma diferente para activar un comportamiento distinto en la pelota.
 \item \textbf{Door}: La puerta de la sala ocupa la pared norte de la sala. 
 \end{itemize}
-
 \begin{figure}[h]
 	\includegraphics[width=0.8\textwidth]{images/estructura/niveles/room}
 	\centering
@@ -115,6 +115,14 @@ La función principal de la sala es la de gestionar la ejecución del resto de o
 \item \textbf{Fin del juego}: Los objetos realizan su finalización. Esta etapa puede tener dos variantes: la \textbf{victoria}, en la que el jugador supera el nivel y pasa al nivel siguiente y la \textbf{Derrota}, en la que el jugador pierde y es enviado a la escena de fin del juego.
 \end{itemize}
 
+El comportamiento de la sala está definido mediante las clases contenidas en el Grupo funcional \textbf{Level Control}. Las clases de este grupo son \textbf{LevelGenerator} y \textbf{Room}, dos componentes que se asocian al objeto principal de la sala; \textbf{ColorToPrefab} y \textbf{LevelInfo}, dos clases de soporte para el generador de niveles y \textbf{TutorialGUI}, la clase encargada del comportamiento del tutorial del juego. Un diagrama de este grupo puede verse en la figura \ref{diagrama_clases_niveles}.
+\begin{figure}[!t]
+    \centering
+    \includegraphics[width=1\textwidth]{images/estructura/niveles/class_diagram}
+    \caption{Diagrama del grupo funcional \textbf{Level Control}.}
+    \label{diagrama_clases_niveles}
+\end{figure}
+
 \subsection{Carga de Niveles}
 La primera etapa de la ejecución de la escena de juego es la carga del nivel. En esta etapa, la escena, a través de su componente \textbf{LevelGenerator} accede a una serie de archivos que contienen la configuración del nivel. El componente se encarga de leer dicha información y usarla para generar los ladrillos del nivel en su configuración correcta, asignar los puntos de vida a la puerta del juego e iniciar el jefe final en caso de que se tratase de un nivel de jefe.
 
@@ -125,13 +133,12 @@ El archivo JSON, por otro lado, contiene la información adicional del nivel, pu
 La lógica para la carga de niveles se encuentra en el componente \textbf{LevelGenerator} de la sala. Este componente tiene como atributos la información necesaria para la carga de nivel como índice del nivel actual, formato del nombre de los archivos, la ruta a la carpeta de donde se guardan los archivos o coordenadas del punto de aparición. 
 
 El componente contiene una lista de objetos de la clase \textbf{ColorToPrefab} que sirve para relacionar cada posible color con un tipo de ladrillos. La clase ColorToPrefab es muy sencilla, estando formada por cuatro atributos: el color, el objeto prefabricado y dos enteros que determinan la longitud del prefabricado. En la figura \ref{prefab_color} se pueden ver la lista de todos los ladrillos prefabricados junto a sus colores correspondientes.
-\begin{figure}[h]
-	\includegraphics[width=0.8\textwidth]{images/estructura/niveles/prefab_colors}
+\begin{figure}[!t]
+	\includegraphics[width=0.85\textwidth]{images/estructura/niveles/prefab_colors}
 	\centering
 	\caption{Listado de ladrillos prefabricados y sus colores asociados.}
 	\label{prefab_color}
 \end{figure}
-
 
 Para iniciar la carga del nivel se utiliza el método público \textbf{Generate} de la clase. El método sigue el siguiente procedimiento para realizar la carga del nivel:
 \begin{enumerate}
@@ -150,39 +157,37 @@ Para iniciar la carga del nivel se utiliza el método público \textbf{Generate}
 \end{enumerate}
 En la figura \ref{generator_diagram} pueden verse de forma gráfica los pasos de ejecución del método
 \begin{figure}[h]
-	\includegraphics[width=0.8\textwidth]{images/estructura/niveles/level-generator}
+	\includegraphics[width=0.95\textwidth]{images/estructura/niveles/level-generator}
 	\centering
-	\caption{Diagrama del proceso de generación de niveles}
+	\caption{Diagrama del proceso de generación de niveles.}
 	\label{generator_diagram}
 \end{figure}
 
-\subsubsection{desarrollo}
-El uso de una única escena de juego con un sistema de carga de nivel se eligió por encima del uso de varias escenas con diferentes configuraciones debido principalmente al gran número de elementos comunes que existen entre los distintos niveles (la geometría de la sala, el personaje, la pelota, la puerta...). De haberse optado por utilizar múltiples escenas, la repetición de elementos \textbf{supondría un gasto innecesario de recursos} y generaría problemas a la hora de realizar \textbf{modificaciones sobre los elementos comunes}, cuyos cambios tendrían que propagarse manualmente en todos los niveles.
-
-Para paliar con estos problemas, se optó por utilizar un editor externo para producir los niveles. Los niveles se \textbf{almacenarían en forma de archivos} que la escena se encargaría de leer para generar las formaciones de ladrillos correspondientes. La funcionalidad que se necesitaba para el editor de niveles era la siguiente:
+\subsubsection{Justificación}
+Cuando empezó el desarrollo del sistema de carga de niveles se elaboró una lista de requisitos que el editor de niveles elegido debía cumplir para resultar útil en el desarrollo. Los requisitos eran los siguientes:
 \begin{itemize}
   \item \textbf{Precisión} a la hora de colocar y alinear los bloques. El editor debe ser capaz de posicionar los ladrillos en una cuadricula de forma automática (para así mantener la estética de juego deseada).
   \item Posibilidad de elegir individualmente el \textbf{color} para cada uno de los bloques del nivel, independientemente de su comportamiento o posición. Esto permite crear dibujos con los bloques, lo que hace los niveles más memorables (ejemplo en la figura \ref{ejemplo-arkanoid}). 
   \item \textbf{Simplicidad} en el proceso de creación. La creación de niveles debe de ser rápida, para facilitar la iteración el diseño.
 \end{itemize}
-
 \begin{figure}[h]
 	\includegraphics[width=0.7\textwidth]{images/estructura/niveles/ejemplo-arkanoid}
 	\centering
-	\caption{Homenaje a Space Invaders(Taito, 1978) dentro de Arkanoid: Doh it Again (Taito, 1997)}
+	\caption{Homenaje a \citegame{space_invaders} dentro de \citegame{arkanoid_2}.}
 	\label{ejemplo-arkanoid}
 \end{figure}
 
-En una primera versión, se planteó el uso del programa \textbf{Tiled}\footnote{http://www.mapeditor.org/}, un editor de mapas de propósito general que permite la edición de mapas basados en baldosas o \textbf{``tiles''} utilizando un sencillo procesador del lenguaje. Los mapas desarrollados generados con tiles eran exportados al formato \textbf{XML}, el cual podía se cargado en Unity. Sin embargo, al ser un programa de propósito general, Tiled contaba con mucha funcionalidad innecesaria que ralentizaba la producción de niveles, al mismo tiempo que carecía de ciertas funciones clave (como la selección individual de colores de bloques).
+El componente LevelGenerator \textbf{cumple de sobra los requisitos exigidos}. El sistema está completamente discretizado, por lo que los ladrillos siempre estarán colocados en sus posiciones correctas; la selección de colores es intrínseca al sistema y la producción de niveles es muy rápida, puesto que nuevas imágenes pueden ser generadas con facilidad en cualquier programa de diseño gráfico. Adicionalmente, la implementación del sistema es capaz de ignorar pequeños errores en el mapa, como asignación de colores a casillas vacías o la presencia de colores que no se corresponden con ningún tipo de ladrillos, lo que reduce aún más los tiempos de producción.
 
-Finalmente, se optó por el sistema actual basado en imágenes dado que posibilita la producción rápida de niveles, fácilmente modificables con cualquier editor de imágenes. Adicionalmente, la implementación del sistema es capaz de ignorar pequeños errores en el mapa, como asignación de colores a casillas vacías o la presencia de colores que no se corresponden con ningún tipo de ladrillos, lo que reduce aún más los tiempos de producción.
+El fichero JSON se añadió a la estructura de niveles como sistema para ``localizar'' las dos imágenes que forman el nivel y también para almacenar información adicional que no pudiese almacenarse de forma intuitiva como otra imagen. El formato de este archivo se eligió para aprovechar la clase \textbf{JsonUtility} de Unity, que permite construir objetos C\# a partir de su representación en JSON de forma instantánea. 
 
-Por otra parte, el sistema por imágenes tiene una serie de limitaciones que hay que tener en cuenta durante el diseño de niveles:
+Sin embargo, el sistema por imágenes tiene una serie de limitaciones que hay que tener en cuenta durante el diseño de niveles:
 \begin{itemize}
   \item En primer lugar, \textbf{solo una pequeña cantidad de colores pueden ser asignados a tipos de ladrillos}. Esto se debe a las discrepancias entre los formatos de colores (los componentes RGB de los colores se guardan como enteros entre 0 y 255 en las texturas, pero como números de punto flotante entre 0 y 1 en la clase Color), la cual provoca perdida de información durante la conversión y nos fuerza a utilizar valores de color que sean fracciones exactas de 256. 
   \item En segundo lugar, el sistema no contempla la posibilidad de \textbf{rotar los ladrillos}. Debido a que esta funcionalidad era necesaria para la construcción de algunos niveles, fue necesario crear ladrillos prefabricados previamente rotados.
   \item En segundo lugar, se trata de un sistema poco escalable, permitiendo un tamaño único de campo de juego y poca capacidad para ``personalizar'' los tipos de bloque más allá de su color; por lo que sería necesario realizar cambios importantes en caso de que se necesitaran construir niveles más complejos
 \end{itemize}
+La solución ideal sería implementar un \textbf{editor de niveles} específico para este juego, el ofrezca la funcionalidad  deseada y además pueda modificarse o extenderse en caso de que los requisitos cambien. Sin embargo, teniendo en cuenta el alcance del proyecto, el coste la producción de una herramienta así no era rentable.
 
 \subsection{Inicio del juego}
 Cuando la escena de juego es cargada, el componente \textbf{Room} de la sala se encarga de coordinar la inicialización del juego. Este tiene asociadas referencias a la mayor parte de los objetos de la escena, lo que le permite llamar a los métodos correspondientes con facilidad. La secuencia de eventos del inicio del juego es la siguiente:
@@ -195,6 +200,14 @@ Cuando la escena de juego es cargada, el componente \textbf{Room} de la sala se 
 \item \textbf{Control del jugador}: Inmediatamente después de activar la pelota, le componente Room invoca el método \textbf{Activate} del personaje principal, el cual empieza a reaccionar a las órdenes del jugador comienza el juego.
 \end{enumerate}
 
+Durante el inicio del nivel, se le muestra al jugador un \textbf{mensaje en pantalla con las instrucciones} del juego (figura \ref{tutorial}). Este mensaje está implementado mediante el sistema de \textbf{interfaz de usuario}\footnote{https://docs.unity3d.com/Manual/UISystem.html} de Unity, el cual permite añadir con facilidad textos, imágenes y otros elementos bidimensionales a la escena de forma que siempre sean visibles por la cámara. En componente, \textbf{TutorialGUI} se encarga de hacer desaparecer el tutorial después de un tiempo. Además, el componente se asegura de que el tutorial solo aparece durante el \textbf{primer nivel al que se juegue en la sesión de juego}, de forma que no resulte molesto al jugador.
+\begin{figure}[h]
+	\includegraphics[width=1\textwidth]{images/estructura/niveles/tutorial}
+	\centering
+	\caption{Texto tutorial.}
+	\label{tutorial}
+\end{figure}
+
 \subsection{Condiciones de fin del juego}
 Una vez finalizada la introducción, se da paso a la etapa de \textbf{Juego}. Esta etapa continua hasta que se alcanza un \textbf{estado de victoria o de derrota}, en los cuales el componente Room de la sala ejecuta una serie de eventos de fin del juego que culminan en un cambio de escenas.
 
@@ -204,7 +217,7 @@ El \textbf{estado de victoria} tiene lugar cuando la puerta de la sala se queda 
 \item \textbf{Animación de la puerta}: Al recibir un golpe y quedarse con cero puntos de vida, la puerta inicia su animación de apertura.
 \item \textbf{Romper los ladrillos}: Cuando acaba la animación de la puerta, esta llama al método \textbf{DestroyBricks} del componente Room, lo que provoca que los ladrillos aun en pie sean destruidos.
 \item \textbf{Salida del personaje principal}: Una vez finalizada la animación de la puerta, esta llama al método \textbf{WinCinematic} del personaje principal para que este salga de la sala por la puerta.
-\item \textbf{Cambio de escena}: Cuando el personaje principal se ha alejado lo suficiente de la sala, este llama al método \textbf{NextStage} de la sala, lo que provoca un cambio de escena. Si se trataba del ultimo nivel, se carga la \textbf{escena de victoria}, si no, se vuelve a cargar la escena de juego, incrementando el índice de nivel.
+\item \textbf{Cambio de escena}: Cuando el personaje principal se ha alejado lo suficiente de la sala, esta llama al método \textbf{NextStage} de la sala, lo que provoca un cambio de escena. Si se trataba del ultimo nivel, se carga la \textbf{escena de victoria}, si no, se vuelve a cargar la escena de juego, incrementando el índice de nivel.
 \end{enumerate}
 
 El \textbf{estado de derrota} se alcanza cuando la pelota golpea tres veces consecutivas el suelo de la sala. Cuando esta condición se cumple, empieza la siguiente secuencia de acciones:
@@ -250,21 +263,27 @@ El personaje principal está implementado mediante dos GameObjects anidados (ver
 El \textbf{GameObject hijo} se encarga únicamente de contener renderizar el modelo del personaje a través del componente \textbf{MeshRenderer}. El motivo de esta división es un conflicto entre los componentes \textbf{Rigidbody y Animator} del GameObject principal debido a que ambos manipulan la rotación y posición del personaje, por lo que fue necesario mover el modelo a un objeto anidado. De esta forma, el rigidbody manipula la \textbf{posición y rotación globales} del personaje, mientras que el Animator controla las \textbf{propiedades locales} del objeto anidado.
 
 Adicionalmente al objeto principal se encuentra la \textbf{Paleta} (figura \ref{paddle}). Se trata de un GameObject muy sencillo que cuenta con solo dos componentes: un \textbf{Renderer} y un \textbf{BoxCollider}. La paleta está guardada como \textbf{Prefab} en los assets del juego, de forma que el personaje principal puede instanciarla cuando sea necesario.
-\begin{figure}[h]
-	\includegraphics[width=0.8\textwidth]{images/estructura/personaje/flick_paddle}
+\begin{figure}[!t]
+	\includegraphics[width=1\textwidth]{images/estructura/personaje/flick_paddle}
 	\centering
-	\caption{Personaje principal activando la paleta}
+	\caption{Personaje principal activando la paleta.}
 	\label{paddle}
 \end{figure}
 
 \subsection{Comportamiento del personaje}
-El componente \textbf{MainCharacter} es el encargado de coordinar el comportamiento del resto de componentes del personaje principal. Para ello, MainCharacter lee la entrada del jugador, procesa las teclas pulsadas y usa esa información para llamar a los métodos pertinentes del resto de componentes.  
+La clase \textbf{MainCharacter} es la encargada de coordinar el comportamiento del resto de componentes del personaje principal y la única clase del grupo funcional \textbf{Player Input} (figura \ref{diagrama_clases_jugador}. Se trata de un componente asociado al objeto principal del personaje el cual lee la entrada del jugador, procesa las teclas pulsadas y usa esa información para llamar a los métodos pertinentes del resto de componentes. 
+\begin{figure}[!t]
+    \centering
+    \includegraphics[width=1\textwidth]{images/estructura/personaje/class_diagram}
+    \caption{Diagrama del grupo funcional \textbf{Player Input}.}
+    \label{diagrama_clases_jugador}
+\end{figure}
 
-El comportamiento de MainCharacter se basa en una \textbf{Maquina de Estados Finitos}, dado que las distintas acciones que el personaje puede realizar pueden modelarse muy bien como estados independientes, lo que además permite prevenir y aislar mejor los fallos de programación durante el desarrollo. En la figura \ref{player_states} se encuentran el diagrama de estados, los cuales se describen a continuación:
+El comportamiento de MainCharacter se basa en una \textbf{maquina de estados finitos}, dado que las distintas acciones que el personaje puede realizar pueden modelarse muy bien como estados independientes, lo que además permite prevenir y aislar mejor los fallos de programación durante el desarrollo. En la figura \ref{player_states} se encuentran el diagrama de estados, los cuales se describen a continuación:
 \begin{figure}[h]
-	\includegraphics[width=0.95\textwidth]{images/estructura/personaje/main_character_states}
+	\includegraphics[width=1\textwidth]{images/estructura/personaje/main_character_states}
 	\centering
-	\caption{Diagrama de estados del personaje principal}
+	\caption{Diagrama de estados del personaje principal.}
 	\label{player_states}
 \end{figure}
 
@@ -280,10 +299,18 @@ El personaje entra en el estado \textbf{Confused} cuando es golpeado por la pelo
 
 El estado \textbf{Dead} comienza cuando el personaje recibe una llamada a su método \textbf{Dead}, es cual sirve para notificarle de la destrucción de la pelota. Este método esta siempre activo, por lo que el personaje puede entrar en este estado desde cualquier otro. Al entrar en este estado, el \textbf{Animator} reproduce la animación de muerte del personaje, en la que este se desploma derrotado y se queda inmóvil. La lectura de entrada queda desactivada, por lo que el jugador pierde el control sobre el personaje.
 
-El estado \textbf{Exit} empieza cuando se llama al método \textbf{WinCinematic} del personaje. Esta llamada se produce cuando el jugador supera el nivel actual. Durante este estado, el personaje avanza hacia el frente, atravesando la puerta de la sala (ahora abierta) y creando la ilusión de que ``avanza al siguiente nivel´´. Este movimiento del jugador se implementa de la misma forma que el del estado \textbf{Move}, usando el método \textbf{AddForce} del componente RigidBody.
+El estado \textbf{Exit} empieza cuando se llama al método \textbf{WinCinematic} del personaje. Esta llamada se produce cuando el jugador supera el nivel actual. Durante este estado, el personaje avanza hacia el frente, atravesando la puerta de la sala (ahora abierta) y creando la ilusión de que ``avanza al siguiente nivel''. Este movimiento del jugador se implementa de la misma forma que el del estado \textbf{Move}, usando el método \textbf{AddForce} del componente RigidBody.
 
 \section{Físicas e interacción}
 La dinámica de este juego surge principalmente de las \textbf{interacciones físicas entre los distintos objetos} contenidos en la sala. Obviando las simples colisiones entre el personaje y la sala que sirven para evitar que este no abandone la sala, todas las colisiones se producen entre \textbf{la pelota} y otro objeto. Cada objeto de la sala reacciona de forma distinta al impacto con la pelota.
+
+Las clases que gestionan estos comportamientos se encuentran en el grupo funcional \textbf{Collision Interaction}. Las clases incluidas en este grupo son \textbf{Ball}, el componente que codifica el comportamiento de la bola; \textbf{Brick} el componente del comportamiento de los ladrillos de la puerta (y sus subclases \textbf{TextureChangeBrick}, \textbf{DivisibleBrick} y \textbf{UnbreakableBrick}) y los componentes \textbf{Door} y \textbf{HealthBar} de la puerta. La figura \ref{diagrama_clases_collision} muestra un diagrama de este grupo.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{images/estructura/fisica/class_diagram}
+    \caption{Diagrama del grupo funcional \textbf{Collision Interaction}.}
+    \label{diagrama_clases_collision}
+\end{figure}
 
 En los siguientes apartados se describirá en detalle a la pelota, así como los distintos objetos que pueden colisionar con esta.
 
@@ -292,9 +319,9 @@ Podríamos considerar \textbf{la pelota} como \textbf{el arma del personaje prin
 
 Visualmente, la pelota es una simple esfera de color uniforme, como puede verse en la figura \ref{ball}. Para facilitarle al jugador la tarea de seguir la trayectoria de la pelota, esta va dejando a su paso un rastro luminoso y produce con cada colisión un efecto visual de impacto.
 \begin{figure}[h]
-	\includegraphics[width=0.65\textwidth]{images/estructura/fisica/ball_moving}
+	\includegraphics[width=1\textwidth]{images/estructura/fisica/ball_moving}
 	\centering
-	\caption{Pelota moviéndose}
+	\caption{Pelota moviéndose.}
 	\label{ball}
 \end{figure}
 
@@ -321,17 +348,19 @@ Anidado a este primer GameObject se encuentra el \textbf{emisor de sombra}. La f
 
 Adicionalmente, la pelota tiene acceso a dos objetos prefabricados que implementan sus efectos visuales: \textbf{ParticleCircle} y \textbf{ExplosionParticle}. ParticleCircle genera una explosión de partículas en forma de anillo mientras que ExplosionParticle genera una explosión esférica. Ambos objetos tienen un solo componente: un ParticleEmitter ya que es la pelota la encargada de completar el resto de sus funciones. En la figura \ref{particles} pueden verse los efectos de ambos objetos.
 \begin{figure}[!htb]
-   \begin{minipage}{0.48\textwidth}
+   \begin{minipage}{0.49\textwidth}
      \centering
-     \includegraphics[width=0.8\linewidth, right]{images/estructura/fisica/ball_hit}
+     \includegraphics[width=0.9\linewidth, right]{images/estructura/fisica/ball_hit}
    \end{minipage}\hfill
-   \begin {minipage}{0.48\textwidth}
+   \begin {minipage}{0.49\textwidth}
      \centering
-     \includegraphics[width=0.8\linewidth, left]{images/estructura/fisica/ball_explosion}
+     \includegraphics[width=0.9\linewidth, left]{images/estructura/fisica/ball_explosion}
    \end{minipage}
-   \caption{ParticleCircle (izquierda) y ExplosionParticle (derecha)}
+   \caption{ParticleCircle (izquierda) y ExplosionParticle (derecha).}
    \label{particles}
 \end{figure}
+
+Se eligió utilizar estos dos objetos como emisores de partículas en lugar de asignárselas directamente a la pelota debido a que esta ya contaba con emisor de partículas para dibujar su trayectoria y Unity no permite añadir más de un componente del mismo tipo al mismo objeto. Esta limitación podría haberse resuelto también asociando dos GameObjects adicionales permanentes a la pelota con los dos emisores, pero habrían necesitado de lógica adicional para determinar cuándo empezar y terminar la emisión, por lo que se optó por la solución actual.
 
 \subsubsection{Comportamiento}
 El componente \textbf{Ball} es el encargado de dotar a la pelota de su comportamiento. Su funcionamiento se basa en una máquina de estados finitos con un total de tres estados: \textbf{Normal}, \textbf{Locked} y \textbf{Destroy}.
@@ -340,9 +369,11 @@ Los estados \textbf{Locked} y \textbf{Destroy} son estados cinemáticos utilizad
 
 Durante el resto de la ejecución, la pelota se encuentra en el estado \textbf{Normal}. En este estado, la pelota se mueve a velocidad constante por la sala rebotando en los diversos objetos contenidos en esta, así como en sus paredes, suelo y techo. El movimiento de la pelota se consigue gracias al componente \textbf{Rigidbody}. Al entrar en el estado \textbf{Normal}, la pelota recibe un impulso en una dirección aleatoria mediante el método \textbf{AddForce} del rigidbody y a partir de ahí se moverá de forma perpetua al haber sido configurada sin fricción.
 
-Cuando la pelota colisiona con otro objeto físico, esta debe determinar de qué tipo de objeto se trata para poder producir la reacción correspondiente. La identificación de los objetos se consigue gracias a sus \textbf{Tags}, un atributo presente en todos los GameObjects que permite distinguirlos rápidamente. Una vez que la pelota a determinado de qué tipo de objeto se trata, un método con las acciones convenientes.
+La pelota cuenta con un \textbf{contador de golpes}, el cual aumenta cuando la pelota colisiona con ciertos objetos. Cuando este contador llega a tres, la pelota es destruida y el jugador pierde la partida. El contador de golpes también sirve para determinar el \textbf{color} de la pelota: blanca si no ha recibido golpes, amarilla si ha recibido uno y roja si ha recibido dos o más. 
 
-La pelota tiene también un \textbf{contador de golpes}. Cuando este contador llega a tres, la pelota es destruida y el jugador pierde la partida. El contador de golpes también sirve para determinar el \textbf{color} de la pelota: blanca si no ha recibido golpes, amarilla si ha recibido uno y roja si ha recibido dos o más. 
+Cuando la pelota colisiona con otro objeto físico, esta debe determinar de qué tipo de objeto se trata para poder producir la reacción correspondiente. La detección de colisiones se realiza con el método \textbf{OnCollision}, el cual es llamado por Unity cuando se produce una colisión entre la pelota y cualquier otro objeto dotado de un Collider, el cual es suministrado como parámetro del método. 
+
+La identificación de los objetos se consigue gracias a sus \textbf{Tags}, un atributo presente en todos los GameObjects que permite distinguirlos rápidamente. El tag se utiliza junto a una estructura \textbf{switch} para elegir la reacción más apropiada de la pelota de entre una serie de \textbf{métodos privados}. Este sistema, aunque funcional para el estado actual del proyecto, es poco escalable a largo plazo y sería necesario desacoplar las distintas reacciones de la pelota del resto de su comportamiento. 
 
 \subsection{Elementos Interactivos}
 \subsubsection{Paredes y Suelo}
@@ -355,15 +386,15 @@ Sin embargo, el comportamiento de la pelota cuando golpea el \textbf{suelo} de l
 \subsubsection{Personaje Principal}
 El objetivo principal del jugador es conseguir que el personaje principal \textbf{golpee la pelota con la paleta}. La dirección hacia la que rebote la pelota tras la colisión depende del punto de la paleta en el que se produjo el impacto, en lugar de en el ángulo de colisión. La trayectoria de salida de la pelota será más perpendicular al plano de la paleta cuanto más cerca de su centro se encuentre, y más paralela cuanto más alejado del centro sea. En la figura \ref{paddle_direction} se pueden ver de forma aproximada las trayectorias.
 \begin{figure}[!htb]
-   \begin{minipage}{0.5\textwidth}
+   \begin{minipage}{0.49\textwidth}
      \centering
-     \includegraphics[width=0.9\linewidth, right]{images/estructura/fisica/paddle_direction_side}
+     \includegraphics[width=0.9\textwidth, right]{images/estructura/fisica/paddle_direction_side}
    \end{minipage}\hfill
-   \begin {minipage}{0.5\textwidth}
+   \begin {minipage}{0.49\textwidth}
      \centering
-     \includegraphics[width=0.9\linewidth, left]{images/estructura/fisica/paddle_direction_top}
+     \includegraphics[width=0.9\textwidth, left]{images/estructura/fisica/paddle_direction_top}
    \end{minipage}
-   \caption{Direcciones que tomaría la pelota dependiendo del punto de la paleta que golpee (Aproximada)}
+   \caption{Direcciones que tomaría la pelota dependiendo del punto de la paleta que golpee (Aproximada).}
    \label{paddle_direction}
 \end{figure}
 
@@ -372,7 +403,7 @@ Por otro lado, si la pelota golpea al \textbf{personaje principal} directamente,
 \subsubsection{Puerta}
 La \textbf{puerta} es una estructura que ocupa la pared norte de la sala (figura \ref{puerta}). El objetivo del juego es el de abrir la puerta golpeándola con la pelota. La puerta tiene un contador de \textbf{puntos de vida} que disminuye con cada impacto de la pelota. Cuando el contador llega a cero, la puerta se abre y el nivel se acaba. Además de con el descenso de sus puntos de vida, la puerta reaccionara a los impactos de la pelota moviendo sus paneles.
 \begin{figure}[h]
-	\includegraphics[width=0.8\textwidth]{images/estructura/fisica/puerta}
+	\includegraphics[width=1\textwidth]{images/estructura/fisica/puerta}
 	\centering
 	\caption{Modelo de la puerta.}
 	\label{puerta}
@@ -392,7 +423,15 @@ EN la figura \ref{puerta_diagrama} se puede ver de forma gráfica esta relación
 	\label{puerta_diagrama}
 \end{figure}
 
-Cuando la pelota impacta con la puerta, esta llama al método \textbf{DoDamage} del componente \textbf{Door} de la puerta. Este método disminuye los puntos de vida de la puerta, inicia la animación de golpe y, en caso de que la puerta tenga cero puntos de vida, inicia la animación de apertura de la puerta.
+Cuando la pelota impacta con la puerta, esta llama al método \textbf{DoDamage} del componente \textbf{Door} de la puerta. Este método disminuye los puntos de vida de la puerta, inicia la animación de golpe y, en caso de que la puerta tenga cero puntos de vida, inicia la animación de apertura de la puerta. 
+
+Para mostrarle al jugador los puntos de vida que tiene la puerta se utiliza una \textbf{barra de vida} (figura \ref{barra}. Se trata de un objeto de \textbf{interfaz de usuario} de Unity que muestra gráficamente el porcentaje de puntos de vida que le queda a la puerta. El componente \textbf{HealthBar} se encarga de tomar los puntos de vida de la puerta y utilizarlos para calcular el tamaño de la barra. 
+\begin{figure}[h]
+	\includegraphics[width=0.8\textwidth]{images/estructura/fisica/barra}
+	\centering
+	\caption{Barra de vida de la vida.}
+	\label{barra}
+\end{figure}
 
 Tras impactar con la puerta, la pelota rebotara de forma natural. Adicionalmente, el parámetro \textbf{UseGravity} del Rigidbody de la pelota cambiará su valor a verdadero, por lo que la pelota empezará a caer en dirección al suelo de la sala. La gravedad de la pelota no se desactivará hasta que no golpee el suelo de la sala o la paleta del jugador.
 
@@ -405,12 +444,12 @@ Para darle variedad al juego, existen varios tipos de ladrillos (ver figura \ref
 \item \textbf{Ladrillo Multi-golpe}: Este ladrillo tiene tres puntos de vida, por lo que es más difícil romperlo. La textura de este ladrillo cambia con cada golpe para mostrar el daño infligido. Este ladrillo mide 1 X 2 casillas.
 \item \textbf{Ladrillo Divisible}: Es un ladrillo de gran tamaño, mide 2 X 2 casillas. Aunque solo tiene un punto de vida, al romperse genera 4 ladrillos pequeños de 1 X 1 casillas de tamaño.
 \item \textbf{Ladrillo Pequeño}: es un ladrillo idéntico al básico, salvo porque solo mide 1 X 1 casillas. Solo aparecen como resultado de la rotura de un ladrillo divisible.
-\item \textbf{Ladrillo Irrompible}: Como su nombre indica, este ladrillo no puede ser destruido por la pelota. Miden 2 X 3 Casillas.
+\item \textbf{Ladrillo Irrompible}: Como su nombre indica, este ladrillo no puede ser destruido por la pelota. Miden 2 X 3 casillas.
 \end{itemize}
 \begin{figure}[h]
-	\includegraphics[width=0.65\textwidth]{images/estructura/fisica/brick_examples}
+	\includegraphics[width=1\textwidth]{images/estructura/fisica/brick_examples}
 	\centering
-	\caption{Modelos de los ladrillos}
+	\caption{Modelos de los ladrillos.}
 	\label{bricks_models}
 \end{figure}
 
@@ -421,7 +460,7 @@ Para implementar los ladrillos se utilizan dos GameObjects anidados, como se mue
 \item Un \ un script de clase \textbf{Brick}, que contiene la funcionalidad del ladrillo.
 \end{itemize}
 \begin{figure}[h]
-	\includegraphics[width=0.65\textwidth]{images/estructura/fisica/bricks}
+	\includegraphics[width=0.8\textwidth]{images/estructura/fisica/bricks}
 	\centering
 	\caption{Componentes del objeto Brick.}
 	\label{diagrama_brick}
@@ -436,7 +475,7 @@ Los ladrillos básicos tendrían el comportamiento anteriormente distinto, pero 
 \item \textbf{UnbreakableBrick}: Este componente ignora las llamadas de la bola, por lo que el ladrillo no pierde puntos de vida. Se utiliza en los \textbf{ladrillos irrompibles}
 \end{itemize}
 \begin{figure}[h]
-	\includegraphics[width=0.65\textwidth]{images/estructura/fisica/brick_classes}
+	\includegraphics[width=0.9\textwidth]{images/estructura/fisica/brick_classes}
 	\centering
 	\caption{Jerarquía de clases de Brick.}
 	\label{brick_classes}
@@ -450,8 +489,8 @@ Un \textbf{jefe final}, o monstruo jefe, es un enemigo poderoso al que los jugad
 Para este juego, el jefe final es el único ``enemigo'' al que se enfrenta el jugador, que aparece en el nivel 11 del juego. Este jefe se comporta como un \textbf{``clon''} o ``rival'' del jugador: su objetivo es impedir que la pelota golpee la puerta, moviéndose y redirigiéndola de forma similar a como lo haría el jugador. La forma de derrotar a este jefe es idéntica de a como se supera cualquier fase: Golpeando la puerta suficientes veces. 
 
 El jefe se mueve a \textbf{velocidad constante}, siempre pegado a la pared, intentando bloquear la pelota. Sin embargo, si detuviese siempre la pelota, sería un desafío imposible de superar, lo que no sería divertido para el jugador. La idea es que este jefe se juegue como si de una partida de tenis se tratase, con dos adversarios intercambiándose la pelota hasta que uno de los dos falle. Por ello, el jefe tendrá un \textbf{sistema de energía} que determinará su eficiencia a la hora de jugar e ira consumiéndose según avance la partida. En la figura \ref{boss} puede verse el modelo 3D de este enemigo.
-\begin{figure}[h]
-	\includegraphics[width=0.70\textwidth]{images/estructura/jefe/boss-captura}
+\begin{figure}[!t]]
+	\includegraphics[width=1\textwidth]{images/estructura/jefe/boss-captura}
 	\centering
 	\caption{Modelo del jefe.}
 	\label{boss}
@@ -479,7 +518,15 @@ El segundo GameObject contiene el modelo 3D del jefe, el cual es dibujado en pan
 
 El jefe no \textbf{forma parte de la escena del juego} al comienzo de la ejecución, sino que está almacenado en los assets del juego en forma de \textbf{Prefab}. El prefab es instanciado por el componente \textbf{LevelGenerator} de la sala durante la generación del nivel en el caso de que la información del nivel indique que se trata de un nivel del jefe. Al ser instanciado, el jefe es asignado como GameObject hijo de la puerta, de forma que su posición sea siempre relativa a esta.
 
-El comportamiento del jefe se encuentra dividido en dos scripts para separar las acciones que puede realizar el jefe, implementadas en \textbf{BossController}) de la inteligencia artificial que determina cuales de esas acciones debe realizar en un momento dado (implementada en \textbf{BossAI}). 
+El comportamiento del jefe se encuentra definido por las clases del grupo funcional \textbf{Boss}. Las dos clases de este grupo son \textbf{BossController}, que implementa las posibles acciones que el jefe puede realizar y \textbf{BossAI}, una inteligencia artificial que determina que acciones debe ejecutar el jefe en un momento dado. El diagrama \ref{diagrama_clases_jefe} muestra gráficamente la composición de este grupo.
+\begin{figure}[!t]
+   \centering
+   \includegraphics[width=1\textwidth]{images/estructura/jefe/class_diagram}
+   \caption{Diagrama del grupo funcional \textbf{Boss}.}
+   \label{diagrama_clases_jefe}
+\end{figure}
+
+La división del comportamiento del jefe en dos componentes se realizó para reducir la complejidad que habría supuesto un único competente monolítico. De esta forma, cada componente pudo ser implementado y revisado de forma independiente, lo que redujo los errores y el tiempo de desarrollo. 
 
 \subsection{Movimiento}
 El componente \textbf{BossController} contiene la información y las funciones que el jefe necesita para realizar sus acciones. Las acciones que el jefe puede realizar son \textbf{moverse}, modificar sus \textbf{valores de energía}, ser \textbf{activado y destruido} y \textbf{reproducir sonidos}.
@@ -544,7 +591,7 @@ En virus breaker, este patrón se utiliza en la implementación del comportamien
 \subsection{Component}
 El patrón componente permite a una sola entidad cubrir múltiples dominios sin provocar el acoplamiento entre los distintos dominios cubiertos \cite{game_programming_patterns}.
 
-La forma de implementar este patrón es crear clases \textbf{Componentes} que encapsulan los métodos y atributos que se utilizan para tratar con cierto dominio del programa (como podría ser la entrada del jugador, el sonido o las físicas). Cuando la funcionalidad de una clase afecta a varios dominios del programa, se le asignan los componentes de dichos dominios, en lugar de acceder a los dominios directamente, lo que provocaría un serio acoplamiento del código. Un diagrama con una estructura de clases de ejemplo de este patrón puede verse en la figura \ref{component_diagram}.
+La forma de implementar este patrón es crear clases \textbf{componente} que encapsulan los métodos y atributos que se utilizan para tratar con cierto dominio del programa (como podría ser la entrada del jugador, el sonido o las físicas). Cuando la funcionalidad de una clase afecta a varios dominios del programa, se le asignan los componentes de dichos dominios, en lugar de acceder a los dominios directamente, lo que provocaría un serio acoplamiento del código. Un diagrama con una estructura de clases de ejemplo de este patrón puede verse en la figura \ref{component_diagram}.
 \begin{figure}[h]
 	\includegraphics[width=1\textwidth]{images/estructura/patrones/component}
 	\centering
@@ -554,7 +601,7 @@ La forma de implementar este patrón es crear clases \textbf{Componentes} que en
 
 Cuando este patrón se utiliza de forma generalizada en un código, las clases pasan a convertirse en \textbf{contenedores de componentes} cuya funcionalidad se deriva completamente de los componentes que tiene asociados. La única función de estas clases suele ser la de coordinar y gestionar el paso de mensajes entre los distintos componentes.
 
-Actualmente, varios motores de juegos utilizan este patrón en la implementación de entidades del juego, dado que una misma entidad necesita casi siempre controlar varios dominios del programa. Algunos de estos motores son Microsoft XNA \footnote{https://msdn.microsoft.com/es-ES/dn308572} y Unity3D \footnote{https://unity3d.com/es/unity}
+Actualmente, varios motores de juegos utilizan este patrón en la implementación de entidades del juego, dado que una misma entidad necesita casi siempre controlar varios dominios del programa. Algunos de estos motores son Microsoft XNA \footnote{https://msdn.microsoft.com/es-ES/dn308572} y Unity3D.
 
 \subsection{Prototype}
 Este patrón permite especificar tipos de objetos utilizando una \textbf{instancia prototipo} como referencia. Los nuevos objetos se crean realizando copias del prototipo \cite{design_patterns}.

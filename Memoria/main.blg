@@ -1,19 +1,17 @@
 [0] Config.pm:354> INFO - This is Biber 2.7
 [0] Config.pm:357> INFO - Logfile is 'main.blg'
-[92] biber-MSWIN32:303> INFO - === 
-[282] Biber.pm:359> INFO - Reading 'main.bcf'
-[436] Biber.pm:835> INFO - Found 36 citekeys in bib section 0
-[479] Biber.pm:3670> INFO - Processing section 0
-[586] Biber.pm:3840> INFO - Looking for bibtex format file 'bibliografia.bib' for section 0
-[610] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
-[655] bibtex.pm:1292> INFO - Found BibTeX data source 'bibliografia.bib'
-[802] Biber.pm:3840> INFO - Looking for bibtex format file 'videojuegos.bib' for section 0
-[830] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
-[832] bibtex.pm:1292> INFO - Found BibTeX data source 'videojuegos.bib'
-[857] Utils.pm:164> WARN - I didn't find a database entry for 'flow' (section 0)
-[915] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[915] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[915] Biber.pm:3499> INFO - Sorting list 'anyt/global/' of type 'entry' with scheme 'anyt' and locale 'es-ES'
-[954] bbl.pm:608> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[960] bbl.pm:712> INFO - Output to main.bbl
-[961] Biber.pm:109> INFO - WARNINGS: 1
+[46] biber-MSWIN32:303> INFO - === 
+[223] Biber.pm:359> INFO - Reading 'main.bcf'
+[365] Biber.pm:835> INFO - Found 40 citekeys in bib section 0
+[385] Biber.pm:3670> INFO - Processing section 0
+[411] Biber.pm:3840> INFO - Looking for bibtex format file 'bibliografia.bib' for section 0
+[416] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[424] bibtex.pm:1292> INFO - Found BibTeX data source 'bibliografia.bib'
+[460] Biber.pm:3840> INFO - Looking for bibtex format file 'videojuegos.bib' for section 0
+[465] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[468] bibtex.pm:1292> INFO - Found BibTeX data source 'videojuegos.bib'
+[563] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[563] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[563] Biber.pm:3499> INFO - Sorting list 'anyt/global/' of type 'entry' with scheme 'anyt' and locale 'es-ES'
+[611] bbl.pm:608> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[619] bbl.pm:712> INFO - Output to main.bbl
